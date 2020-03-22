@@ -1,18 +1,18 @@
 ---
-title: "Dygraphs Linked Time Series"
+title: "COVID-19 台灣確診人數預測"
 output: 
   flexdashboard::flex_dashboard:
-  orientation: columns
-social: menu
-source_code: embed
+    orientation: columns
+    social: menu
+    source_code: https://github.com/dspim/COVID-19-Forecasts
 ---
   
 ```{r setup, include=FALSE}
+library(plotly)
 library(tidyr)
 library(dplyr)
 library(dygraphs)
 library(flexdashboard)
-library(viridis)
 
 dat <- read.csv("./data/output_worldwide.csv") 
 dat_tw <- read.csv("./data/output_TW.csv")
@@ -22,8 +22,9 @@ r <- read.csv("./data/country_region.csv") %>%
 ```
 
 Column {data-width=600}
--------------------------------------
-### Taiwan 7 days forecast
+-----------------------------------------------------------------
+
+### 台灣確診人數預測 
 
 ```{r}
 cbind(
@@ -37,51 +38,100 @@ cbind(
             frequency = 1)
 ) %>%
   dygraph(main = "Taiwan 7 days forecast") %>% 
-  dyOptions(colors = viridis(n=9),
+  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
+              #RColorBrewer::brewer.pal(3, "Set2")
              strokeWidth = 5)
+```
+
+### 世界每日新增案例數
+
+```{r}
+dat_world <- dat %>% 
+  left_join(r) %>% 
+  na.omit() %>% 
+  select(date, sub.region, actual_cases) %>% 
+  group_by(date, sub.region) %>% 
+  summarise(actual_cases = sum(actual_cases)) %>% 
+  spread(sub.region, actual_cases) 
+
+data.frame(
+  date = as.Date(dat_world$date[2:nrow(dat_world)]),
+  v1 = sapply(2:nrow(dat_world), function(i){dat_world$`Australia and New Zealand`[i] - dat_world$`Australia and New Zealand`[i-1]}),
+  v2 = sapply(2:nrow(dat_world), function(i){dat_world$`Eastern Asia`[i] - dat_world$`Eastern Asia`[i-1]}),
+  v3 = sapply(2:nrow(dat_world), function(i){dat_world$`Northern America`[i] - dat_world$`Northern America`[i-1]}),
+  v4 = sapply(2:nrow(dat_world), function(i){dat_world$`Northern Europe`[i] - dat_world$`Northern Europe`[i-1]}),
+  v5 = sapply(2:nrow(dat_world), function(i){dat_world$`Western Europe`[i] - dat_world$`Western Europe`[i-1]})
+) %>% 
+  plot_ly(x = ~date, y = ~v1,
+          name = 'Australia and New Zealand',
+          type = 'bar', 
+          marker = list(color = '#E78AC3')#,
+          # text = ~n, 
+          # hovertemplate = paste('%{x}', '<br>人數: %{text:.s}<br>'),
+          # texttemplate = '%{y:.2s}',
+          # textposition = 'outside', 
+          # width = 0.2
+  ) %>% 
+  add_trace(y = ~v2, name = 'Eastern Asia', marker = list(color = '#66C2A5')) %>% 
+  add_trace(y = ~v3, name = 'Northern America', marker = list(color = '#FC8D62')) %>% 
+  add_trace(y = ~v4, name = 'Northern Europe', marker = list(color = '#8DA0CB')) %>% 
+  add_trace(y = ~v5, name = 'Western Europe', marker = list(color = '#A6D854')) %>% 
+  layout(uniformtext=list(minsize = Inf, mode='hide'),
+         xaxis = list(showline = F,
+                      fixedrange = T, 
+                      title = "日期"),
+         yaxis = list(fixedrange = T, 
+                      title = "人數"),
+         # autosize = F,
+         legend = list(x = 0.4, y = 0.9))
 ```
 
 
 Column {data-width=400}
--------------------------------------
+-----------------------------------------------------------------
 
-### Eastern Europe
-```{r}
-d1 <- dat %>% 
-  left_join(r) %>% 
-  filter(sub.region == "Eastern Europe") %>% 
-  select(country, actual_cases, date) %>% 
-  spread(country, actual_cases) %>% 
-  mutate(date = as.Date(date))
-
-d2 <- lapply(2:9, function(i){
-  ts(d1[[i]], 
-     start = d1$date[1], 
-     frequency = 1)
-}) %>% 
-  Reduce(f = cbind) 
-attr(d2, "dimnames")[[2]] <- names(d1)[2:9]
-d2 %>% 
-  dygraph(main = "Eastern Europe") %>% 
-  dyOptions(colors = viridis(n=9),
-             strokeWidth = 3)
-```
-
-### Singapore
+### 今日預測誤差
 
 ```{r}
-d <- dat %>% 
-  filter(country == "Singapore")
-
-cbind(
-  actual = ts(d$actual_cases, 
-              start = as.Date("2020-02-01"),
-              frequency = 1),
-  pred = ts(d$predict_cases, 
-            start = as.Date("2020-02-01"),
-            frequency = 1)
-) %>%
-  dygraph(main = "Singapore") %>% 
-  dyOptions(colors = viridis(n=9),
-             strokeWidth = 3)
+valueBox(round(tail(dat_tw$actual_cases - dat_tw$predict_cases, 1)),
+         icon = "fa-frown-open")
 ```
+
+### 台灣今日確診人數成長率
+
+```{r}
+n <- nrow(dat_tw)
+p <- (dat_tw$actual_cases[n] - dat_tw$actual_cases[n-1])/dat_tw$actual_cases[n] 
+valueBox(paste0(round(100*p, digits = 2), "%"), 
+         icon = "fa-chart-line")
+```
+
+
+### 台灣每日新增案例數
+
+```{r}
+d_tw <- data.frame(
+  date = as.Date(dat_tw$date[2:nrow(dat_tw)]),
+  n = sapply(2:nrow(dat_tw), function(i){
+      dat_tw$actual_cases[i] - dat_tw$actual_cases[i-1]
+    }) 
+  ) 
+d_tw %>% 
+  plot_ly(x = ~date, y = ~n,
+          type = 'bar', 
+          marker = list(color = 'rgb(49,130,189)'),
+          text = ~n, 
+          hovertemplate = paste('%{x}', '<br>人數: %{text:.s}<br>'),
+          texttemplate = '%{y:.2s}',
+          textposition = 'outside'
+          ) %>% 
+  layout(uniformtext=list(minsize = max(d_tw$n), mode='hide'),
+    xaxis = list(showline = F,
+                      fixedrange = T, 
+                      title = "日期"),
+         yaxis = list(fixedrange = T, 
+                      title = "人數")) 
+```
+
+
+
