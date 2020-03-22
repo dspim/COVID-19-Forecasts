@@ -9,4 +9,5 @@ Imports:
     dygraphs,
     flexdashboard,
     plotly,
-    logger
+    logger,
+    remotes
