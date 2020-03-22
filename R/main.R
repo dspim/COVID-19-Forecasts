@@ -1,13 +1,7 @@
+#!/usr/bin/env Rscript
 library(jsonlite)
 library(dplyr)
 library(tidyr)
-
-# library(lubridate)
-tryCatch({
-  raw <- fromJSON("https://corona.lmao.ninja/historical")
-  saveRDS(raw, paste0("../data/historicalData", Sys.Date(), ".rds"))
-  }, 
-  finally = "The historical covid-19 data that has been downloaded")
 
 
 getData <- function(raw, country_="Taiwan*", province_=NA, type="cases"){
@@ -39,13 +33,13 @@ getData_ <- function(raw, row=1, type="cases"){
   dat
 }
 
-Pred.Chao <- function(x, m){
+Pred.Chao <- function(x, m, B=9){
   # Chao 1987
   n <- length(x)
-  Q1 <- (x[n]-x[n-1]) * n
-  Q2 <- ((x[n-1]-x[n-2]) - (x[n]-x[n-1])) * choose(n,2)
+  Q1 <- (x[n]-x[n-1]) * B
+  Q2 <- ((x[n-1]-x[n-2]) - (x[n]-x[n-1])) * choose(B,2)
   
-  Q0 <- ifelse(Q2>0, (n-1)/n*Q1^2/2/Q2, (n-1)/n*Q1*(Q1-1)/2)
+  Q0 <- ifelse(Q2>0, (B-1)/B*Q1^2/2/Q2, (B-1)/B*Q1*(Q1-1)/2)
   Sobs <- x[n]
   a <- ifelse(Q1==0, 0, Q1/(n*Q0+Q1))
   Sm <- sapply(m, function(m) {Sobs + Q0*(1-(1-a)^m)})
@@ -81,6 +75,6 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao"){
                   "actual_cases", "predict_cases", 
                   "predict_cases_1", "predict_cases_2", "predict_cases_3",
                   "predict_cases_4", "predict_cases_5", "predict_cases_6")
-
+  
   out
 }
