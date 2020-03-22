@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 library(jsonlite)
 library(dplyr)
 library(tidyr)

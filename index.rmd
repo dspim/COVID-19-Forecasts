@@ -1,0 +1,87 @@
+---
+title: "Dygraphs Linked Time Series"
+output: 
+  flexdashboard::flex_dashboard:
+  orientation: columns
+social: menu
+source_code: embed
+---
+  
+```{r setup, include=FALSE}
+library(tidyr)
+library(dplyr)
+library(dygraphs)
+library(flexdashboard)
+library(viridis)
+
+dat <- read.csv("./data/output_worldwide.csv") 
+dat_tw <- read.csv("./data/output_TW.csv")
+r <- read.csv("./data/country_region.csv") %>% 
+  rename("country" = "name") %>% 
+  select(country, region, sub.region)
+```
+
+Column {data-width=600}
+-------------------------------------
+### Taiwan 7 days forecast
+
+```{r}
+cbind(
+  actual = ts(dat_tw$actual_cases,
+              start = as.Date("2020-02-01"),
+              frequency = 1),
+  pred = ts(c(rep(NA, nrow(dat_tw)-1), 
+              dat_tw$actual_cases[nrow(dat_tw)],
+              dat_tw[nrow(dat_tw), c(6:11)] %>% unlist() %>% unname()),
+            start = as.Date("2020-02-01"),
+            frequency = 1)
+) %>%
+  dygraph(main = "Taiwan 7 days forecast") %>% 
+  dyOptions(colors = viridis(n=9),
+             strokeWidth = 5)
+```
+
+
+Column {data-width=400}
+-------------------------------------
+
+### Eastern Europe
+```{r}
+d1 <- dat %>% 
+  left_join(r) %>% 
+  filter(sub.region == "Eastern Europe") %>% 
+  select(country, actual_cases, date) %>% 
+  spread(country, actual_cases) %>% 
+  mutate(date = as.Date(date))
+
+d2 <- lapply(2:9, function(i){
+  ts(d1[[i]], 
+     start = d1$date[1], 
+     frequency = 1)
+}) %>% 
+  Reduce(f = cbind) 
+attr(d2, "dimnames")[[2]] <- names(d1)[2:9]
+d2 %>% 
+  dygraph(main = "Eastern Europe") %>% 
+  dyOptions(colors = viridis(n=9),
+             strokeWidth = 3)
+```
+
+### Singapore
+
+```{r}
+d <- dat %>% 
+  filter(country == "Singapore")
+
+cbind(
+  actual = ts(d$actual_cases, 
+              start = as.Date("2020-02-01"),
+              frequency = 1),
+  pred = ts(d$predict_cases, 
+            start = as.Date("2020-02-01"),
+            frequency = 1)
+) %>%
+  dygraph(main = "Singapore") %>% 
+  dyOptions(colors = viridis(n=9),
+             strokeWidth = 3)
+```
