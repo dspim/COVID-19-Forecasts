@@ -65,25 +65,25 @@ data.frame(
   plot_ly(x = ~date, y = ~v1,
           name = 'Australia and New Zealand',
           type = 'bar', 
-          marker = list(color = '#E78AC3'),
-          text = ~n, 
-          hovertemplate = paste('%{x}', '<br>人數: %{text:.s}<br>'),
-          texttemplate = '%{y:.2s}',
-          textposition = 'outside', 
-          width = 0.2
+          marker = list(color = '#E78AC3')#,
+          # text = ~n, 
+          # hovertemplate = paste('%{x}', '<br>人數: %{text:.s}<br>'),
+          # texttemplate = '%{y:.2s}',
+          # textposition = 'outside', 
+          # width = 0.2
   ) %>% 
   add_trace(y = ~v2, name = 'Eastern Asia', marker = list(color = '#66C2A5')) %>% 
   add_trace(y = ~v3, name = 'Northern America', marker = list(color = '#FC8D62')) %>% 
   add_trace(y = ~v4, name = 'Northern Europe', marker = list(color = '#8DA0CB')) %>% 
   add_trace(y = ~v5, name = 'Western Europe', marker = list(color = '#A6D854')) %>% 
-  layout(uniformtext=list(minsize = max(d_tw$n), mode='hide'),
+  layout(uniformtext=list(minsize = Inf, mode='hide'),
          xaxis = list(showline = F,
                       fixedrange = T, 
                       title = "日期"),
          yaxis = list(fixedrange = T, 
                       title = "人數"),
-         autosize = F,
-         legend = list(x = 0.7, y = 0.9))
+         # autosize = F,
+         legend = list(x = 0.4, y = 0.9))
 ```
 
 
