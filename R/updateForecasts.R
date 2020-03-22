@@ -5,6 +5,7 @@ library(tidyr)
 library(logger)
 source("R/main.R")
 
+log_appender(appender_file("updateForecasts.log"))
 # download historical covid-19 data
 log_info("Download the COVID-19 historical data from Novel COVID-19 API...")
 

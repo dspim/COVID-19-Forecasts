@@ -8,4 +8,5 @@ Imports:
     jsonlite,
     dygraphs,
     flexdashboard,
-    plotly
+    plotly,
+    logger

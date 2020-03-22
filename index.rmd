@@ -19,6 +19,9 @@ dat_tw <- read.csv("./data/output_TW.csv")
 r <- read.csv("./data/country_region.csv") %>% 
   rename("country" = "name") %>% 
   select(country, region, sub.region)
+
+dat$country <- as.character(dat$country)
+r$country <- as.character(r$country)
 ```
 
 Column {data-width=600}
