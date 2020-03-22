@@ -1,14 +1,11 @@
 language: r
-sudo: true
+sudo: false
 cache: packages
-
 os:
   - linux
 
-before_script:
- - sudo apt-get install r-base-core
 scrpit:
-  - Rscrpit R/makeDashboard.R
+  - Rscript R/makeDashboard.R
 
 deploy:
   provider: pages
