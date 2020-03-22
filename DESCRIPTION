@@ -1,0 +1,16 @@
+Title: COVID-19-Forecasts
+Version: 0.1.2
+Date: 2020-03-22
+Author: Johnson Hsieh, ChengEn Li
+Maintainer: Johnson Hsieh <johnso@dsp.im>
+Description: COVID-19-Forecasts
+License: MIT  LICENSE
+URL: https://github.com/dspim/COVID-19-Forecasts
+Imports:
+    rmarkdown,
+    dplyr,
+    tidyr,
+    jsonlite,
+    dygraphs,
+    flexdashboard,
+    viridis
