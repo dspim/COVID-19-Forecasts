@@ -1,14 +1,16 @@
 language: r
 sudo: false
-script: make bacon
 cache: packages
-r_packages:
-  - rmarkdown
-  - dplyr
-  - tidyr
-  - jsonlite
-  - dygraphs
-  - flexdashboard
-  - viridis
+
 os:
   - linux
+scrpit:
+  - Rscrpit R/makeDashboard.R
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
