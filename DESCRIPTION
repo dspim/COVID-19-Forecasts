@@ -1,0 +1,11 @@
+Package: placeholder
+Title: Does not matter.
+Version: 0.0.1
+Imports:
+    rmarkdown,
+    dplyr,
+    tidyr,
+    jsonlite,
+    dygraphs,
+    flexdashboard,
+    plotly
