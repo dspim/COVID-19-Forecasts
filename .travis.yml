@@ -8,14 +8,6 @@ scrpit:
   - Rscript R/updateForecasts.R
   - Rscript R/makeDashboard.R
 
-after_success:
-  - git config user.name "johnson@Travis" 
-  - git config user.email "johnson@dsp.im"
-  - git add --all .
-  - git commit -m "Travis CI Auto Builder"
-  - git push https://$GH_TOKEN@github.com/dspim/COVID-19-Forecasts.git master
-
-
 deploy:
   provider: pages
   skip_cleanup: true
