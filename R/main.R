@@ -5,7 +5,7 @@ library(tidyr)
 # library(lubridate)
 
 raw <- fromJSON("https://corona.lmao.ninja/historical")
-saveRDS(raw, paste0("historicalData", Sys.Date(), ".rds"))
+saveRDS(raw, paste0("../data/historicalData", Sys.Date(), ".rds"))
 
 
 getData <- function(raw, country_="Taiwan*", province_=NA, type="cases"){
