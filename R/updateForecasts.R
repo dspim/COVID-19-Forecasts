@@ -37,7 +37,7 @@ log_info(paste0("The date version of this data is ", nowDate))
 
 log_info("Checking whether the worldwide forecasts should be updated.")
 tryCatch({
-  out <- read.csv("data/output_worldwide.csv")
+  out <- read.csv("./data/output_worldwide.csv")
   lastDate <- as.character(tail(out$date,1))
   seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
@@ -48,7 +48,7 @@ tryCatch({
   }
   out_ <- bind_rows(out, out.new) %>% 
     distinct(country, province, date, .keep_all = TRUE)
-  write.csv(out_, file = "data/output_worldwide.csv", row.names = FALSE)
+  write.csv(out_, file = "./data/output_worldwide.csv", row.names = FALSE)
   log_info("The output_worldwide.csv has been up to date.")
   }, 
   error=function(e){
@@ -58,7 +58,7 @@ tryCatch({
 
 log_info("Checking whether the Taiwan forecasts should be updated.")
 tryCatch({
-  out <- read.csv("data/output_TW.csv")
+  out <- read.csv("./data/output_TW.csv")
   lastDate <- as.character(tail(out$date,1))
   seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
@@ -67,7 +67,7 @@ tryCatch({
   }
   out_ <- bind_rows(out, out.new) %>% 
     distinct(country, province, date, .keep_all = TRUE)
-  write.csv(out_, file = "data/output_TW.csv", row.names = FALSE)
+  write.csv(out_, file = "./data/output_TW.csv", row.names = FALSE)
   log_info("The output_TW.csv has been up to date.")
   }, 
   error=function(e){
