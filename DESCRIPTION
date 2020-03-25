@@ -10,4 +10,5 @@ Imports:
     flexdashboard,
     plotly,
     logger,
-    remotes
+    remotes,
+    foreach
