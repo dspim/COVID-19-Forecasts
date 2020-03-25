@@ -1,0 +1,6 @@
+INFO [2020-03-25 14:12:00] Download the COVID-19 historical data from Novel COVID-19 API...
+INFO [2020-03-25 14:12:02] The COVID-19 historical data that has been imported.
+INFO [2020-03-25 14:13:05] The date version of this data is 2020-03-23
+INFO [2020-03-25 14:13:31] Checking whether the worldwide forecasts should be updated.
+INFO [2020-03-25 14:13:32] Already up to date. There is no change for output_worldwide.csv.
+INFO [2020-03-25 14:13:32] Checking whether the Taiwan forecasts should be updated.
