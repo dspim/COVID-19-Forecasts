@@ -6,7 +6,7 @@ library(logger)
 library(foreach)
 source("R/main.R")
 
-log_appender(appender_file("updateForecasts.log"))
+log_appender(appender =  appender_tee("updateForecasts.log"))
 # download historical covid-19 data
 log_info("Download the COVID-19 historical data from Novel COVID-19 API...")
 
@@ -38,7 +38,8 @@ log_info(paste0("The date version of this data is ", nowDate))
 
 log_info("Checking whether the worldwide forecasts should be updated.")
 tryCatch({
-  out <- read.csv("./data/output_worldwide.csv")
+  out <- read.csv("./data/output_worldwide.csv", stringsAsFactors = FALSE)
+  out$date <- as.Date(out$date)
   lastDate <- as.Date(as.character(tail(out$date,1)))
   seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
@@ -59,11 +60,12 @@ tryCatch({
 
 log_info("Checking whether the Taiwan forecasts should be updated.")
 tryCatch({
-  out <- read.csv("./data/output_TW.csv")
+  out <- read.csv("./data/output_TW.csv",  stringsAsFactors = FALSE)
+  out$date <- as.Date(out$date)
   lastDate <- as.Date(as.character(tail(out$date,1)))
   seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
-    dat <- getData(raw, country_ = "Taiwan*", province_ = NA)
+    dat <- getData(raw, country_ = "taiwan*", province_ = NA)
     calPred(dat, endDate = seqDate[i])
   }
   out_ <- bind_rows(out, out.new) %>% 
@@ -75,4 +77,5 @@ tryCatch({
     log_info("Already up to date. There is no change for output_TW.csv.")
   }
 )
+log_info("Mission completed.")
 

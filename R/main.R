@@ -6,7 +6,7 @@ library(tidyr)
 
 getData <- function(raw, country_="Taiwan*", province_=NA, type="cases"){
   raw_ <- raw %>% 
-    filter(country=="Taiwan*") 
+    filter(country==country_) 
   
   dat <- raw_[["timeline"]][[type]] %>% 
     gather(key = "date", value="cases") %>% 

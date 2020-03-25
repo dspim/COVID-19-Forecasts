@@ -1,0 +1,36 @@
+language: r
+sudo: false
+env:
+  global:
+  - secure: HxmF8zApZZB0Ue2UM60cvszh3FWvEzviKtISRRdlGiVJMb89EBZqh5QZmAlzJ6I3/oeUdE7pMFIEaKe2ELEY0VkQoUzpQf5FeHjndnuZ7rudE/HpquQQiNYxA5FGBLYVFVdp5Vs7v5tjGHnjaduNXLaOMCMaTEu0/XwmaD5u2QQXdWA9cNVuo4z69iCXugApGdvHYCaGNE4NSFPwiP5tD5yqW9ZqbU7wvoLXtV7Zq3deK/CefYGFCPiTVTtxRWO4gnJTOuSI2kHjx7pzbmrzQQ+6uK4DPzuZtwx7F1G2YYXQqGtazbQlc/1E7gRHf6SWIP77xQHOCuXrjNvprhiXpT/fP1gm8mI6l29j12MUTiL+Ktk8njmwdhwXoweTJ27C5XRUzYAm6kc3RN8YxqKE3PKnodhjMP7Bdpx1lsCUluXDYxsRKJV7LF8SkW7x3bzC5R1+d0yOvuKGSkRjZZVHCF5dFakEkN/xLRaBNjSlnIU2VClB9TIKfHec5xz4Z++vA2z7uy0BHLWjuiEjTVT+Z/Co1xjoJsZvQA1uw1ROjub6dV5Wcv8omueh1y0vr4O04TzzaZ40GjbTFVvqr7Rv89CQC8C4FLY5/QEalvIoKoR6/wwIooLdWh0aWqtunQ1eSXJYKfAlXQN782ihEp7zgtKDlNCE6nRegJyTSoLUdkA=
+cache: packages
+r_packages:
+  - rmarkdown
+  - dplyr
+  - tidyr
+  - jsonlite
+  - dygraphs
+  - flexdashboard
+  - viridis
+os:
+  - linux
+before_install:
+  - export TZ=Asia/Taipei
+  
+
+script: 
+  # Set Git config
+  - git config --global user.name "$GIT_NAME"
+  - git config --global user.email "$GIT_EMAIL"
+  - git config --global push.default simple
+  - git clone --depth 1 --branch gh-pages https://$GH_TOKEN@github.com/dspim/COVID-19-Forecasts public
+  # Update data and run forecasting
+  - cd public 
+  - Rscript R/updateForecasts.R
+  - Rscript R/makeDashboard.R
+  - git add -A .
+  - MESSAGE=`date +\ %Y-%m-%d\ %H:%M:%S`
+  - git commit -m "Site updated:$MESSAGE"
+  - git push --quiet
+  
+  
