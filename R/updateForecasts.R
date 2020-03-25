@@ -38,7 +38,7 @@ log_info(paste0("The date version of this data is ", nowDate))
 log_info("Checking whether the worldwide forecasts should be updated.")
 tryCatch({
   out <- read.csv("./data/output_worldwide.csv")
-  lastDate <- as.character(tail(out$date,1))
+  lastDate <- as.Date(as.character(tail(out$date,1)))
   seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
     foreach(j=1:nrow(raw), .combine = rbind)%do%{
@@ -59,7 +59,7 @@ tryCatch({
 log_info("Checking whether the Taiwan forecasts should be updated.")
 tryCatch({
   out <- read.csv("./data/output_TW.csv")
-  lastDate <- as.character(tail(out$date,1))
+  lastDate <- as.Date(as.character(tail(out$date,1)))
   seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
     dat <- getData(raw, country_ = "Taiwan*", province_ = NA)
