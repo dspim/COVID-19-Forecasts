@@ -3,6 +3,7 @@ library(jsonlite)
 library(dplyr)
 library(tidyr)
 library(logger)
+library(foreach)
 source("R/main.R")
 
 log_appender(appender_file("updateForecasts.log"))
