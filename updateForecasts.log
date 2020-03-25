@@ -1,8 +1,8 @@
-INFO [2020-03-25 07:10:54] Download the COVID-19 historical data from Novel COVID-19 API...
-INFO [2020-03-25 07:10:54] The COVID-19 historical data that has been imported.
-INFO [2020-03-25 07:10:54] The date version of this data is 2020-03-23
-INFO [2020-03-25 07:10:54] Checking whether the worldwide forecasts should be updated.
-INFO [2020-03-25 07:10:54] Already up to date. There is no change for output_worldwide.csv.
-INFO [2020-03-25 07:10:54] Checking whether the Taiwan forecasts should be updated.
-INFO [2020-03-25 07:10:54] Already up to date. There is no change for output_TW.csv.
-INFO [2020-03-25 07:10:54] Mission completed.
+INFO [2020-03-25 09:14:58] Download the COVID-19 historical data from Novel COVID-19 API...
+INFO [2020-03-25 09:14:58] The COVID-19 historical data that has been imported.
+INFO [2020-03-25 09:14:58] The date version of this data is 2020-03-23
+INFO [2020-03-25 09:14:58] Checking whether the worldwide forecasts should be updated.
+INFO [2020-03-25 09:14:59] Already up to date. There is no change for output_worldwide.csv.
+INFO [2020-03-25 09:14:59] Checking whether the Taiwan forecasts should be updated.
+INFO [2020-03-25 09:14:59] Already up to date. There is no change for output_TW.csv.
+INFO [2020-03-25 09:14:59] Mission completed.
