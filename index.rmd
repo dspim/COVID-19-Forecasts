@@ -14,15 +14,17 @@ library(dplyr)
 library(dygraphs)
 library(flexdashboard)
 
-dat <- read.csv("./data/output_worldwide.csv") 
-dat_tw <- read.csv("./data/output_TW.csv")
-r <- read.csv("./data/country_region.csv") %>% 
+dat <- read.csv("./data/output_worldwide.csv", stringsAsFactors = FALSE) 
+dat_tw <- read.csv("./data/output_TW.csv", stringsAsFactors = FALSE)
+r <- read.csv("./data/country_region.csv", stringsAsFactors = FALSE) %>% 
   rename("country" = "name") %>% 
   select(country, region, sub.region)
-
-dat$country <- as.character(dat$country)
-r$country <- as.character(r$country)
+tw_county <- read.csv("./data/tw_county.csv", 
+                      stringsAsFactors = FALSE)
 ```
+
+台灣全域
+=====================================  
 
 Column {data-width=600}
 -----------------------------------------------------------------
@@ -40,7 +42,7 @@ cbind(
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
-  dygraph(main = "Taiwan 7 days forecast") %>% 
+  dygraph() %>% 
   dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
               #RColorBrewer::brewer.pal(3, "Set2")
              strokeWidth = 5)
@@ -136,5 +138,100 @@ d_tw %>%
                       title = "人數")) 
 ```
 
+重點縣市 {data-orientation=rows}
+=====================================  
 
+Row
+-------------------------------------
+    
+### 台北市確診人數預測 
+    
+```{r}
+# Taipei
+d <- tw_county %>% 
+  filter(county == "台北市")
+cbind(
+  actual = ts(d$actual_cases,
+              start = as.Date("2020-02-01"),
+              frequency = 1),
+  pred = ts(c(rep(NA, nrow(d)-1), 
+              d$actual_cases[nrow(d)],
+              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+            start = as.Date("2020-02-01"),
+            frequency = 1)
+) %>%
+  dygraph() %>% 
+  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
+            #RColorBrewer::brewer.pal(3, "Set2")
+            strokeWidth = 5)  
+```
+ 
+### 新北市確診人數預測 
+    
+```{r}
+# New Taipei
+d <- tw_county %>% 
+  filter(county == "新北市")
+cbind(
+  actual = ts(d$actual_cases,
+              start = as.Date("2020-02-01"),
+              frequency = 1),
+  pred = ts(c(rep(NA, nrow(d)-1), 
+              d$actual_cases[nrow(d)],
+              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+            start = as.Date("2020-02-01"),
+            frequency = 1)
+) %>%
+  dygraph() %>% 
+  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
+            #RColorBrewer::brewer.pal(3, "Set2")
+            strokeWidth = 5)  
+``` 
+
+Row
+-------------------------------------
+    
+### 桃園市確診人數預測 
+    
+```{r}
+# Taoyuan
+d <- tw_county %>% 
+  filter(county == "桃園市")
+cbind(
+  actual = ts(d$actual_cases,
+              start = as.Date("2020-02-01"),
+              frequency = 1),
+  pred = ts(c(rep(NA, nrow(d)-1), 
+              d$actual_cases[nrow(d)],
+              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+            start = as.Date("2020-02-01"),
+            frequency = 1)
+) %>%
+  dygraph() %>% 
+  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
+            #RColorBrewer::brewer.pal(3, "Set2")
+            strokeWidth = 5)  
+```
+    
+### 台中市確診人數預測 
+
+```{r}
+# Taichung
+d <- tw_county %>% 
+  filter(county == "台中市")
+cbind(
+  actual = ts(d$actual_cases,
+              start = as.Date("2020-02-01"),
+              frequency = 1),
+  pred = ts(c(rep(NA, nrow(d)-1), 
+              d$actual_cases[nrow(d)],
+              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+            start = as.Date("2020-02-01"),
+            frequency = 1)
+) %>%
+  dygraph() %>% 
+  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
+            #RColorBrewer::brewer.pal(3, "Set2")
+            strokeWidth = 5)  
+```
 
