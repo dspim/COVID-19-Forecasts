@@ -11,4 +11,7 @@ Imports:
     plotly,
     logger,
     remotes,
-    foreach
+    foreach,
+    rvest,
+    xml2,
+    httr
