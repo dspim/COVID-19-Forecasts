@@ -119,19 +119,21 @@ tryCatch({
   out$date <- as.Date(out$date)
   lastDate <- as.Date(as.character(tail(out$date,1)))
   seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')),
-                      to = as.Date(sys.Date()), by = 'days')
+                      to = as.Date(Sys.Date()-1), by = 'days')
   # set start_date to 14 days after the firstday of the raw data when initializing /data/tw_county.csv.
-  # seqDate <- seq.Date(from = as.Date("2020-02-01"), to = as.Date(nowDate), by = 'days')
-  county_vec <- unique(cdc_h$county) %>% as.character()
+  # seqDate <- seq.Date(from = as.Date("2020-02-14"), to = as.Date(Sys.Date()-1), by = 'days')
+  county_vec <- unique(out$county) %>% as.character()
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
     foreach(j=1:length(county_vec), .combine = rbind)%do%{
       dat <- filter(out, county == county_vec[j]) %>% 
         mutate(cases = as.numeric(actual_cases))
-      calPred(dat, endDate = seqDate[i])
+      calPred(dat, endDate = seqDate[i], data_source = "tw_county")
     }
   }
-  out_ <- bind_rows(out, out.new) %>% 
-    distinct(county, date, .keep_all = TRUE)
+  # out_ <- rbind(out[1:352,], out.new)
+  out_ <- rbind(out, out.new) %>% 
+    group_by(county, date) %>% 
+    dplyr::tail(1)
   write.csv(out_, file = "./data/tw_county.csv", row.names = FALSE)
   log_info("The tw_county.csv has been up to date.")
 }, 
@@ -139,7 +141,6 @@ error=function(e){
   log_info("Already up to date. There is no change for tw_county.csv.")
 }
 )
-
 
 log_info("Mission completed.")
 
