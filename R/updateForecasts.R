@@ -37,6 +37,8 @@ tryCatch({
     regmatches(., regexec("[0-9]{4}\\/[0-9]{1,2}\\/[0-9]{1,2}", .)) %>%
     unlist() %>% 
     as.Date() - 1 
+  tw_cdc$date <- tw_cdc$date%>% 
+    as.character()
   tw_cdc$predict_cases <- 0
   tw_cdc$predict_cases_1 <- 0
   tw_cdc$predict_cases_2 <- 0
@@ -44,10 +46,13 @@ tryCatch({
   tw_cdc$predict_cases_4 <- 0
   tw_cdc$predict_cases_5 <- 0
   tw_cdc$predict_cases_6 <- 0
+  
   d <- read.csv("./data/tw_county.csv", stringsAsFactors = FALSE)
-  d <- d %>% 
-    rbind(tw_cdc) 
-  write.csv(d, file = "./data/tw_county.csv")  
+  if(as.Date(tw_cdc$date[1]) > max(as.Date(d$date))){
+    d <- d %>% 
+      rbind(tw_cdc) 
+    write.csv(d, file = "./data/tw_county.csv")  
+  }
 },
 error=function(e){
   log_error("Can not download data from Taiwan CDC.")
@@ -68,6 +73,7 @@ finally = log_info("The Taiwan CDC historical data has been updated.")
 
 # Make the current forecasts output
 
+raw <- readRDS("./data/historicalData.rds")
 nowDate <- as.Date(tail(names(raw$timeline$cases),1), "%m/%d/%y")
 log_info(paste0("The date version of this data is ", nowDate))
 

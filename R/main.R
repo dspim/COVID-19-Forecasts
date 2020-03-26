@@ -3,7 +3,6 @@ library(jsonlite)
 library(dplyr)
 library(tidyr)
 
-
 getData <- function(raw, country_="Taiwan*", province_=NA, type="cases"){
   raw_ <- raw %>% 
     filter(country==country_) 
