@@ -32,7 +32,11 @@ tryCatch({
     html_table(fill = TRUE) 
   tw_cdc <- cdc_raw[[19]][-23, ]
   names(tw_cdc) <- c("county", "actual_cases")
-  tw_cdc$date <- Sys.Date() %>% as.character()
+  # update yesterday's data at every morning around 06:00. 
+  tw_cdc$date <- regmatches(cdc_raw[[18]]$X1, regexec("資料更新時間為[0-9]{4}\\/[0-9]{1,2}\\/[0-9]{1,2}", cdc_raw[[18]]$X1)) %>% 
+    regmatches(., regexec("[0-9]{4}\\/[0-9]{1,2}\\/[0-9]{1,2}", .)) %>%
+    unlist() %>% 
+    as.Date() - 1 
   tw_cdc$predict_cases <- 0
   tw_cdc$predict_cases_1 <- 0
   tw_cdc$predict_cases_2 <- 0
@@ -108,12 +112,14 @@ tryCatch({
     log_info("Already up to date. There is no change for output_TW.csv.")
   }
 )
+
 log_info("Checking whether the Taiwan county level forecasts should be updated.")
 tryCatch({
   out <- read.csv("./data/tw_county.csv",  stringsAsFactors = FALSE)
   out$date <- as.Date(out$date)
   lastDate <- as.Date(as.character(tail(out$date,1)))
-  seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
+  seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')),
+                      to = as.Date(sys.Date()), by = 'days')
   # set start_date to 14 days after the firstday of the raw data when initializing /data/tw_county.csv.
   # seqDate <- seq.Date(from = as.Date("2020-02-01"), to = as.Date(nowDate), by = 'days')
   county_vec <- unique(cdc_h$county) %>% as.character()
