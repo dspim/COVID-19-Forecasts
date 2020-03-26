@@ -70,11 +70,14 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao"){
     pred <- Pred.Chao(dat_$cases[-n], m=1:7)
   }
   pred <- data.frame(t(round(pred, 2)))
+  names(pred) <- c("predict_cases", 
+                   "predict_cases_1", "predict_cases_2", "predict_cases_3",
+                   "predict_cases_4", "predict_cases_5", "predict_cases_6")
   out <- data.frame(dat_[n,], pred)
-  names(out) <- c("country", "province", "date", 
-                  "actual_cases", "predict_cases", 
-                  "predict_cases_1", "predict_cases_2", "predict_cases_3",
-                  "predict_cases_4", "predict_cases_5", "predict_cases_6")
+  
+  if("cases" %in% names(out)){
+    out <- out[, -which(names(out) == "cases")]
+  }
   
   out
 }

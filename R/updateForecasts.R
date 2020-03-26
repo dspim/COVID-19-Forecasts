@@ -4,14 +4,17 @@ library(dplyr)
 library(tidyr)
 library(logger)
 library(foreach)
+library(rvest)
+library(xml2)
+library(httr)
 source("R/main.R")
 
 log_appender(appender =  appender_tee("updateForecasts.log"))
 # download historical covid-19 data
 log_info("Download the COVID-19 historical data from Novel COVID-19 API...")
-
 tryCatch({
-  raw <- fromJSON("https://corona.lmao.ninja/historical")
+  # raw <- fromJSON("https://corona.lmao.ninja/historical")
+  raw <- fromJSON("https://corona.lmao.ninja/v2/historical")
   saveRDS(raw, paste0("./data/historicalData.rds"))
   },
   error=function(e){
@@ -19,6 +22,34 @@ tryCatch({
     log_error("Use cached data.")
     },
   finally = log_info("The COVID-19 historical data that has been imported.")
+)
+
+log_info("Download the Taiwan county level historical data from CDC website...")
+tryCatch({
+  cdc_url <- "https://nidss.cdc.gov.tw/ch/NIDSS_DiseaseMap.aspx?dc=1&dt=5&disease=19CoV" 
+  cdc_raw <- GET(url = cdc_url) %>%
+    content() %>% 
+    html_table(fill = TRUE) 
+  tw_cdc <- cdc_raw[[19]][-23, ]
+  names(tw_cdc) <- c("county", "actual_cases")
+  tw_cdc$date <- Sys.Date() %>% as.character()
+  tw_cdc$predict_cases <- 0
+  tw_cdc$predict_cases_1 <- 0
+  tw_cdc$predict_cases_2 <- 0
+  tw_cdc$predict_cases_3 <- 0
+  tw_cdc$predict_cases_4 <- 0
+  tw_cdc$predict_cases_5 <- 0
+  tw_cdc$predict_cases_6 <- 0
+  d <- read.csv("./data/tw_county.csv", stringsAsFactors = FALSE)
+  d <- d %>% 
+    rbind(tw_cdc) 
+  write.csv(d, file = "./data/tw_county.csv")  
+},
+error=function(e){
+  log_error("Can not download data from Taiwan CDC.")
+  log_error("Use cached data.")
+},
+finally = log_info("The Taiwan CDC historical data has been updated.")
 )
 
 # Make the initial forecasts output
@@ -77,5 +108,32 @@ tryCatch({
     log_info("Already up to date. There is no change for output_TW.csv.")
   }
 )
+log_info("Checking whether the Taiwan county level forecasts should be updated.")
+tryCatch({
+  out <- read.csv("./data/tw_county.csv",  stringsAsFactors = FALSE)
+  out$date <- as.Date(out$date)
+  lastDate <- as.Date(as.character(tail(out$date,1)))
+  seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')), to = as.Date(nowDate), by = 'days')
+  # set start_date to 14 days after the firstday of the raw data when initializing /data/tw_county.csv.
+  # seqDate <- seq.Date(from = as.Date("2020-02-01"), to = as.Date(nowDate), by = 'days')
+  county_vec <- unique(cdc_h$county) %>% as.character()
+  out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
+    foreach(j=1:length(county_vec), .combine = rbind)%do%{
+      dat <- filter(out, county == county_vec[j]) %>% 
+        mutate(cases = as.numeric(actual_cases))
+      calPred(dat, endDate = seqDate[i])
+    }
+  }
+  out_ <- bind_rows(out, out.new) %>% 
+    distinct(county, date, .keep_all = TRUE)
+  write.csv(out_, file = "./data/tw_county.csv", row.names = FALSE)
+  log_info("The tw_county.csv has been up to date.")
+}, 
+error=function(e){
+  log_info("Already up to date. There is no change for tw_county.csv.")
+}
+)
+
+
 log_info("Mission completed.")
 
