@@ -27,6 +27,7 @@ tryCatch({
 log_info("Download the Taiwan county level historical data from CDC website...")
 tryCatch({
   cdc_url <- "https://nidss.cdc.gov.tw/ch/NIDSS_DiseaseMap.aspx?dc=1&dt=5&disease=19CoV" 
+  httr::set_config(config(ssl_verifypeer = 0L))
   cdc_raw <- GET(url = cdc_url) %>%
     content() %>% 
     html_table(fill = TRUE) 
@@ -51,7 +52,10 @@ tryCatch({
   if(as.Date(tw_cdc$date[1]) > max(as.Date(d$date))){
     d <- d %>% 
       rbind(tw_cdc) 
-    write.csv(d, file = "./data/tw_county.csv")  
+    write.csv(d, file = "./data/tw_county.csv", row.names = FALSE)  
+  }else{
+    log_error("Can not download data from Taiwan CDC.")
+    log_error("Use cached data.")
   }
 },
 error=function(e){
@@ -123,11 +127,10 @@ log_info("Checking whether the Taiwan county level forecasts should be updated."
 tryCatch({
   out <- read.csv("./data/tw_county.csv",  stringsAsFactors = FALSE)
   out$date <- as.Date(out$date)
-  lastDate <- as.Date(as.character(tail(out$date,1)))
-  seqDate <- seq.Date(from = as.Date(format(lastDate+1, '%Y-%m-%d')),
-                      to = as.Date(Sys.Date()-1), by = 'days')
-  # set start_date to 14 days after the firstday of the raw data when initializing /data/tw_county.csv.
-  # seqDate <- seq.Date(from = as.Date("2020-02-14"), to = as.Date(Sys.Date()-1), by = 'days')
+  lastDate <- as.Date(as.character(tail(out$date, 1)))
+  # seqDate <- seq.Date(from = as.Date(format(lastDate, '%Y-%m-%d')),
+  #                     to = as.Date(Sys.Date()-1), by = 'days')
+  seqDate <- seq.Date(from = as.Date("2020-02-01"), to = as.Date(Sys.Date()-1), by = 'days')
   county_vec <- unique(out$county) %>% as.character()
   out.new <- foreach(i=1:length(seqDate), .combine = rbind, .verbose = TRUE)%do%{
     foreach(j=1:length(county_vec), .combine = rbind)%do%{
@@ -136,11 +139,7 @@ tryCatch({
       calPred(dat, endDate = seqDate[i], data_source = "tw_county")
     }
   }
-  # out_ <- rbind(out[1:352,], out.new)
-  out_ <- rbind(out, out.new) %>% 
-    group_by(county, date) %>% 
-    dplyr::tail(1)
-  write.csv(out_, file = "./data/tw_county.csv", row.names = FALSE)
+  write.csv(out.new, file = "./data/tw_county.csv", row.names = FALSE)
   log_info("The tw_county.csv has been up to date.")
 }, 
 error=function(e){

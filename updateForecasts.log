@@ -1,12 +1,16 @@
-INFO [2020-03-26 15:49:02] Download the COVID-19 historical data from Novel COVID-19 API...
-INFO [2020-03-26 15:49:18] The COVID-19 historical data that has been imported.
-INFO [2020-03-26 15:49:18] Download the Taiwan county level historical data from CDC website...
-INFO [2020-03-26 15:49:22] The Taiwan CDC historical data has been updated.
-INFO [2020-03-26 15:49:22] The date version of this data is 2020-03-25
-INFO [2020-03-26 15:49:22] Checking whether the worldwide forecasts should be updated.
-INFO [2020-03-26 15:49:27] Already up to date. There is no change for output_worldwide.csv.
-INFO [2020-03-26 15:49:27] Checking whether the Taiwan forecasts should be updated.
-INFO [2020-03-26 15:49:27] Already up to date. There is no change for output_TW.csv.
-INFO [2020-03-26 15:49:27] Checking whether the Taiwan county level forecasts should be updated.
-INFO [2020-03-26 15:49:27] Already up to date. There is no change for tw_county.csv.
-INFO [2020-03-26 15:49:27] Mission completed.
+INFO [2020-03-27 02:55:10] Download the COVID-19 historical data from Novel COVID-19 API...
+ERROR [2020-03-27 02:55:10] Can not download data from Novel COVID-19 API.
+ERROR [2020-03-27 02:55:10] Use cached data.
+INFO [2020-03-27 02:55:10] The COVID-19 historical data that has been imported.
+INFO [2020-03-27 02:55:10] Download the Taiwan county level historical data from CDC website...
+ERROR [2020-03-27 02:55:13] Can not download data from Taiwan CDC.
+ERROR [2020-03-27 02:55:13] Use cached data.
+INFO [2020-03-27 02:55:13] The Taiwan CDC historical data has been updated.
+INFO [2020-03-27 02:55:13] The date version of this data is 2020-03-23
+INFO [2020-03-27 02:55:13] Checking whether the worldwide forecasts should be updated.
+INFO [2020-03-27 02:55:13] Already up to date. There is no change for output_worldwide.csv.
+INFO [2020-03-27 02:55:13] Checking whether the Taiwan forecasts should be updated.
+INFO [2020-03-27 02:55:13] Already up to date. There is no change for output_TW.csv.
+INFO [2020-03-27 02:55:13] Checking whether the Taiwan county level forecasts should be updated.
+INFO [2020-03-27 02:55:19] Already up to date. There is no change for tw_county.csv.
+INFO [2020-03-27 02:55:19] Mission completed.

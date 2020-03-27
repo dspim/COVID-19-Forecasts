@@ -69,6 +69,9 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao",
     n <- nrow(dat_)
     pred <- Pred.Chao(dat_$cases[-n], m=1:7)
   }
+  if(data_source == "tw_county" & method=="Chao"){
+    pred <- Pred.Chao(dat_$cases, m=1:7)
+  }
   pred <- data.frame(t(round(pred, 2)))
   
   if(is.null(data_source)){
