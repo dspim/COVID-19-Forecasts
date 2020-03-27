@@ -3,7 +3,7 @@ library(jsonlite)
 library(dplyr)
 library(tidyr)
 
-getData <- function(raw, country_="Taiwan*", province_=NA, type="cases"){
+getData <- function(raw, country_="taiwan*", province_=NA, type="cases"){
   raw_ <- raw %>% 
     filter(country==country_) 
   
@@ -11,8 +11,8 @@ getData <- function(raw, country_="Taiwan*", province_=NA, type="cases"){
     gather(key = "date", value="cases") %>% 
     mutate(date=as.Date(date, "%m/%d/%y")) %>% 
     mutate(country=country_, province=province_) %>% 
-    mutate(cases=as.numeric(cases)) %>% 
-    select(country, province, date, cases)
+    mutate(actual_cases=as.numeric(cases)) %>% 
+    select(country, province, date, actual_cases)
   
   dat
 }
@@ -26,8 +26,8 @@ getData_ <- function(raw, row=1, type="cases"){
     gather(key = "date", value="cases") %>% 
     mutate(date=as.Date(date, "%m/%d/%y")) %>% 
     mutate(country=country_, province=province_) %>% 
-    mutate(cases=as.numeric(cases)) %>% 
-    select(country, province, date, cases)
+    mutate(actual_cases=as.numeric(cases)) %>% 
+    select(country, province, date, actual_cases)
   
   dat
 }
@@ -66,28 +66,20 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao",
     filter(between(date, startDate, endDate)) 
   
   if(method=="Chao"){
-    n <- nrow(dat_)
-    pred <- Pred.Chao(dat_$cases[-n], m=1:7)
+    pred <- Pred.Chao(dat_$actual_cases, m=1:7)
   }
-  if(data_source == "tw_county" & method=="Chao"){
-    pred <- Pred.Chao(dat_$cases, m=1:7)
-  }
+  
   pred <- data.frame(t(round(pred, 2)))
+  names(pred) <- c("predict_cases", 
+                   "predict_cases_1", "predict_cases_2", "predict_cases_3",
+                   "predict_cases_4", "predict_cases_5", "predict_cases_6")
   
   if(is.null(data_source)){
-    pred <- data.frame(t(round(pred, 2)))
-    out <- data.frame(dat_[n,], pred)
-    names(out) <- c("country", "province", "date", 
-                    "actual_cases", "predict_cases", 
-                    "predict_cases_1", "predict_cases_2", "predict_cases_3",
-                    "predict_cases_4", "predict_cases_5", "predict_cases_6")
+    out <- data.frame(dat_[nrow(dat_), c(1:4)], pred)
     return(out)
   }
   if(data_source == "tw_county"){
     # source: Taiwan CDC county level data
-    names(pred) <- c("predict_cases", 
-                     "predict_cases_1", "predict_cases_2", "predict_cases_3",
-                     "predict_cases_4", "predict_cases_5", "predict_cases_6")
     out <- data.frame(dat_[nrow(dat_), 1:3], pred)
   }
 
