@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 台灣確診人數預測"
+title: "COVID-19 Prediciton on Confirmed Case in Taiwan"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -23,13 +23,13 @@ tw_county <- read.csv("./data/tw_county.csv",
                       stringsAsFactors = FALSE)
 ```
 
-台灣全域
+Nationwide
 =====================================  
 
 Column {data-width=600}
 -----------------------------------------------------------------
 
-### 台灣確診人數預測 
+### Total Confirmed Cases (Taiwan)
 
 ```{r}
 cbind(
@@ -42,13 +42,13 @@ cbind(
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
-  dygraph() %>% 
+  dygraph(ylab = "Cases") %>% 
   dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
               #RColorBrewer::brewer.pal(3, "Set2")
              strokeWidth = 5)
 ```
 
-### 世界每日新增案例數
+### Daily New Confirmed Cases (World)
 
 ```{r}
 dat_world <- dat %>% 
@@ -84,9 +84,9 @@ data.frame(
   layout(uniformtext=list(minsize = Inf, mode='hide'),
          xaxis = list(showline = F,
                       fixedrange = T, 
-                      title = "日期"),
+                      title = "Date"),
          yaxis = list(fixedrange = T, 
-                      title = "人數"),
+                      title = "Cases"),
          # autosize = F,
          legend = list(x = 0.4, y = 0.9))
 ```
@@ -95,14 +95,14 @@ data.frame(
 Column {data-width=400}
 -----------------------------------------------------------------
 
-### 今日預測誤差
+### Prediction Errors
 
 ```{r}
 valueBox(round(tail(dat_tw$actual_cases - dat_tw$predict_cases, 1)),
          icon = "fa-frown-open")
 ```
 
-### 台灣今日確診人數成長率
+### Growth Rate of Daily new confirmed cases (Taiwan)
 
 ```{r}
 n <- nrow(dat_tw)
@@ -112,7 +112,7 @@ valueBox(paste0(round(100*p, digits = 2), "%"),
 ```
 
 
-### 台灣每日新增案例數
+### Daily new confirmed cases (Taiwan)
 
 ```{r}
 d_tw <- data.frame(
@@ -126,25 +126,25 @@ d_tw %>%
           type = 'bar', 
           marker = list(color = 'rgb(49,130,189)'),
           text = ~n, 
-          hovertemplate = paste('%{x}', '<br>人數: %{text:.s}<br>'),
+          hovertemplate = paste('%{x}', '<br>Cases: %{text:.s}<br>'),
           texttemplate = '%{y:.2s}',
           textposition = 'outside'
           ) %>% 
   layout(uniformtext=list(minsize = max(d_tw$n), mode='hide'),
     xaxis = list(showline = F,
                       fixedrange = T, 
-                      title = "日期"),
+                      title = "Date"),
          yaxis = list(fixedrange = T, 
-                      title = "人數")) 
+                      title = "Cases")) 
 ```
 
-重點縣市 {data-orientation=rows}
+Selected Regions {data-orientation=rows}
 =====================================  
 
 Row
 -------------------------------------
     
-### 台北市確診人數預測 
+### Total Confirmed Cases (Taipei)
     
 ```{r}
 # Taipei
@@ -160,16 +160,16 @@ cbind(
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
-  dygraph() %>% 
+  dygraph(ylab = "Cases") %>% 
   dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
             #RColorBrewer::brewer.pal(3, "Set2")
             strokeWidth = 5)  
 ```
  
-### 新北市確診人數預測 
+### Total Confirmed Cases (New Taipei City)
     
 ```{r}
-# New Taipei
+# New Taipei City
 d <- tw_county %>% 
   filter(county == "新北市")
 cbind(
@@ -182,7 +182,7 @@ cbind(
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
-  dygraph() %>% 
+  dygraph(ylab = "Cases") %>% 
   dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
             #RColorBrewer::brewer.pal(3, "Set2")
             strokeWidth = 5)  
@@ -191,7 +191,7 @@ cbind(
 Row
 -------------------------------------
     
-### 桃園市確診人數預測 
+### Total Confirmed Cases (Taoyuan)
     
 ```{r}
 # Taoyuan
@@ -207,13 +207,13 @@ cbind(
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
-  dygraph() %>% 
+  dygraph(ylab = "Cases") %>% 
   dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
             #RColorBrewer::brewer.pal(3, "Set2")
             strokeWidth = 5)  
 ```
     
-### 台中市確診人數預測 
+### Total Confirmed Cases (Taichung)
 
 ```{r}
 # Taichung
@@ -229,7 +229,7 @@ cbind(
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
-  dygraph() %>% 
+  dygraph(ylab = "Cases") %>% 
   dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
             #RColorBrewer::brewer.pal(3, "Set2")
             strokeWidth = 5)  
