@@ -14,13 +14,19 @@ library(dplyr)
 library(dygraphs)
 library(flexdashboard)
 
-dat <- read.csv("./data/output_worldwide.csv", stringsAsFactors = FALSE) 
-dat_tw <- read.csv("./data/output_TW.csv", stringsAsFactors = FALSE)
-r <- read.csv("./data/country_region.csv", stringsAsFactors = FALSE) %>% 
+dat1_global <- read.csv("data/Stage1/Stage1_NovelCovid_worldwide.csv", stringsAsFactors = FALSE) 
+dat1_tw <- read.csv("data/Stage1/Stage1_NovelCovid_tw.csv", stringsAsFactors = FALSE) 
+dat1_tw_c <- read.csv("data/Stage1/Stage1_Taiwan_CDC.csv", stringsAsFactors = FALSE)
+
+dat2_global <- read.csv("data/Stage2/Stage2_worldwide_pred.csv", stringsAsFactors = FALSE) 
+dat2_tw <- read.csv("data/Stage2/Stage2_tw_pred.csv", stringsAsFactors = FALSE) 
+dat2_tw_c <- read.csv("data/Stage2/Stage2_tw_county_pred.csv", stringsAsFactors = FALSE) 
+r <- read.csv("data/country_region.csv", stringsAsFactors = FALSE) %>% 
   rename("country" = "name") %>% 
   select(country, region, sub.region)
-tw_county <- read.csv("./data/tw_county.csv", 
-                      stringsAsFactors = FALSE)
+r$country <- r$country %>% tolower()
+
+now <- Sys.Date()-1
 ```
 
 Nationwide
@@ -33,12 +39,13 @@ Column {data-width=600}
 
 ```{r}
 cbind(
-  actual = ts(dat_tw$actual_cases,
+  actual = ts(dat1_tw$actual_cases,
               start = as.Date("2020-02-01"),
               frequency = 1),
-  pred = ts(c(rep(NA, nrow(dat_tw)-1), 
-              dat_tw$actual_cases[nrow(dat_tw)],
-              dat_tw[nrow(dat_tw), c(6:11)] %>% unlist() %>% unname()),
+  pred = ts(c(rep(NA, nrow(dat1_tw)-1), 
+              dat1_tw$actual_cases[dat1_tw$date == now], # 當天資料用真實值
+              dat2_tw[dat2_tw$date == now, c(5:11)] %>% unlist() %>% unname()), 
+            # 從predict_cases 開始畫
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
@@ -51,7 +58,7 @@ cbind(
 ### Daily New Confirmed Cases (World)
 
 ```{r}
-dat_world <- dat %>% 
+dat_world <- dat1_global %>% 
   left_join(r) %>% 
   na.omit() %>% 
   select(date, sub.region, actual_cases) %>% 
@@ -98,16 +105,18 @@ Column {data-width=400}
 ### Prediction Errors
 
 ```{r}
-valueBox(round(tail(dat_tw$actual_cases - dat_tw$predict_cases, 1)),
-         icon = "fa-frown-open")
+true <- dat1_tw$actual_cases[dat1_tw$date == now]
+pred <- dat2_tw$predict_cases[dat2_tw$date == (now-1)]
+valueBox(round(true - pred), icon = "fa-frown-open")
 ```
 
 ### Growth Rate of Daily new confirmed cases (Taiwan)
 
 ```{r}
-n <- nrow(dat_tw)
-p <- (dat_tw$actual_cases[n] - dat_tw$actual_cases[n-1])/dat_tw$actual_cases[n] 
-valueBox(paste0(round(100*p, digits = 2), "%"), 
+true <- dat1_tw$actual_cases[dat1_tw$date == now]
+pred <- dat2_tw$predict_cases[dat2_tw$date == (now-1)]
+v <- (true - pred)/true
+valueBox(paste0(round(100*v, digits = 2), "%"), 
          icon = "fa-chart-line")
 ```
 
@@ -116,9 +125,9 @@ valueBox(paste0(round(100*p, digits = 2), "%"),
 
 ```{r}
 d_tw <- data.frame(
-  date = as.Date(dat_tw$date[2:nrow(dat_tw)]),
-  n = sapply(2:nrow(dat_tw), function(i){
-      dat_tw$actual_cases[i] - dat_tw$actual_cases[i-1]
+  date = as.Date(dat1_tw$date[2:nrow(dat1_tw)]),
+  n = sapply(2:nrow(dat1_tw), function(i){
+      dat1_tw$actual_cases[i] - dat1_tw$actual_cases[i-1]
     }) 
   ) 
 d_tw %>% 
@@ -148,15 +157,17 @@ Row
     
 ```{r}
 # Taipei
-d <- tw_county %>% 
+d1 <- dat1_tw_c %>% 
+  filter(county == "台北市")
+d2 <- dat2_tw_c %>% 
   filter(county == "台北市")
 cbind(
-  actual = ts(d$actual_cases,
+  actual = ts(d1$actual_cases,
               start = as.Date("2020-02-01"),
               frequency = 1),
-  pred = ts(c(rep(NA, nrow(d)-1), 
-              d$actual_cases[nrow(d)],
-              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+  pred = ts(c(rep(NA, nrow(d1)-1), 
+              d1$actual_cases[d1$date == now],
+              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
@@ -170,15 +181,17 @@ cbind(
     
 ```{r}
 # New Taipei City
-d <- tw_county %>% 
+d1 <- dat1_tw_c %>% 
+  filter(county == "新北市")
+d2 <- dat2_tw_c %>% 
   filter(county == "新北市")
 cbind(
-  actual = ts(d$actual_cases,
+  actual = ts(d1$actual_cases,
               start = as.Date("2020-02-01"),
               frequency = 1),
-  pred = ts(c(rep(NA, nrow(d)-1), 
-              d$actual_cases[nrow(d)],
-              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+  pred = ts(c(rep(NA, nrow(d1)-1), 
+              d1$actual_cases[d1$date == now],
+              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
@@ -195,15 +208,17 @@ Row
     
 ```{r}
 # Taoyuan
-d <- tw_county %>% 
+d1 <- dat1_tw_c %>% 
+  filter(county == "桃園市")
+d2 <- dat2_tw_c %>% 
   filter(county == "桃園市")
 cbind(
-  actual = ts(d$actual_cases,
+  actual = ts(d1$actual_cases,
               start = as.Date("2020-02-01"),
               frequency = 1),
-  pred = ts(c(rep(NA, nrow(d)-1), 
-              d$actual_cases[nrow(d)],
-              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+  pred = ts(c(rep(NA, nrow(d1)-1), 
+              d1$actual_cases[d1$date == now],
+              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%
@@ -217,15 +232,17 @@ cbind(
 
 ```{r}
 # Taichung
-d <- tw_county %>% 
+d1 <- dat1_tw_c %>% 
+  filter(county == "台中市")
+d2 <- dat2_tw_c %>% 
   filter(county == "台中市")
 cbind(
-  actual = ts(d$actual_cases,
+  actual = ts(d1$actual_cases,
               start = as.Date("2020-02-01"),
               frequency = 1),
-  pred = ts(c(rep(NA, nrow(d)-1), 
-              d$actual_cases[nrow(d)],
-              d[nrow(d), c(4:10)] %>% unlist() %>% unname()),
+  pred = ts(c(rep(NA, nrow(d1)-1), 
+              d1$actual_cases[d1$date == now],
+              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
             start = as.Date("2020-02-01"),
             frequency = 1)
 ) %>%

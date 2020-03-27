@@ -5,8 +5,10 @@ os:
   - linux
 
 scrpit:
-  - Rscript R/updateForecasts.R
-  - Rscript R/makeDashboard.R
+  - Rscript R/01_get_raw_data.R
+  - Rscript R/02_get_Stage1_data.R
+  - Rscript R/03_make_pred.R
+  - Rscript R/04_makeDashboard.R
 
 deploy:
   provider: pages
