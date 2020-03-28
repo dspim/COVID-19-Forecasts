@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 Prediciton on Confirmed Case in Taiwan"
+title: "COVID-19 Prediciton on Confirmed Case"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
@@ -12,10 +12,13 @@ output:
 library(plotly)
 library(tidyr)
 library(dplyr)
+library(ggplot2)
+library(viridisLite)
 library(dygraphs)
 library(DT)
 library(sparkline)
 library(flexdashboard)
+
 
 dat1_global <- read.csv("data/Stage1/Stage1_NovelCovid_worldwide.csv", stringsAsFactors = FALSE) 
 dat1_tw <- read.csv("data/Stage1/Stage1_NovelCovid_tw.csv", stringsAsFactors = FALSE) 
@@ -38,7 +41,7 @@ r$country <- r$country %>% tolower()
 now <- as.Date("2020-03-26")
 ```
 
-Nationwide
+Tawian
 =====================================  
 
 Row
@@ -133,7 +136,7 @@ df %>%
 
 ```{r}
 min_value <- min(dat2_tw$actual_cases)
-max_value <- max(dat2_tw$predict_cases_6)
+max_value <- max(dat2_tw$predict_cases_7)
 
 df2 <- dat2_tw_ %>%
   mutate(predict_cases=actual_cases) %>% 
