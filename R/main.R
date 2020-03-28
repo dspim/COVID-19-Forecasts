@@ -71,8 +71,8 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao",
   
   pred <- data.frame(t(round(pred, 2)))
   names(pred) <- c("predict_cases", 
-                   "predict_cases_1", "predict_cases_2", "predict_cases_3",
-                   "predict_cases_4", "predict_cases_5", "predict_cases_6")
+                   "predict_cases_2", "predict_cases_3", "predict_cases_4",
+                   "predict_cases_5", "predict_cases_6", "predict_cases_7")
   
   if(is.null(data_source)){
     out <- data.frame(dat_[nrow(dat_), c(1:4)], pred)

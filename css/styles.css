@@ -1,0 +1,9 @@
+.dygraph-legend {
+  left: 100px !important;
+  background-color: transparent !important;
+}
+
+.value-box {
+    color: #f9f9f9;
+    height: 125px !important;
+}

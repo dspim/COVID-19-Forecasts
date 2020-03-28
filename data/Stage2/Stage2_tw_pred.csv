@@ -1,3 +1,3 @@
-"country","province","date","actual_cases","predict_cases","predict_cases_1","predict_cases_2","predict_cases_3","predict_cases_4","predict_cases_5","predict_cases_6"
+"country","province","date","actual_cases","predict_cases","predict_cases_2","predict_cases_3","predict_cases_4","predict_cases_5","predict_cases_6","predict_cases_7"
 "taiwan*",NA,2020-03-25,235,246.99,258.97,270.94,282.9,294.85,306.79,318.72
 "taiwan*",NA,2020-03-26,252,261.22,269.56,277.11,283.93,290.09,295.67,300.71
