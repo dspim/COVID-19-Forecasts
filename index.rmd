@@ -2,9 +2,10 @@
 title: "COVID-19 Prediciton on Confirmed Case in Taiwan"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     social: menu
     source_code: https://github.com/dspim/COVID-19-Forecasts
+    css: "css/styles.css"
 ---
   
 ```{r setup, include=FALSE}
@@ -12,6 +13,8 @@ library(plotly)
 library(tidyr)
 library(dplyr)
 library(dygraphs)
+library(DT)
+library(sparkline)
 library(flexdashboard)
 
 dat1_global <- read.csv("data/Stage1/Stage1_NovelCovid_worldwide.csv", stringsAsFactors = FALSE) 
@@ -21,234 +24,140 @@ dat1_tw_c <- read.csv("data/Stage1/Stage1_Taiwan_CDC.csv", stringsAsFactors = FA
 dat2_global <- read.csv("data/Stage2/Stage2_worldwide_pred.csv", stringsAsFactors = FALSE) 
 dat2_tw <- read.csv("data/Stage2/Stage2_tw_pred.csv", stringsAsFactors = FALSE) 
 dat2_tw_c <- read.csv("data/Stage2/Stage2_tw_county_pred.csv", stringsAsFactors = FALSE) 
+tmp <- read.csv("data/Stage2/Stage2_tw_pred_caches.csv", stringsAsFactors = FALSE)
+dat2_tw_ <- bind_rows(dat2_tw, tmp) %>% distinct() %>% 
+  mutate(date=as.Date(date)) %>% 
+  arrange(date)
+
 r <- read.csv("data/country_region.csv", stringsAsFactors = FALSE) %>% 
   rename("country" = "name") %>% 
   select(country, region, sub.region)
 r$country <- r$country %>% tolower()
 
-now <- Sys.Date()-1
+# now <- Sys.Date()-1
+now <- as.Date("2020-03-26")
 ```
 
 Nationwide
 =====================================  
 
-Column {data-width=600}
+Row
 -----------------------------------------------------------------
 
-### Total Confirmed Cases (Taiwan)
-
-```{r}
-cbind(
-  actual = ts(dat1_tw$actual_cases,
-              start = as.Date("2020-02-01"),
-              frequency = 1),
-  pred = ts(c(rep(NA, nrow(dat1_tw)-1), 
-              dat1_tw$actual_cases[dat1_tw$date == now], # 當天資料用真實值
-              dat2_tw[dat2_tw$date == now, c(5:11)] %>% unlist() %>% unname()), 
-            # 從predict_cases 開始畫
-            start = as.Date("2020-02-01"),
-            frequency = 1)
-) %>%
-  dygraph(ylab = "Cases") %>% 
-  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
-              #RColorBrewer::brewer.pal(3, "Set2")
-             strokeWidth = 5)
-```
-
-### Daily New Confirmed Cases (World)
-
-```{r}
-dat_world <- dat1_global %>% 
-  left_join(r) %>% 
-  na.omit() %>% 
-  select(date, sub.region, actual_cases) %>% 
-  group_by(date, sub.region) %>% 
-  summarise(actual_cases = sum(actual_cases)) %>% 
-  spread(sub.region, actual_cases) 
-
-data.frame(
-  date = as.Date(dat_world$date[2:nrow(dat_world)]),
-  v1 = sapply(2:nrow(dat_world), function(i){dat_world$`Australia and New Zealand`[i] - dat_world$`Australia and New Zealand`[i-1]}),
-  v2 = sapply(2:nrow(dat_world), function(i){dat_world$`Eastern Asia`[i] - dat_world$`Eastern Asia`[i-1]}),
-  v3 = sapply(2:nrow(dat_world), function(i){dat_world$`Northern America`[i] - dat_world$`Northern America`[i-1]}),
-  v4 = sapply(2:nrow(dat_world), function(i){dat_world$`Northern Europe`[i] - dat_world$`Northern Europe`[i-1]}),
-  v5 = sapply(2:nrow(dat_world), function(i){dat_world$`Western Europe`[i] - dat_world$`Western Europe`[i-1]})
-) %>% 
-  plot_ly(x = ~date, y = ~v1,
-          name = 'Australia and New Zealand',
-          type = 'bar', 
-          marker = list(color = '#E78AC3')#,
-          # text = ~n, 
-          # hovertemplate = paste('%{x}', '<br>人數: %{text:.s}<br>'),
-          # texttemplate = '%{y:.2s}',
-          # textposition = 'outside', 
-          # width = 0.2
-  ) %>% 
-  add_trace(y = ~v2, name = 'Eastern Asia', marker = list(color = '#66C2A5')) %>% 
-  add_trace(y = ~v3, name = 'Northern America', marker = list(color = '#FC8D62')) %>% 
-  add_trace(y = ~v4, name = 'Northern Europe', marker = list(color = '#8DA0CB')) %>% 
-  add_trace(y = ~v5, name = 'Western Europe', marker = list(color = '#A6D854')) %>% 
-  layout(uniformtext=list(minsize = Inf, mode='hide'),
-         xaxis = list(showline = F,
-                      fixedrange = T, 
-                      title = "Date"),
-         yaxis = list(fixedrange = T, 
-                      title = "Cases"),
-         # autosize = F,
-         legend = list(x = 0.4, y = 0.9))
-```
-
-
-Column {data-width=400}
------------------------------------------------------------------
-
-### Prediction Errors
+### Yesterday Prediction Errors
 
 ```{r}
 true <- dat1_tw$actual_cases[dat1_tw$date == now]
 pred <- dat2_tw$predict_cases[dat2_tw$date == (now-1)]
-valueBox(round(true - pred), icon = "fa-frown-open")
+valueBox(paste0(round(pred - true), " cases"), icon = "fa-ruler")
 ```
 
-### Growth Rate of Daily new confirmed cases (Taiwan)
+### Mean Absolute Prediction Error in last 7 days
 
 ```{r}
-true <- dat1_tw$actual_cases[dat1_tw$date == now]
-pred <- dat2_tw$predict_cases[dat2_tw$date == (now-1)]
-v <- (true - pred)/true
-valueBox(paste0(round(100*v, digits = 2), "%"), 
+mae <- 
+  dat2_tw_ %>% 
+  mutate(error = predict_cases-actual_cases) %>% 
+  tail(7) %>%  
+  summarise(mae=mean(abs(error), na.rm = TRUE)) %>% "[["("mae")
+
+valueBox(paste0(round(mae, 2), " cases"), icon = "fa-ruler")
+```
+
+### Growth Rate of Daily new confirmed cases in last 7 days
+
+```{r}
+rate <-
+  dat1_tw %>% 
+  mutate(rate=(actual_cases-lag(actual_cases))/actual_cases) %>% 
+  tail(7) %>% 
+  summarise(rate=mean(rate, na.rm = TRUE)) %>% "[["("rate")
+
+valueBox(paste0(round(100*rate, digits = 2), "%"), 
+         icon = "fa-chart-line")
+```
+
+### Growth Rate of Daily new confirmed cases in next 7 days
+
+```{r}
+rate <-
+  dat2_tw %>% 
+  tail(1) %>% 
+  select(-c(country, province, date, actual_cases)) %>% 
+  gather(key = "var", value="value") %>% 
+  mutate(rate=(value-lag(value))/value) %>% 
+  tail(7) %>% 
+  summarise(rate=mean(rate, na.rm = TRUE)) %>% "[["("rate")
+
+valueBox(paste0(round(100*rate, digits = 2), "%"), 
          icon = "fa-chart-line")
 ```
 
 
-### Daily new confirmed cases (Taiwan)
-
-```{r}
-d_tw <- data.frame(
-  date = as.Date(dat1_tw$date[2:nrow(dat1_tw)]),
-  n = sapply(2:nrow(dat1_tw), function(i){
-      dat1_tw$actual_cases[i] - dat1_tw$actual_cases[i-1]
-    }) 
-  ) 
-d_tw %>% 
-  plot_ly(x = ~date, y = ~n,
-          type = 'bar', 
-          marker = list(color = 'rgb(49,130,189)'),
-          text = ~n, 
-          hovertemplate = paste('%{x}', '<br>Cases: %{text:.s}<br>'),
-          texttemplate = '%{y:.2s}',
-          textposition = 'outside'
-          ) %>% 
-  layout(uniformtext=list(minsize = max(d_tw$n), mode='hide'),
-    xaxis = list(showline = F,
-                      fixedrange = T, 
-                      title = "Date"),
-         yaxis = list(fixedrange = T, 
-                      title = "Cases")) 
-```
-
-Selected Regions {data-orientation=rows}
-=====================================  
 
 Row
--------------------------------------
-    
-### Total Confirmed Cases (Taipei)
-    
-```{r}
-# Taipei
-d1 <- dat1_tw_c %>% 
-  filter(county == "台北市")
-d2 <- dat2_tw_c %>% 
-  filter(county == "台北市")
-cbind(
-  actual = ts(d1$actual_cases,
-              start = as.Date("2020-02-01"),
-              frequency = 1),
-  pred = ts(c(rep(NA, nrow(d1)-1), 
-              d1$actual_cases[d1$date == now],
-              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
-            start = as.Date("2020-02-01"),
-            frequency = 1)
-) %>%
-  dygraph(ylab = "Cases") %>% 
-  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
-            #RColorBrewer::brewer.pal(3, "Set2")
-            strokeWidth = 5)  
-```
- 
-### Total Confirmed Cases (New Taipei City)
-    
-```{r}
-# New Taipei City
-d1 <- dat1_tw_c %>% 
-  filter(county == "新北市")
-d2 <- dat2_tw_c %>% 
-  filter(county == "新北市")
-cbind(
-  actual = ts(d1$actual_cases,
-              start = as.Date("2020-02-01"),
-              frequency = 1),
-  pred = ts(c(rep(NA, nrow(d1)-1), 
-              d1$actual_cases[d1$date == now],
-              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
-            start = as.Date("2020-02-01"),
-            frequency = 1)
-) %>%
-  dygraph(ylab = "Cases") %>% 
-  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
-            #RColorBrewer::brewer.pal(3, "Set2")
-            strokeWidth = 5)  
-``` 
+-----------------------------------------------------------------
 
-Row
--------------------------------------
-    
-### Total Confirmed Cases (Taoyuan)
-    
-```{r}
-# Taoyuan
-d1 <- dat1_tw_c %>% 
-  filter(county == "桃園市")
-d2 <- dat2_tw_c %>% 
-  filter(county == "桃園市")
-cbind(
-  actual = ts(d1$actual_cases,
-              start = as.Date("2020-02-01"),
-              frequency = 1),
-  pred = ts(c(rep(NA, nrow(d1)-1), 
-              d1$actual_cases[d1$date == now],
-              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
-            start = as.Date("2020-02-01"),
-            frequency = 1)
-) %>%
-  dygraph(ylab = "Cases") %>% 
-  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
-            #RColorBrewer::brewer.pal(3, "Set2")
-            strokeWidth = 5)  
-```
-    
-### Total Confirmed Cases (Taichung)
+### Total and New Confirmed Cases (Taiwan) {data-width=600}
 
 ```{r}
-# Taichung
-d1 <- dat1_tw_c %>% 
-  filter(county == "台中市")
-d2 <- dat2_tw_c %>% 
-  filter(county == "台中市")
-cbind(
-  actual = ts(d1$actual_cases,
-              start = as.Date("2020-02-01"),
-              frequency = 1),
-  pred = ts(c(rep(NA, nrow(d1)-1), 
-              d1$actual_cases[d1$date == now],
-              d2[d2$date == (now), c(4:10)] %>% unlist() %>% unname()),
-            start = as.Date("2020-02-01"),
-            frequency = 1)
-) %>%
+startDate <- as.Date(min(dat1_tw$date))
+
+df <- 
+  data.frame(actual=c(dat1_tw$actual_cases, rep(NA, 7)),
+             new = c(1, sapply(2:nrow(dat1_tw), function(i){
+               dat1_tw$actual_cases[i] - dat1_tw$actual_cases[i-1]
+               }), rep(NA, 7)),
+             forecast=c(rep(NA, nrow(dat1_tw)-1),
+               dat2_tw[dat2_tw$date == now, c(4:11)] %>% unlist() %>% unname())) %>%
+  mutate(forecast_new = forecast - max(actual, na.rm = TRUE)) 
+
+df[["forecast_new"]][dat1_tw$date == now] <- NA
+
+df <- df %>%  ts(start = as.Date(startDate), frequency = 1)
+col <- c("#66c2a5", "#c27766", "#6683c2", "#a566c2")
+
+df %>%
   dygraph(ylab = "Cases") %>% 
-  dyOptions(colors = c("#66C2A5", "#FC8D62", "#8DA0CB"),
-            #RColorBrewer::brewer.pal(3, "Set2")
-            strokeWidth = 5)  
+  dySeries("actual", label = "Total") %>%
+  dySeries("forecast", label = "Total (forecasts)", strokePattern = "dashed") %>% 
+  dyBarSeries("new", label = "New") %>% 
+  dyBarSeries("forecast_new", label="New (forecasts)") %>% 
+  dyLegend(labelsSeparateLines = TRUE) %>% 
+  dyRangeSelector(dateWindow = c(as.Date(format(now-14)), as.Date(now+7))) %>% 
+  dyOptions(colors = col, strokeWidth = 3) 
 ```
 
+
+### Daily New Confirmed Cases (Taiwan) {data-width=400}
+
+```{r}
+min_value <- min(dat2_tw$actual_cases)
+max_value <- max(dat2_tw$predict_cases_6)
+
+df2 <- dat2_tw_ %>%
+  mutate(predict_cases=actual_cases) %>% 
+  gather(key="key", value="value", -c("country", "province","date","actual_cases")) %>% 
+  group_by(country, province, date, actual_cases) %>% 
+  summarise(
+    forecast_trend = spk_chr(value, type="line", width=125,
+                  chartRangeMin=min_value, chartRangeMax=max_value)
+  ) %>% ungroup() %>% 
+  mutate(new_cases=actual_cases-lag(actual_cases)) %>% 
+  mutate(country=factor(country), 
+         province=factor(province), 
+         date=as.Date(date)) %>% 
+  mutate(country=ifelse(country=="taiwan*", "Taiwan", country)) %>% 
+  arrange(desc(date)) %>% 
+  select(`Country` = country, 
+         `Date` = date, 
+         `New cases` = new_cases, 
+         `Total cases` = actual_cases,
+         `Forecasts trend` = forecast_trend)
+  
+cb <- htmlwidgets::JS('function(){debugger;HTMLWidgets.staticRender();}')
+
+d1 <- datatable(df2, rownames = FALSE, escape = FALSE,
+                options = list(dom = "t", paging = FALSE, fnDrawCallback=cb))
+spk_add_deps(d1)
+```
