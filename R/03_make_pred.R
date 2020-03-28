@@ -44,7 +44,7 @@ tryCatch({
   write.table(pred, "data/Stage2/Stage2_worldwide_pred.csv",
               sep = ",", col.names = !file.exists("data/Stage2/Stage2_worldwide_pred.csv"),
               row.names = FALSE,
-              append = T)
+              append = TRUE)
   log_info("The Stage2_worldwide_pred.csv has been up to date.")
 }, 
 error=function(e){
@@ -76,8 +76,14 @@ tryCatch({
   write.table(pred, "data/Stage2/Stage2_tw_pred.csv",
               sep = ",", col.names = !file.exists("data/Stage2/Stage2_tw_pred.csv"),
               row.names = FALSE,
-              append = T)
+              append = TRUE)
   log_info("The Stage2_tw_pred has been up to date.")
+  
+  write.table(pred, "data/Stage2/Stage2_tw_pred_caches.csv",
+              sep = ",", col.names = !file.exists("data/Stage2/Stage2_tw_pred_caches.csv"),
+              row.names = FALSE,
+              append = TRUE)
+  log_info("The Stage2_tw_pred_caches has been up to date.")
 }, 
 error=function(e){
   log_info("Already up to date. There is no change for Stage2_tw_pred.")
@@ -105,14 +111,15 @@ tryCatch({
   # append today's forecast
   lastDate <- max(as.Date(out$date))
   pred <- pred_func(lastDate)
-  pred <- pred_func(lastDate)
   # county, date, actual_cases, 
   # predict_cases, predict_cases_1, predict_cases_2, 
   # predict_cases_3, predict_cases_4, predict_cases_5, predict_cases_6
   write.table(pred, "data/Stage2/Stage2_tw_county_pred.csv",
               sep = ",", col.names = !file.exists("data/Stage2/Stage2_tw_county_pred.csv"),
               row.names = FALSE,
-              append = T)
+              append = TRUE)
+  
+  
   log_info("The Stage2_tw_pred has been up to date.")
 }, 
 error=function(e){
