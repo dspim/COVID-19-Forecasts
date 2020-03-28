@@ -1,4 +1,4 @@
-"country","province","date","actual_cases","predict_cases","predict_cases_1","predict_cases_2","predict_cases_3","predict_cases_4","predict_cases_5","predict_cases_6"
+"country","province","date","actual_cases","predict_cases","predict_cases_2","predict_cases_3","predict_cases_4","predict_cases_5","predict_cases_6","predict_cases_7"
 "afghanistan",NA,2020-03-25,84,86.46,87.47,87.88,88.05,88.12,88.15,88.16
 "albania",NA,2020-03-25,146,159.79,173.57,187.34,201.1,214.85,228.59,242.32
 "algeria",NA,2020-03-25,302,324.79,347.57,370.34,393.1,415.85,438.59,461.32
