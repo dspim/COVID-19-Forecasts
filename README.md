@@ -58,7 +58,6 @@ Rscript R/04_makeDashboard.R
 5. Open dashboard file (`index.html`)
 
 ### Hack the prediction algorithm
-
 - Create a prediction function like  `Pred.Chao()` in `"./R/main.R Line 77-92"`  
 - Modified `calPred()` in `"./R/main.R Line 55-58"`
 
@@ -66,8 +65,9 @@ Rscript R/04_makeDashboard.R
 Every health authority of governments can benefit from our solution. In addition, it provides epidemiologists around the world to collaborate with. They could fork this github repository, change country views or algorithms. This dashboard could run automatically.
 
 ### What's next for COVID-19 Prediction on Confirmed Case
-Develop local versions and assist local governments in using this tool.
-Promote projects to allow more scientists to collaborate.
+- Develop local versions and assist local governments in using this tool.
+- Promote projects to allow more scientists to collaborate.
+- Just finished the web crawler from Taiwan CDC, we are going to develop regional (city-based) dashboard in Taiwan.
 
 ### Credits
 - Johnson Hsieh (johnson@dsp.im)
@@ -76,4 +76,3 @@ Promote projects to allow more scientists to collaborate.
 
 ### License
 [The MIT License (MIT)](https://github.com/dspim/COVID-19-Forecasts/blob/master/LICENSE)
-
