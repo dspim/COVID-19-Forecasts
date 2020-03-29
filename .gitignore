@@ -33,3 +33,4 @@ vignettes/*.pdf
 .Rbuildignore
 DESCRIPTION
 ._*.Rmd
+index_draft.Rmd

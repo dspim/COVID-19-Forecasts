@@ -32,7 +32,7 @@ getData_ <- function(raw, row=1, type="cases"){
   dat
 }
 
-Pred.Chao <- function(x, m, B=9){
+Pred.Chao <- function(x, m, B=17){
   # Chao 1987
   n <- length(x)
   Q1 <- (x[n]-x[n-1]) * B
