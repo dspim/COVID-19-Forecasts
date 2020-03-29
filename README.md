@@ -1,10 +1,8 @@
 # COVID-19 Prediction on Confirmed Case
 [![Build Status](https://travis-ci.org/dspim/COVID-19-Forecasts.svg?branch=master)](https://travis-ci.org/dspim/COVID-19-Forecasts)
 
-### Dashboard
-
-![COVID-19 prediction on confirmed case (Taiwan)](https://github.com/dspim/COVID-19-Forecasts/raw/master/snapshot.png "COVID-19 prediction on confirmed case (Taiwan)")
-https://dspim.github.io/COVID-19-Forecasts/  
+![COVID-19 prediction on confirmed case (Taiwan)](https://github.com/dspim/COVID-19-Forecasts/raw/master/snapshot.png "COVID-19 prediction on confirmed case (Taiwan)")  
+https://dspim.github.io/COVID-19-Forecasts/
 
 ### About this project
 As the epidemic continues to develop, health authorities in various countries around the world need to to stay on top of medical resources and the development of the disease.
@@ -17,7 +15,7 @@ The dashboard is divided into several large blocks. First of all, users can quic
 The same method can be extended to the whole world. We have made predictions of epidemic development in various regions and countries around the world.
 
 ### How did you address this problem
-The forecasting algorithm is the key element of the whole project. In this version, we used ecological rarefaction and extrapolation methods to build the algorithm. [ref1, ref2]. 
+The forecasting algorithm is the key element of the whole project. In this version, we used ecological rarefaction and extrapolation methods to build the algorithm. 
 
 We also design a plug-in framework for scientists who would like to use their prediction methods to replace our default forecasts. 
 
@@ -73,24 +71,4 @@ Every health authority of governments can benefit from our solution. In addition
 - [DSP, Inc.](https://dsp.im) a data driven consulting company based in Taiwan
 
 ### License
-The MIT License (MIT)
-
-Copyright (c) 2020 DSP, Inc.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[The MIT License (MIT)](https://github.com/dspim/COVID-19-Forecasts/blob/master/LICENSE)
