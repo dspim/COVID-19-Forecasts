@@ -6,6 +6,7 @@ Imports:
     dplyr,
     tidyr,
     jsonlite,
+    htmlwidgets,
     dygraphs,
     flexdashboard,
     plotly,
@@ -16,4 +17,6 @@ Imports:
     xml2,
     httr,
     sparkline,
-    DT
+    DT,
+    ggplot,
+    viridisLite
