@@ -43,6 +43,7 @@ r$country <- r$country %>% tolower()
 now <- max(as.Date(dat2_global$date))
 ```
 
+
 Tawian
 =====================================  
 
@@ -52,6 +53,7 @@ Row
 ### Yesterday Prediction Errors
 
 ```{r}
+now <- max(as.Date(dat2_tw$date))
 true <- dat1_tw$actual_cases[dat1_tw$date == now]
 pred <- dat2_tw$predict_cases[dat2_tw$date == (now-1)]
 valueBox(paste0(round(pred - true), " cases"), icon = "fa-ruler")
@@ -165,4 +167,137 @@ cb <- htmlwidgets::JS('function(){debugger;HTMLWidgets.staticRender();}')
 d1 <- datatable(df2, rownames = FALSE, escape = FALSE,
                 options = list(dom = "t", paging = FALSE, fnDrawCallback=cb))
 spk_add_deps(d1)
+```
+
+Global
+=====================================  
+```{r}
+startDate <- as.Date(min(dat1_global$date))
+now <- max(as.Date(dat1_global$date))
+
+dat1_global_ <- dat1_global %>% 
+  mutate(date=as.Date(date)) %>% 
+  group_by(country, date) %>% 
+  summarise(actual_cases=sum(actual_cases, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  left_join(r, by="country")
+
+dat_region <- dat1_global_ %>%
+  select(date, sub.region, actual_cases) %>% 
+  group_by(date, sub.region) %>% 
+  summarise(actual_cases = sum(actual_cases, na.rm = TRUE))
+
+lab <-
+  dat_region %>% 
+  filter(date==now) %>% 
+  arrange(desc(actual_cases)) %>% 
+  "[["("sub.region")
+
+dat_region$sub.region <- factor(dat_region$sub.region, lab)
+```
+
+Row
+-----------------------------------------------------------------
+### Total confirmed cases
+```{r}
+value <- dat_region %>% 
+  filter(date==now) %>% 
+  "[["("actual_cases") %>% sum(na.rm = TRUE)
+
+value <- format(value, big.mark=",", scientific=FALSE)
+valueBox(value, caption = "Total Cases", icon="fa-upload")
+```
+
+### New confirmed cases
+```{r}
+value <- dat_region %>% 
+  filter(between(date, now-1, now)) %>%
+  group_by(date) %>% 
+  summarise(actual_cases=sum(actual_cases, na.rm = TRUE)) %>% 
+  "[["("actual_cases") %>% diff
+
+value <- format(value, big.mark=",", scientific=FALSE)
+
+valueBox(value, caption = "New Cases", icon="fa-upload")
+```
+
+### Growth Factor of Daily New Cases
+```{r}
+value <- dat_region %>% 
+  filter(between(date, now-2, now)) %>%
+  group_by(date) %>% 
+  summarise(actual_cases=sum(actual_cases, na.rm = TRUE)) %>% 
+  "[["("actual_cases") %>% diff %>% log %>% diff %>% exp %>% round(3)
+
+valueBox(value, caption = "Growth Factor of Daily New Cases", icon="fa-edit")
+```
+
+### Number of Countries
+```{r}
+value <- dat1_global_ %>% 
+  filter(date==now) %>%
+  summarise(count=sum(country>0)) %>% "[["("count")
+
+value <- format(value, big.mark=",", scientific=FALSE)
+
+valueBox(value, caption = "Number of Countries", icon="fa-flag")
+```
+
+Row
+-----------------------------------------------------------------
+
+### Total and New Confirmed Cases (Worldwide) {data-width=600}
+
+```{r}
+dat_region_ <- dat_region %>% 
+  transmute(`Date`=date,
+            `Sub region` = sub.region,
+            `Total cases (log10 scale)` = round(log10(actual_cases+1),3))
+
+g <- 
+ggplot(dat_region_, aes(x=`Date`, y=`Total cases (log10 scale)`, fill=`Sub region`)) +
+  geom_area(position = 'stack') +
+  scale_x_date() + 
+  labs(x="Date", y="Cumulative number of confirmed cases \n(Logarithmic scale)", fill="Sub Region") +
+  scale_fill_viridis_d()
+
+ggplotly(g)
+```
+
+### Daily New Confirmed Cases (Worldwide) {data-width=400}
+
+```{r}
+# min_value <- min(dat2_global$actual_cases)
+# max_value <- max(dat2_global$predict_cases_7)
+
+dat1_global_ <- dat1_global %>% 
+  mutate(date=as.Date(date)) %>% 
+  group_by(country, date) %>% 
+  summarise_if(is.numeric, sum, na.rm = TRUE) %>% 
+  ungroup() %>% 
+  left_join(r, by="country")
+
+tab <- dat1_global_ %>%
+  mutate(country=country,
+         region=factor(region),
+         sub.region=factor(sub.region, lab),
+         date=as.Date(date)) %>%
+  arrange(country, date) %>% 
+  group_by(country) %>% 
+  mutate(new_cases=actual_cases-lag(actual_cases)) %>%
+  mutate(growth_factor=round(new_cases/lag(new_cases+1),3)) %>%
+  mutate(growth_factor=ifelse(growth_factor<0, 0, growth_factor)) %>%
+  filter(date==now) %>%
+  arrange(sub.region, desc(actual_cases)) %>%
+  select(`Country` = country,
+         #`Region` = region,
+         `Sub region` = sub.region,
+         `Date` = date,
+         `Total cases` = actual_cases,
+         `New cases` = new_cases,
+         `Groth factor` = growth_factor
+         )
+
+datatable(tab, rownames = FALSE, escape = FALSE,
+          options = list(dom = "t", paging = FALSE))
 ```
