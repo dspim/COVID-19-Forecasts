@@ -9,6 +9,7 @@ output:
 ---
   
 ```{r setup, include=FALSE}
+remotes::install_github("ramnathv/htmlwidgets", force = TRUE)
 library(plotly)
 library(tidyr)
 library(dplyr)
