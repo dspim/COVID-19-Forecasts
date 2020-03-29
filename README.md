@@ -1,8 +1,8 @@
 # COVID-19 Prediction on Confirmed Case
 [![Build Status](https://travis-ci.org/dspim/COVID-19-Forecasts.svg?branch=master)](https://travis-ci.org/dspim/COVID-19-Forecasts)
 
-![COVID-19 prediction on confirmed case (Taiwan)](https://github.com/dspim/COVID-19-Forecasts/raw/master/snapshot.png "COVID-19 prediction on confirmed case (Taiwan)")
-https://dspim.github.io/COVID-19-Forecasts/ 
+![COVID-19 prediction on confirmed case (Taiwan)](https://github.com/dspim/COVID-19-Forecasts/raw/master/snapshot.png "COVID-19 prediction on confirmed case (Taiwan)")  
+https://dspim.github.io/COVID-19-Forecasts/
 
 ### About this project
 As the epidemic continues to develop, health authorities in various countries around the world need to to stay on top of medical resources and the development of the disease.
@@ -15,7 +15,7 @@ The dashboard is divided into several large blocks. First of all, users can quic
 The same method can be extended to the whole world. We have made predictions of epidemic development in various regions and countries around the world.
 
 ### How did you address this problem
-The forecasting algorithm is the key element of the whole project. In this version, we used ecological rarefaction and extrapolation methods to build the algorithm. 
+The forecasting algorithm is the key element of the whole project. In this version, we used ecological rarefaction and extrapolation methods to build the algorithm.
 
 We also design a plug-in framework for scientists who would like to use their prediction methods to replace our default forecasts. 
 
@@ -65,6 +65,10 @@ Rscript R/04_makeDashboard.R
 ### Who (or what organizations) could potentially benefit from your solution?
 Every health authority of governments can benefit from our solution. In addition, it provides epidemiologists around the world to collaborate with. They could fork this github repository, change country views or algorithms. This dashboard could run automatically.
 
+### What's next for COVID-19 Prediction on Confirmed Case
+Develop local versions and assist local governments in using this tool.
+Promote projects to allow more scientists to collaborate.
+
 ### Credits
 - Johnson Hsieh (johnson@dsp.im)
 - Chen En Li (leslie.li@dsp.im)
@@ -72,3 +76,4 @@ Every health authority of governments can benefit from our solution. In addition
 
 ### License
 [The MIT License (MIT)](https://github.com/dspim/COVID-19-Forecasts/blob/master/LICENSE)
+
