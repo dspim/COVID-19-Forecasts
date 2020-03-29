@@ -50,16 +50,18 @@ Tawian
 Row
 -----------------------------------------------------------------
 
-### Yesterday Prediction Errors
+### Bias
 
 ```{r}
 now <- max(as.Date(dat2_tw$date))
 true <- dat1_tw$actual_cases[dat1_tw$date == now]
 pred <- dat2_tw$predict_cases[dat2_tw$date == (now-1)]
-valueBox(paste0(round(pred - true), " cases"), icon = "fa-ruler")
+valueBox(paste0(round(pred - true), " cases"), 
+         caption = "Yesterday Prediction Errors",
+         icon = "fa-ruler")
 ```
 
-### Mean Absolute Prediction Error in last 7 days
+### MAE
 
 ```{r}
 mae <- 
@@ -68,23 +70,30 @@ mae <-
   tail(7) %>%  
   summarise(mae=mean(abs(error), na.rm = TRUE)) %>% "[["("mae")
 
-valueBox(paste0(round(mae, 2), " cases"), icon = "fa-ruler")
+valueBox(paste0(round(mae, 2), " cases"), 
+         caption = "Mean Absolute Prediction Error in last 7 days",
+         icon = "fa-ruler")
 ```
 
-### Growth Rate of Daily new confirmed cases in last 7 days
+### Growth Factor of Daily New Cases
 
 ```{r}
-rate <-
-  dat1_tw %>% 
-  mutate(rate=(actual_cases-lag(actual_cases))/actual_cases) %>% 
-  tail(7) %>% 
-  summarise(rate=mean(rate, na.rm = TRUE)) %>% "[["("rate")
+value <- dat1_tw %>% 
+  filter(between(as.Date(date), now-2, now)) %>% 
+  "[["("actual_cases") %>% diff %>% log %>% diff %>% exp %>% round(3)
 
-valueBox(paste0(round(100*rate, digits = 2), "%"), 
-         icon = "fa-chart-line")
+valueBox(value, caption = "Growth Factor of Daily New Cases <br><small> (today confiremd cases) / (yesterday confiremd cases) </small>", icon="fa-edit")
+# rate <-
+#   dat1_tw %>% 
+#   mutate(rate=(actual_cases-lag(actual_cases))/actual_cases) %>% 
+#   tail(7) %>% 
+#   summarise(rate=mean(rate, na.rm = TRUE)) %>% "[["("rate")
+# 
+# valueBox(paste0(round(100*rate, digits = 2), "%"), 
+#          icon = "fa-chart-line")
 ```
 
-### Growth Rate of Daily new confirmed cases in next 7 days
+### Growth Rate
 
 ```{r}
 rate <-
@@ -97,6 +106,7 @@ rate <-
   summarise(rate=mean(rate, na.rm = TRUE)) %>% "[["("rate")
 
 valueBox(paste0(round(100*rate, digits = 2), "%"), 
+         caption="Growth Rate of Daily New Cases in next 7 days",
          icon = "fa-chart-line")
 ```
 
@@ -117,7 +127,7 @@ df <-
                }), rep(NA, 7)),
              forecast=c(rep(NA, nrow(dat1_tw)-1),
                dat2_tw[dat2_tw$date == now, c(4:11)] %>% unlist() %>% unname())) %>%
-  mutate(forecast_new = forecast - max(actual, na.rm = TRUE)) 
+  mutate(forecast_new = forecast - lag(forecast)) 
 
 df[["forecast_new"]][dat1_tw$date == now] <- NA
 
@@ -229,7 +239,7 @@ value <- dat_region %>%
   summarise(actual_cases=sum(actual_cases, na.rm = TRUE)) %>% 
   "[["("actual_cases") %>% diff %>% log %>% diff %>% exp %>% round(3)
 
-valueBox(value, caption = "Growth Factor of Daily New Cases", icon="fa-edit")
+valueBox(value, caption = "Growth Factor of Daily New Cases <br><small> (today confiremd cases) / (yesterday confiremd cases) </small>", icon="fa-edit")
 ```
 
 ### Number of Countries
