@@ -14,6 +14,7 @@ library(tidyr)
 library(dplyr)
 library(ggplot2)
 library(viridisLite)
+library(htmlwidgets)
 library(dygraphs)
 library(DT)
 library(sparkline)
@@ -38,7 +39,8 @@ r <- read.csv("data/country_region.csv", stringsAsFactors = FALSE) %>%
 r$country <- r$country %>% tolower()
 
 # now <- Sys.Date()-1
-now <- as.Date("2020-03-26")
+# now <- as.Date("2020-03-26")
+now <- max(as.Date(dat2_global$date))
 ```
 
 Tawian
