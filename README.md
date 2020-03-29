@@ -1,8 +1,8 @@
 # COVID-19 Prediction on Confirmed Case
 [![Build Status](https://travis-ci.org/dspim/COVID-19-Forecasts.svg?branch=master)](https://travis-ci.org/dspim/COVID-19-Forecasts)
 
-![COVID-19 prediction on confirmed case (Taiwan)](https://github.com/dspim/COVID-19-Forecasts/raw/master/snapshot.png "COVID-19 prediction on confirmed case (Taiwan)")
-https://dspim.github.io/COVID-19-Forecasts/ 
+![COVID-19 prediction on confirmed case (Taiwan)](https://github.com/dspim/COVID-19-Forecasts/raw/master/snapshot.png "COVID-19 prediction on confirmed case (Taiwan)")  
+https://dspim.github.io/COVID-19-Forecasts/
 
 ### About this project
 As the epidemic continues to develop, health authorities in various countries around the world need to to stay on top of medical resources and the development of the disease.
