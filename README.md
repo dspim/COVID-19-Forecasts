@@ -15,7 +15,7 @@ The dashboard is divided into several large blocks. First of all, users can quic
 The same method can be extended to the whole world. We have made predictions of epidemic development in various regions and countries around the world.
 
 ### How did you address this problem
-The forecasting algorithm is the key element of the whole project. In this version, we used ecological rarefaction and extrapolation methods to build the algorithm. 
+The forecasting algorithm is the key element of the whole project. In this version, we used ecological rarefaction and extrapolation methods to build the algorithm.
 
 We also design a plug-in framework for scientists who would like to use their prediction methods to replace our default forecasts. 
 
@@ -58,12 +58,16 @@ Rscript R/04_makeDashboard.R
 5. Open dashboard file (`index.html`)
 
 ### Hack the prediction algorithm
-
 - Create a prediction function like  `Pred.Chao()` in `"./R/main.R Line 77-92"`  
 - Modified `calPred()` in `"./R/main.R Line 55-58"`
 
 ### Who (or what organizations) could potentially benefit from your solution?
 Every health authority of governments can benefit from our solution. In addition, it provides epidemiologists around the world to collaborate with. They could fork this github repository, change country views or algorithms. This dashboard could run automatically.
+
+### What's next for COVID-19 Prediction on Confirmed Case
+- Develop local versions and assist local governments in using this tool.
+- Promote projects to allow more scientists to collaborate.
+- Just finished the web crawler from Taiwan CDC, we are going to develop regional (city-based) dashboard in Taiwan.
 
 ### Credits
 - Johnson Hsieh (johnson@dsp.im)
