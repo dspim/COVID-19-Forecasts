@@ -32,19 +32,6 @@ getData_ <- function(raw, row=1, type="cases"){
   dat
 }
 
-Pred.Chao <- function(x, m, B=17){
-  # Chao 1987
-  n <- length(x)
-  Q1 <- (x[n]-x[n-1]) * B
-  Q2 <- ((x[n-1]-x[n-2]) - (x[n]-x[n-1])) * choose(B,2)
-  
-  Q0 <- ifelse(Q2>0, (B-1)/B*Q1^2/2/Q2, (B-1)/B*Q1*(Q1-1)/2)
-  Sobs <- x[n]
-  a <- ifelse(Q1==0, 0, Q1/(n*Q0+Q1))
-  Sm <- sapply(m, function(m) {Sobs + Q0*(1-(1-a)^m)})
-  Sm
-}
-
 
 calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao", 
                     data_source=NULL){
@@ -65,6 +52,7 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao",
   dat_ <- dat %>% 
     filter(between(date, startDate, endDate)) 
   
+  # Change forecast method here
   if(method=="Chao"){
     pred <- Pred.Chao(dat_$actual_cases, m=1:7)
   }
@@ -84,4 +72,21 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao",
   }
 
   return(out)
+}
+
+#' Chao2 richness estimator and its extrapolation
+#' @param x a vector of daily cumulative confirmed cases (default is last 14 days).
+#' @param m a vector of periods for forecasting (default is 0:7 days)
+#' @param B a tuning parameter adjust from Hsieh, Ma and Chao (2016)
+Pred.Chao <- function(x, m=0:7, B=17){
+  # Chao 1987
+  n <- length(x)
+  Q1 <- (x[n]-x[n-1]) * B
+  Q2 <- ((x[n-1]-x[n-2]) - (x[n]-x[n-1])) * choose(B,2)
+  
+  Q0 <- ifelse(Q2>0, (B-1)/B*Q1^2/2/Q2, (B-1)/B*Q1*(Q1-1)/2)
+  Sobs <- x[n]
+  a <- ifelse(Q1==0, 0, Q1/(n*Q0+Q1))
+  Sm <- sapply(m, function(m) {Sobs + Q0*(1-(1-a)^m)})
+  Sm
 }
