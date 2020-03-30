@@ -5,21 +5,25 @@
 https://dspim.github.io/COVID-19-Forecasts/
 
 ### About this project
-As the epidemic continues to develop, health authorities in various countries around the world need to to stay on top of medical resources and the development of the disease.
+As the COVID-19 pandemic continues to grow, health authorities need to have a better understanding of future epidemic development in order to execute proper non-medical interventions and optimize the allocation of critical medical resources.
 
-In view of this, we have used ecological statistical methods to make daily prediction model for the number of confirmed diagnoses and make epidemic forecasting for countries around the world. It not only provide policy reference for government agencies' epidemic prevention deployment, but also provides epidemiologists around the world to collaborate with.
+In view of this, we applied statistical methods to predict daily confirmed cases in infected countries. 
 
 ### What are sample use cases
-The dashboard is divided into several large blocks. First of all, users can quickly view the trend of total and new confirmed cases, as well as the development of our predicted epidemic situation. The block on the right side can check the daily information and forecast situation. The four blocks above are the algorithm's accuracy monitoring indicators and the epidemic growth trend indicators.
+Our project has two main outputs: a country-level prediction model for confirmed cases and a dashboard for demonstrating prediction results.
 
-The same method can be extended to the whole world. We have made predictions of epidemic development in various regions and countries around the world.
+First, since this statistical model covers all infected countries, health authorities and medical institutions around the world can use these predictions for executing proper non-medical interventions and medical resource planning.
+
+Secondly, epidemic modelers can either replace the included prediction model with their own models or enhance their models with the included one. In both cases, the modellers can use the dashboard for model output and as the user interface.
 
 ### How did you address this problem
-The forecasting algorithm is the key element of the whole project. In this version, we used ecological rarefaction and extrapolation methods to build the algorithm.
+We developed a country-level prediction model for confirmed cases, based on daily epidemic updates from trustworthy data sources.
 
-We also design a plug-in framework for scientists who would like to use their prediction methods to replace our default forecasts. 
+We also provided a dashboard to display real-time case statistics, model results and prediction performance over time. 
 
-This project is a  serverless architecture. We use CI tools to get data, compute forecasting, and deploy the dashboard everyday.
+We have designed this system for use in all countries. 
+
+All source code can be downloaded on Github. (https://dspim.github.io/COVID-19-Forecasts/)
 
 ### How I bulit it
 - [R](https://www.r-project.org) + [R Markdown](https://rmarkdown.rstudio.com) + [GitHub](https://github.com) + [Travis CI](https://travis-ci.org)
@@ -62,12 +66,16 @@ Rscript R/04_makeDashboard.R
 - Modified `calPred()` in `"./R/main.R Line 55-58"`
 
 ### Who (or what organizations) could potentially benefit from your solution?
-Every health authority of governments can benefit from our solution. In addition, it provides epidemiologists around the world to collaborate with. They could fork this github repository, change country views or algorithms. This dashboard could run automatically.
+We are data scientists, not epidemonist. We have crunched the numbers and produced a data-driven epidemic prediction model. 
+
+We hope health authority and medical institutions around the world can use our project for decision support, such as executing proper non-medical interventions and optimizing the allocation of critical medical resources.
 
 ### What's next for COVID-19 Prediction on Confirmed Case
-- Develop local versions and assist local governments in using this tool.
-- Promote projects to allow more scientists to collaborate.
-- Just finished the web crawler from Taiwan CDC, we are going to develop regional (city-based) dashboard in Taiwan.
+- Develop subnational (city) level prediction models.
+- Hopefully, assist local authorities in decision making for epidemic risk management.
+- Encourage data scientists and/or epidemonists around the world to collaborate by using this system to improve their own prediction models.
+
+
 
 ### Credits
 - Johnson Hsieh (johnson@dsp.im)
