@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 Prediciton on Confirmed Case"
+title: "COVID-19 Prediciton for Confirmed Cases"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows

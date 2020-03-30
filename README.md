@@ -1,4 +1,4 @@
-# COVID-19 Prediction on Confirmed Case
+# COVID-19 Prediction for Confirmed Cases
 [![Build Status](https://travis-ci.org/dspim/COVID-19-Forecasts.svg?branch=master)](https://travis-ci.org/dspim/COVID-19-Forecasts)
 
 ![COVID-19 prediction on confirmed case (Taiwan)](https://github.com/dspim/COVID-19-Forecasts/raw/master/snapshot.png "COVID-19 prediction on confirmed case (Taiwan)")  
