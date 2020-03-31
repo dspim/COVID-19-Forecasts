@@ -12,7 +12,7 @@ out <- foreach(j=1:nrow(raw), .combine = rbind) %do% {
 write.csv(out, file = "data/Stage1/Stage1_NovelCovid_worldwide.csv", row.names = FALSE)
 
 # Stage1_NovelCovid_tw
-dat <- getData(raw, country_ = "taiwan*", province_ = NA, type = "cases") %>% 
+dat <- getData(raw, country_ = "Taiwan*", province_ = NA, type = "cases") %>% 
   distinct()
 # country, province, date, actual_cases
 write.csv(dat, file = "data/Stage1/Stage1_NovelCovid_tw.csv", row.names = FALSE)
