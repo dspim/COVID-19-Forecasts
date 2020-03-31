@@ -37,7 +37,7 @@ dat2_tw_ <- bind_rows(dat2_tw, tmp) %>% distinct() %>%
 r <- read.csv("data/country_region.csv", stringsAsFactors = FALSE) %>% 
   rename("country" = "name") %>% 
   select(country, region, sub.region)
-r$country <- r$country %>% tolower()
+# r$country <- r$country %>% tolower()
 
 # now <- Sys.Date()-1
 # now <- as.Date("2020-03-26")
@@ -162,7 +162,8 @@ df2 <- dat2_tw_ %>%
                   chartRangeMin=min_value, chartRangeMax=max_value)
   ) %>% ungroup() %>% 
   mutate(new_cases=actual_cases-lag(actual_cases)) %>% 
-  mutate(country=factor(country), 
+  mutate(country=as.character(country), 
+         # country=factor(country), 
          province=factor(province), 
          date=as.Date(date)) %>% 
   mutate(country=ifelse(country=="taiwan*", "Taiwan", country)) %>% 
@@ -198,8 +199,7 @@ dat_region <- dat1_global_ %>%
   group_by(date, sub.region) %>% 
   summarise(actual_cases = sum(actual_cases, na.rm = TRUE))
 
-lab <-
-  dat_region %>% 
+lab <- dat_region %>% 
   filter(date==now) %>% 
   arrange(desc(actual_cases)) %>% 
   "[["("sub.region")
@@ -265,8 +265,7 @@ dat_region_ <- dat_region %>%
             `Sub region` = sub.region,
             `Total cases (log10 scale)` = round(log10(actual_cases+1),3))
 
-g <- 
-ggplot(dat_region_, aes(x=`Date`, y=`Total cases (log10 scale)`, fill=`Sub region`)) +
+g <- ggplot(dat_region_, aes(x=`Date`, y=`Total cases (log10 scale)`, fill=`Sub region`)) +
   geom_area(position = 'stack') +
   scale_x_date() + 
   labs(x="Date", y="Cumulative number of confirmed cases \n(Logarithmic scale)", fill="Sub Region") +
@@ -306,7 +305,7 @@ tab <- dat1_global_ %>%
          `Date` = date,
          `Total cases` = actual_cases,
          `New cases` = new_cases,
-         `Groth factor` = growth_factor
+         `Growth factor` = growth_factor
          )
 
 datatable(tab, rownames = FALSE, escape = FALSE,
