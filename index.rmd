@@ -9,7 +9,11 @@ output:
 ---
   
 ```{r setup, include=FALSE}
-remotes::install_github("ramnathv/htmlwidgets", force = TRUE)
+list.of.packages <- c("htmlwidgets")
+new.packages <- list.of.packages[!("htmlwidgets" %in% installed.packages()[,"Package"])]
+if(length(new.packages)){
+  remotes::install_github("ramnathv/htmlwidgets", force = TRUE)
+} 
 library(plotly)
 library(tidyr)
 library(dplyr)
@@ -20,7 +24,6 @@ library(dygraphs)
 library(DT)
 library(sparkline)
 library(flexdashboard)
-
 
 dat1_global <- read.csv("data/Stage1/Stage1_NovelCovid_worldwide.csv", stringsAsFactors = FALSE) 
 dat1_tw <- read.csv("data/Stage1/Stage1_NovelCovid_tw.csv", stringsAsFactors = FALSE) 
@@ -198,6 +201,39 @@ dat_region <- dat1_global_ %>%
   select(date, sub.region, actual_cases) %>% 
   group_by(date, sub.region) %>% 
   summarise(actual_cases = sum(actual_cases, na.rm = TRUE))
+#-------------------------------------------------
+dat2_global_ <- dat2_global %>% 
+  mutate(date=as.Date(date),
+         lower_country = tolower(country)) %>% 
+  filter(date == now) %>% 
+  group_by(lower_country, date) %>% 
+  summarise(actual_cases=sum(actual_cases, na.rm = TRUE),
+            predict_cases=sum(predict_cases, na.rm = TRUE),
+            predict_cases_2=sum(predict_cases_2, na.rm = TRUE),
+            predict_cases_3=sum(predict_cases_3, na.rm = TRUE),
+            predict_cases_4=sum(predict_cases_4, na.rm = TRUE),
+            predict_cases_5=sum(predict_cases_5, na.rm = TRUE),
+            predict_cases_6=sum(predict_cases_6, na.rm = TRUE),
+            predict_cases_7=sum(predict_cases_7, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  left_join(mutate(r, lower_country = tolower(country)),
+            by=c("lower_country"))
+
+dat2_global_ <- dat2_global_ %>% 
+  select(-lower_country) %>% 
+  gather(type, n, -date, -country, -region, -sub.region)
+dat2_global_$date[dat2_global_$type == "predict_cases"] <- now + 1
+dat2_global_$date[dat2_global_$type == "predict_cases_2"] <- now + 2
+dat2_global_$date[dat2_global_$type == "predict_cases_3"] <- now + 3
+dat2_global_$date[dat2_global_$type == "predict_cases_4"] <- now + 4
+dat2_global_$date[dat2_global_$type == "predict_cases_5"] <- now + 5
+dat2_global_$date[dat2_global_$type == "predict_cases_6"] <- now + 6
+dat2_global_$date[dat2_global_$type == "predict_cases_7"] <- now + 7
+
+dat2_global_ <- dat2_global_ %>% 
+  filter(type != "actual_cases") %>% 
+  select(date, sub.region, n)
+#------------------------------------------------
 
 lab <- dat_region %>% 
   filter(date==now) %>% 
@@ -260,18 +296,28 @@ Row
 ### Total and New Confirmed Cases (Worldwide) {data-width=600}
 
 ```{r}
-dat_region_ <- dat_region %>% 
-  transmute(`Date`=date,
-            `Sub region` = sub.region,
-            `Total cases (log10 scale)` = round(log10(actual_cases+1),3))
-
-g <- ggplot(dat_region_, aes(x=`Date`, y=`Total cases (log10 scale)`, fill=`Sub region`)) +
+tmp <- dat_region %>% rename("n" = "actual_cases") %>% 
+  ungroup()
+p <- rbind(tmp, dat2_global_) %>% 
+  group_by(date, sub.region) %>% 
+  summarise(n = sum(n)) %>% 
+  mutate(`Total cases (log10 scale)` = round(log10(n+1),3)) %>% 
+  ungroup() %>% 
+  na.omit() %>% 
+  rename(`Date` = date, `Sub region` = sub.region) %>% 
+  # View()
+  ggplot(., aes(x=`Date`, y=`Total cases (log10 scale)`, fill=`Sub region`)) +
+  # geom_line(aes(color = sub.region))
   geom_area(position = 'stack') +
-  scale_x_date() + 
-  labs(x="Date", y="Cumulative number of confirmed cases \n(Logarithmic scale)", fill="Sub Region") +
-  scale_fill_viridis_d()
+  scale_x_date() +
+  labs(x="Date",
+       y="Cumulative number of confirmed cases \n(Logarithmic scale)",
+       fill="Sub Region") +
+  scale_fill_viridis_d() +
+  geom_vline(aes(xintercept = now), color = "#020728", size=1.5)
 
-ggplotly(g)
+ggplotly(p)
+
 ```
 
 ### Daily New Confirmed Cases (Worldwide) {data-width=400}

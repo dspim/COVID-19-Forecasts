@@ -34,7 +34,7 @@ getData_ <- function(raw, row=1, type="cases"){
 
 
 calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao", 
-                    data_source=NULL){
+                    data_source=NULL, arg_B=17){
   
   if(is.null(endDate)){
     endDate <- as.Date(max(dat$date))
@@ -54,7 +54,7 @@ calPred <- function(dat, startDate=NULL, endDate=NULL, method="Chao",
   
   # Change forecast method here
   if(method=="Chao"){
-    pred <- Pred.Chao(dat_$actual_cases, m=1:7)
+    pred <- Pred.Chao(dat_$actual_cases, m=1:7, arg_B)
   }
   
   pred <- data.frame(t(round(pred, 2)))
