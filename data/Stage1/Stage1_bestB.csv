@@ -1,179 +1,181 @@
 "country","B"
-"Afghanistan",14
+"Afghanistan",8
 "Albania",18
-"Algeria",21
-"Andorra",11
-"Angola",10
+"Algeria",24
+"Andorra",9
+"Angola",5
 "Antigua and Barbuda",2
-"Argentina",13
-"Armenia",11
-"Australia",14
-"Austria",27
-"Azerbaijan",11
-"Bahamas",42
-"Bahrain",19
-"Bangladesh",2
-"Barbados",7
-"Belarus",22
-"Belgium",15
+"Argentina",16
+"Armenia",7
+"Australia",10
+"Austria",20
+"Azerbaijan",15
+"Bahamas",9
+"Bahrain",26
+"Bangladesh",28
+"Barbados",3
+"Belarus",2
+"Belgium",10
 "Benin",2
-"Bhutan",5
-"Bolivia",9
-"Bosnia",13
-"Brazil",12
-"Brunei",9
-"Bulgaria",9
-"Burkina Faso",11
-"Cabo Verde",5
+"Bhutan",2
+"Bolivia",17
+"Bosnia",12
+"Brazil",17
+"Brunei",7
+"Bulgaria",8
+"Burkina Faso",10
+"Cabo Verde",2
 "Cambodia",11
-"Cameroon",9
-"Canada",18
+"Cameroon",6
+"Canada",16
 "Central African Republic",2
-"Chad",2
-"Chile",13
-"China",14
-"Colombia",21
+"Chad",14
+"Chile",14
+"China",13
+"Colombia",18
 "Congo",2
-"Congo (Kinshasa)",6
-"Costa Rica",10
+"Congo (Kinshasa)",10
+"Costa Rica",8
 "Côte d'Ivoire",2
-"Croatia",11
+"Croatia",22
 "Diamond Princess",2
-"Cuba",15
-"Cyprus",18
+"Cuba",9
+"Cyprus",15
 "Czechia",9
-"Denmark",15
-"Djibouti",16
-"Dominican Republic",14
-"Ecuador",9
-"Egypt",14
-"El Salvador",13
+"Denmark",19
+"Djibouti",22
+"Dominican Republic",12
+"Ecuador",7
+"Egypt",17
+"El Salvador",11
 "Equatorial Guinea",2
-"Eritrea",2
-"Estonia",8
+"Eritrea",3
+"Estonia",7
 "Swaziland",2
-"Ethiopia",8
+"Ethiopia",7
 "Fiji",2
-"Finland",14
-"France",13
+"Finland",10
+"France",14
 "Gabon",2
 "Gambia",2
-"Georgia",16
-"Germany",11
+"Georgia",12
+"Germany",10
 "Ghana",8
-"Greece",14
-"Guatemala",7
-"Guinea",14
-"Guyana",2
+"Greece",12
+"Guatemala",3
+"Guinea",6
+"Guyana",4
 "Haiti",2
 "Holy See",2
-"Honduras",16
-"Hungary",17
-"Iceland",11
-"India",10
-"Indonesia",12
+"Honduras",9
+"Hungary",13
+"Iceland",16
+"India",15
+"Indonesia",16
 "Iran",14
-"Iraq",11
-"Ireland",12
-"Israel",17
-"Italy",13
-"Jamaica",10
-"Japan",12
-"Jordan",16
-"Kazakhstan",13
-"Kenya",12
-"S. Korea",14
-"Kuwait",12
-"Kyrgyzstan",10
-"Latvia",13
-"Lebanon",15
+"Iraq",22
+"Ireland",14
+"Israel",13
+"Italy",11
+"Jamaica",8
+"Japan",5
+"Jordan",11
+"Kazakhstan",7
+"Kenya",14
+"S. Korea",10
+"Kuwait",14
+"Kyrgyzstan",6
+"Latvia",12
+"Lebanon",12
 "Liberia",2
-"Liechtenstein",2
+"Liechtenstein",14
 "Lithuania",11
-"Luxembourg",10
-"Madagascar",10
-"Malaysia",16
-"Maldives",2
-"Malta",10
+"Luxembourg",7
+"Madagascar",9
+"Malaysia",14
+"Maldives",6
+"Malta",8
 "Mauritania",2
-"Mauritius",300
-"Mexico",16
-"Moldova, Republic of",18
-"Monaco",3
+"Mauritius",17
+"Mexico",14
+"Moldova, Republic of",17
+"Monaco",11
 "Mongolia",2
-"Montenegro",3
-"Morocco",15
+"Montenegro",42
+"Morocco",16
 "Namibia",2
-"Nepal",5
-"Netherlands",13
+"Nepal",2
+"Netherlands",12
 "New Zealand",12
 "Nicaragua",2
-"Niger",16
-"Nigeria",15
-"Macedonia",18
-"Norway",9
-"Oman",11
-"Pakistan",10
-"Panama",13
+"Niger",8
+"Nigeria",11
+"Macedonia",19
+"Norway",13
+"Oman",10
+"Pakistan",32
+"Panama",17
 "Papua New Guinea",2
-"Paraguay",5
-"Peru",14
-"Philippines",17
-"Poland",16
-"Portugal",13
-"Qatar",29
-"Romania",14
-"Russia",18
-"Rwanda",11
-"Saint Lucia",2
+"Paraguay",13
+"Peru",10
+"Philippines",15
+"Poland",13
+"Portugal",12
+"Qatar",25
+"Romania",11
+"Russia",20
+"Rwanda",8
+"Saint Lucia",4
 "Saint Vincent and the Grenadines",2
-"San Marino",2
-"Saudi Arabia",21
-"Senegal",15
-"Serbia",10
-"Seychelles",2
-"Singapore",12
-"Slovakia",8
-"Slovenia",9
+"San Marino",14
+"Saudi Arabia",17
+"Senegal",20
+"Serbia",5
+"Seychelles",6
+"Singapore",9
+"Slovakia",18
+"Slovenia",16
 "Somalia",2
-"South Africa",3
-"Spain",14
-"Sri Lanka",9
-"Sudan",4
+"South Africa",6
+"Spain",16
+"Sri Lanka",18
+"Sudan",5
 "Suriname",2
-"Sweden",15
-"Switzerland",12
-"Taiwan*",13
-"Tanzania, United Republic of",28
-"Thailand",20
-"Togo",8
-"Trinidad and Tobago",7
-"Tunisia",10
-"Turkey",12
-"Uganda",6
-"Ukraine",10
-"UAE",14
-"UK",13
-"Uruguay",12
-"USA",15
-"Uzbekistan",16
-"Venezuela, Bolivarian Republic of",7
-"Vietnam",21
-"Zambia",9
-"Zimbabwe",5
+"Sweden",13
+"Switzerland",11
+"Taiwan*",11
+"Tanzania, United Republic of",9
+"Thailand",16
+"Togo",11
+"Trinidad and Tobago",8
+"Tunisia",9
+"Turkey",20
+"Uganda",10
+"Ukraine",11
+"UAE",11
+"UK",18
+"Uruguay",8
+"USA",16
+"Uzbekistan",9
+"Venezuela",6
+"Vietnam",15
+"Zambia",6
+"Zimbabwe",2
 "Dominica",2
 "Grenada",2
 "Mozambique",2
-"Syrian Arab Republic",4
+"Syrian Arab Republic",2
 "Timor-Leste",2
 "Belize",2
 "Lao People's Democratic Republic",2
-"Libyan Arab Jamahiriya",9
-"West Bank and Gaza",16
+"Libyan Arab Jamahiriya",7
+"West Bank and Gaza",12
 "Guinea-Bissau",2
-"Mali",8
-"Saint Kitts and Nevis",2
-"Kosovo",20
-"Burma",3
+"Mali",6
+"Saint Kitts and Nevis",3
+"Kosovo",133
+"Burma",13
 "MS Zaandam",2
-"Botswana",2
+"Botswana",5
+"Burundi",2
+"Sierra Leone",2
