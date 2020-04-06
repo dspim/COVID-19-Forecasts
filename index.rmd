@@ -134,7 +134,7 @@ df <-
              new = c(1, sapply(2:nrow(dat1_tw), function(i){
                dat1_tw$actual_cases[i] - dat1_tw$actual_cases[i-1]
                }), rep(NA, 7)),
-             forecast=c(rep(NA, nrow(dat1_tw)-1),
+             forecast=c(rep(NA, (nrow(dat1_tw)-1)),
                dat2_tw[dat2_tw$date == now, c(4:11)] %>% unlist() %>% unname())) %>%
   mutate(forecast_new = forecast - lag(forecast)) 
 
