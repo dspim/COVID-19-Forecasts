@@ -4,6 +4,7 @@ library(dplyr)
 library(tidyr)
 
 getData <- function(raw, country_="taiwan*", province_=NA, type="cases"){
+  country_ <- raw$country[grep(toupper(country_), toupper(raw$country))]
   raw_ <- raw %>% 
     filter(country==country_) 
   
