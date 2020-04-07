@@ -27,13 +27,18 @@ library(flexdashboard)
 
 dat1_global <- read.csv("data/Stage1/Stage1_NovelCovid_worldwide.csv", stringsAsFactors = FALSE) 
 dat1_tw <- read.csv("data/Stage1/Stage1_NovelCovid_tw.csv", stringsAsFactors = FALSE) 
+dat1_tw$date <- as.Date(dat1_tw$date)
 dat1_tw_c <- read.csv("data/Stage1/Stage1_Taiwan_CDC.csv", stringsAsFactors = FALSE)
+dat1_tw_c$date <- as.Date(dat1_tw_c$date)
 
 dat2_global <- read.csv("data/Stage2/Stage2_worldwide_pred.csv", stringsAsFactors = FALSE) 
+dat2_global$date <- as.Date(dat2_global$date)
 dat2_tw <- read.csv("data/Stage2/Stage2_tw_pred.csv", stringsAsFactors = FALSE) 
 dat2_tw_c <- read.csv("data/Stage2/Stage2_tw_county_pred.csv", stringsAsFactors = FALSE) 
+dat2_tw_c$date <- as.Date(dat2_tw_c$date)
 tmp <- read.csv("data/Stage2/Stage2_tw_pred_caches.csv", stringsAsFactors = FALSE)
-dat2_tw_ <- bind_rows(dat2_tw, tmp) %>% distinct() %>% 
+dat2_tw_ <- bind_rows(dat2_tw, tmp) %>% 
+  distinct() %>% 
   mutate(date=as.Date(date)) %>% 
   arrange(date)
 
@@ -129,7 +134,7 @@ df <-
              new = c(1, sapply(2:nrow(dat1_tw), function(i){
                dat1_tw$actual_cases[i] - dat1_tw$actual_cases[i-1]
                }), rep(NA, 7)),
-             forecast=c(rep(NA, nrow(dat1_tw)-1),
+             forecast=c(rep(NA, (nrow(dat1_tw)-1)),
                dat2_tw[dat2_tw$date == now, c(4:11)] %>% unlist() %>% unname())) %>%
   mutate(forecast_new = forecast - lag(forecast)) 
 
