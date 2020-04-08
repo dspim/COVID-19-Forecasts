@@ -1,5 +1,4 @@
 "country","province","date","actual_cases"
-"Taiwan",NA,2020-03-08,45
 "Taiwan",NA,2020-03-09,45
 "Taiwan",NA,2020-03-10,47
 "Taiwan",NA,2020-03-11,48
@@ -29,3 +28,4 @@
 "Taiwan",NA,2020-04-04,355
 "Taiwan",NA,2020-04-05,363
 "Taiwan",NA,2020-04-06,373
+"Taiwan",NA,2020-04-07,376

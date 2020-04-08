@@ -1,5 +1,4 @@
 "country","province","date","actual_cases"
-"Afghanistan",NA,2020-03-08,4
 "Afghanistan",NA,2020-03-09,4
 "Afghanistan",NA,2020-03-10,5
 "Afghanistan",NA,2020-03-11,7
@@ -29,7 +28,7 @@
 "Afghanistan",NA,2020-04-04,299
 "Afghanistan",NA,2020-04-05,349
 "Afghanistan",NA,2020-04-06,367
-"Albania",NA,2020-03-08,0
+"Afghanistan",NA,2020-04-07,423
 "Albania",NA,2020-03-09,2
 "Albania",NA,2020-03-10,10
 "Albania",NA,2020-03-11,12
@@ -59,7 +58,7 @@
 "Albania",NA,2020-04-04,333
 "Albania",NA,2020-04-05,361
 "Albania",NA,2020-04-06,377
-"Algeria",NA,2020-03-08,19
+"Albania",NA,2020-04-07,383
 "Algeria",NA,2020-03-09,20
 "Algeria",NA,2020-03-10,20
 "Algeria",NA,2020-03-11,20
@@ -89,7 +88,7 @@
 "Algeria",NA,2020-04-04,1251
 "Algeria",NA,2020-04-05,1320
 "Algeria",NA,2020-04-06,1423
-"Andorra",NA,2020-03-08,1
+"Algeria",NA,2020-04-07,1468
 "Andorra",NA,2020-03-09,1
 "Andorra",NA,2020-03-10,1
 "Andorra",NA,2020-03-11,1
@@ -119,7 +118,7 @@
 "Andorra",NA,2020-04-04,466
 "Andorra",NA,2020-04-05,501
 "Andorra",NA,2020-04-06,525
-"Angola",NA,2020-03-08,0
+"Andorra",NA,2020-04-07,545
 "Angola",NA,2020-03-09,0
 "Angola",NA,2020-03-10,0
 "Angola",NA,2020-03-11,0
@@ -149,7 +148,7 @@
 "Angola",NA,2020-04-04,10
 "Angola",NA,2020-04-05,14
 "Angola",NA,2020-04-06,16
-"Antigua and Barbuda",NA,2020-03-08,0
+"Angola",NA,2020-04-07,17
 "Antigua and Barbuda",NA,2020-03-09,0
 "Antigua and Barbuda",NA,2020-03-10,0
 "Antigua and Barbuda",NA,2020-03-11,0
@@ -179,7 +178,7 @@
 "Antigua and Barbuda",NA,2020-04-04,15
 "Antigua and Barbuda",NA,2020-04-05,15
 "Antigua and Barbuda",NA,2020-04-06,15
-"Argentina",NA,2020-03-08,12
+"Antigua and Barbuda",NA,2020-04-07,19
 "Argentina",NA,2020-03-09,12
 "Argentina",NA,2020-03-10,17
 "Argentina",NA,2020-03-11,19
@@ -209,7 +208,7 @@
 "Argentina",NA,2020-04-04,1451
 "Argentina",NA,2020-04-05,1451
 "Argentina",NA,2020-04-06,1554
-"Armenia",NA,2020-03-08,1
+"Argentina",NA,2020-04-07,1628
 "Armenia",NA,2020-03-09,1
 "Armenia",NA,2020-03-10,1
 "Armenia",NA,2020-03-11,1
@@ -239,7 +238,7 @@
 "Armenia",NA,2020-04-04,770
 "Armenia",NA,2020-04-05,822
 "Armenia",NA,2020-04-06,833
-"Australia","australian capital territory",2020-03-08,0
+"Armenia",NA,2020-04-07,853
 "Australia","australian capital territory",2020-03-09,0
 "Australia","australian capital territory",2020-03-10,0
 "Australia","australian capital territory",2020-03-11,0
@@ -269,7 +268,7 @@
 "Australia","australian capital territory",2020-04-04,93
 "Australia","australian capital territory",2020-04-05,96
 "Australia","australian capital territory",2020-04-06,96
-"Australia","new south wales",2020-03-08,38
+"Australia","australian capital territory",2020-04-07,96
 "Australia","new south wales",2020-03-09,48
 "Australia","new south wales",2020-03-10,55
 "Australia","new south wales",2020-03-11,65
@@ -299,7 +298,7 @@
 "Australia","new south wales",2020-04-04,2493
 "Australia","new south wales",2020-04-05,2580
 "Australia","new south wales",2020-04-06,2637
-"Australia","northern territory",2020-03-08,0
+"Australia","new south wales",2020-04-07,2686
 "Australia","northern territory",2020-03-09,0
 "Australia","northern territory",2020-03-10,1
 "Australia","northern territory",2020-03-11,1
@@ -329,7 +328,7 @@
 "Australia","northern territory",2020-04-04,26
 "Australia","northern territory",2020-04-05,27
 "Australia","northern territory",2020-04-06,28
-"Australia","queensland",2020-03-08,15
+"Australia","northern territory",2020-04-07,28
 "Australia","queensland",2020-03-09,15
 "Australia","queensland",2020-03-10,18
 "Australia","queensland",2020-03-11,20
@@ -359,7 +358,7 @@
 "Australia","queensland",2020-04-04,900
 "Australia","queensland",2020-04-05,907
 "Australia","queensland",2020-04-06,921
-"Australia","south australia",2020-03-08,7
+"Australia","queensland",2020-04-07,934
 "Australia","south australia",2020-03-09,7
 "Australia","south australia",2020-03-10,7
 "Australia","south australia",2020-03-11,9
@@ -389,7 +388,7 @@
 "Australia","south australia",2020-04-04,407
 "Australia","south australia",2020-04-05,407
 "Australia","south australia",2020-04-06,411
-"Australia","tasmania",2020-03-08,2
+"Australia","south australia",2020-04-07,411
 "Australia","tasmania",2020-03-09,2
 "Australia","tasmania",2020-03-10,2
 "Australia","tasmania",2020-03-11,3
@@ -419,7 +418,7 @@
 "Australia","tasmania",2020-04-04,80
 "Australia","tasmania",2020-04-05,82
 "Australia","tasmania",2020-04-06,86
-"Australia","victoria",2020-03-08,11
+"Australia","tasmania",2020-04-07,89
 "Australia","victoria",2020-03-09,15
 "Australia","victoria",2020-03-10,18
 "Australia","victoria",2020-03-11,21
@@ -449,7 +448,7 @@
 "Australia","victoria",2020-04-04,1115
 "Australia","victoria",2020-04-05,1135
 "Australia","victoria",2020-04-06,1158
-"Australia","western australia",2020-03-08,3
+"Australia","victoria",2020-04-07,1191
 "Australia","western australia",2020-03-09,4
 "Australia","western australia",2020-03-10,6
 "Australia","western australia",2020-03-11,9
@@ -479,7 +478,7 @@
 "Australia","western australia",2020-04-04,436
 "Australia","western australia",2020-04-05,453
 "Australia","western australia",2020-04-06,460
-"Austria",NA,2020-03-08,104
+"Australia","western australia",2020-04-07,460
 "Austria",NA,2020-03-09,131
 "Austria",NA,2020-03-10,182
 "Austria",NA,2020-03-11,246
@@ -509,7 +508,7 @@
 "Austria",NA,2020-04-04,11781
 "Austria",NA,2020-04-05,12051
 "Austria",NA,2020-04-06,12297
-"Azerbaijan",NA,2020-03-08,9
+"Austria",NA,2020-04-07,12639
 "Azerbaijan",NA,2020-03-09,9
 "Azerbaijan",NA,2020-03-10,11
 "Azerbaijan",NA,2020-03-11,11
@@ -539,7 +538,7 @@
 "Azerbaijan",NA,2020-04-04,521
 "Azerbaijan",NA,2020-04-05,584
 "Azerbaijan",NA,2020-04-06,641
-"Bahamas",NA,2020-03-08,0
+"Azerbaijan",NA,2020-04-07,717
 "Bahamas",NA,2020-03-09,0
 "Bahamas",NA,2020-03-10,0
 "Bahamas",NA,2020-03-11,0
@@ -569,7 +568,7 @@
 "Bahamas",NA,2020-04-04,28
 "Bahamas",NA,2020-04-05,28
 "Bahamas",NA,2020-04-06,29
-"Bahrain",NA,2020-03-08,85
+"Bahamas",NA,2020-04-07,33
 "Bahrain",NA,2020-03-09,95
 "Bahrain",NA,2020-03-10,110
 "Bahrain",NA,2020-03-11,195
@@ -599,7 +598,7 @@
 "Bahrain",NA,2020-04-04,688
 "Bahrain",NA,2020-04-05,700
 "Bahrain",NA,2020-04-06,756
-"Bangladesh",NA,2020-03-08,3
+"Bahrain",NA,2020-04-07,811
 "Bangladesh",NA,2020-03-09,3
 "Bangladesh",NA,2020-03-10,3
 "Bangladesh",NA,2020-03-11,3
@@ -629,7 +628,7 @@
 "Bangladesh",NA,2020-04-04,70
 "Bangladesh",NA,2020-04-05,88
 "Bangladesh",NA,2020-04-06,123
-"Barbados",NA,2020-03-08,0
+"Bangladesh",NA,2020-04-07,164
 "Barbados",NA,2020-03-09,0
 "Barbados",NA,2020-03-10,0
 "Barbados",NA,2020-03-11,0
@@ -659,7 +658,7 @@
 "Barbados",NA,2020-04-04,52
 "Barbados",NA,2020-04-05,56
 "Barbados",NA,2020-04-06,60
-"Belarus",NA,2020-03-08,6
+"Barbados",NA,2020-04-07,63
 "Belarus",NA,2020-03-09,6
 "Belarus",NA,2020-03-10,9
 "Belarus",NA,2020-03-11,9
@@ -689,7 +688,7 @@
 "Belarus",NA,2020-04-04,440
 "Belarus",NA,2020-04-05,562
 "Belarus",NA,2020-04-06,700
-"Belgium",NA,2020-03-08,200
+"Belarus",NA,2020-04-07,861
 "Belgium",NA,2020-03-09,239
 "Belgium",NA,2020-03-10,267
 "Belgium",NA,2020-03-11,314
@@ -719,7 +718,7 @@
 "Belgium",NA,2020-04-04,18431
 "Belgium",NA,2020-04-05,19691
 "Belgium",NA,2020-04-06,20814
-"Benin",NA,2020-03-08,0
+"Belgium",NA,2020-04-07,22194
 "Benin",NA,2020-03-09,0
 "Benin",NA,2020-03-10,0
 "Benin",NA,2020-03-11,0
@@ -749,7 +748,7 @@
 "Benin",NA,2020-04-04,16
 "Benin",NA,2020-04-05,22
 "Benin",NA,2020-04-06,26
-"Bhutan",NA,2020-03-08,1
+"Benin",NA,2020-04-07,26
 "Bhutan",NA,2020-03-09,1
 "Bhutan",NA,2020-03-10,1
 "Bhutan",NA,2020-03-11,1
@@ -779,7 +778,7 @@
 "Bhutan",NA,2020-04-04,5
 "Bhutan",NA,2020-04-05,5
 "Bhutan",NA,2020-04-06,5
-"Bolivia",NA,2020-03-08,0
+"Bhutan",NA,2020-04-07,5
 "Bolivia",NA,2020-03-09,0
 "Bolivia",NA,2020-03-10,0
 "Bolivia",NA,2020-03-11,2
@@ -809,7 +808,7 @@
 "Bolivia",NA,2020-04-04,139
 "Bolivia",NA,2020-04-05,157
 "Bolivia",NA,2020-04-06,183
-"Bosnia",NA,2020-03-08,3
+"Bolivia",NA,2020-04-07,194
 "Bosnia",NA,2020-03-09,3
 "Bosnia",NA,2020-03-10,5
 "Bosnia",NA,2020-03-11,7
@@ -839,7 +838,7 @@
 "Bosnia",NA,2020-04-04,624
 "Bosnia",NA,2020-04-05,654
 "Bosnia",NA,2020-04-06,674
-"Brazil",NA,2020-03-08,20
+"Bosnia",NA,2020-04-07,764
 "Brazil",NA,2020-03-09,25
 "Brazil",NA,2020-03-10,31
 "Brazil",NA,2020-03-11,38
@@ -869,7 +868,7 @@
 "Brazil",NA,2020-04-04,10360
 "Brazil",NA,2020-04-05,11130
 "Brazil",NA,2020-04-06,12161
-"Brunei",NA,2020-03-08,0
+"Brazil",NA,2020-04-07,14034
 "Brunei",NA,2020-03-09,1
 "Brunei",NA,2020-03-10,1
 "Brunei",NA,2020-03-11,11
@@ -899,7 +898,7 @@
 "Brunei",NA,2020-04-04,135
 "Brunei",NA,2020-04-05,135
 "Brunei",NA,2020-04-06,135
-"Bulgaria",NA,2020-03-08,4
+"Brunei",NA,2020-04-07,135
 "Bulgaria",NA,2020-03-09,4
 "Bulgaria",NA,2020-03-10,4
 "Bulgaria",NA,2020-03-11,7
@@ -929,7 +928,7 @@
 "Bulgaria",NA,2020-04-04,503
 "Bulgaria",NA,2020-04-05,531
 "Bulgaria",NA,2020-04-06,549
-"Burkina Faso",NA,2020-03-08,0
+"Bulgaria",NA,2020-04-07,577
 "Burkina Faso",NA,2020-03-09,0
 "Burkina Faso",NA,2020-03-10,1
 "Burkina Faso",NA,2020-03-11,2
@@ -959,7 +958,7 @@
 "Burkina Faso",NA,2020-04-04,318
 "Burkina Faso",NA,2020-04-05,345
 "Burkina Faso",NA,2020-04-06,364
-"Cabo Verde",NA,2020-03-08,0
+"Burkina Faso",NA,2020-04-07,384
 "Cabo Verde",NA,2020-03-09,0
 "Cabo Verde",NA,2020-03-10,0
 "Cabo Verde",NA,2020-03-11,0
@@ -989,7 +988,7 @@
 "Cabo Verde",NA,2020-04-04,7
 "Cabo Verde",NA,2020-04-05,7
 "Cabo Verde",NA,2020-04-06,7
-"Cambodia",NA,2020-03-08,2
+"Cabo Verde",NA,2020-04-07,7
 "Cambodia",NA,2020-03-09,2
 "Cambodia",NA,2020-03-10,2
 "Cambodia",NA,2020-03-11,3
@@ -1019,7 +1018,7 @@
 "Cambodia",NA,2020-04-04,114
 "Cambodia",NA,2020-04-05,114
 "Cambodia",NA,2020-04-06,114
-"Cameroon",NA,2020-03-08,2
+"Cambodia",NA,2020-04-07,115
 "Cameroon",NA,2020-03-09,2
 "Cameroon",NA,2020-03-10,2
 "Cameroon",NA,2020-03-11,2
@@ -1049,7 +1048,7 @@
 "Cameroon",NA,2020-04-04,555
 "Cameroon",NA,2020-04-05,650
 "Cameroon",NA,2020-04-06,658
-"Canada","alberta",2020-03-08,4
+"Cameroon",NA,2020-04-07,658
 "Canada","alberta",2020-03-09,7
 "Canada","alberta",2020-03-10,7
 "Canada","alberta",2020-03-11,19
@@ -1079,7 +1078,7 @@
 "Canada","alberta",2020-04-04,1075
 "Canada","alberta",2020-04-05,1181
 "Canada","alberta",2020-04-06,1250
-"Canada","british columbia",2020-03-08,27
+"Canada","alberta",2020-04-07,1373
 "Canada","british columbia",2020-03-09,32
 "Canada","british columbia",2020-03-10,32
 "Canada","british columbia",2020-03-11,39
@@ -1109,7 +1108,7 @@
 "Canada","british columbia",2020-04-04,1203
 "Canada","british columbia",2020-04-05,1203
 "Canada","british columbia",2020-04-06,1266
-"Canada","grand princess",2020-03-08,0
+"Canada","british columbia",2020-04-07,1266
 "Canada","grand princess",2020-03-09,0
 "Canada","grand princess",2020-03-10,0
 "Canada","grand princess",2020-03-11,0
@@ -1139,7 +1138,7 @@
 "Canada","grand princess",2020-04-04,13
 "Canada","grand princess",2020-04-05,13
 "Canada","grand princess",2020-04-06,13
-"Canada","manitoba",2020-03-08,0
+"Canada","grand princess",2020-04-07,13
 "Canada","manitoba",2020-03-09,0
 "Canada","manitoba",2020-03-10,0
 "Canada","manitoba",2020-03-11,0
@@ -1169,7 +1168,7 @@
 "Canada","manitoba",2020-04-04,182
 "Canada","manitoba",2020-04-05,203
 "Canada","manitoba",2020-04-06,203
-"Canada","new brunswick",2020-03-08,0
+"Canada","manitoba",2020-04-07,217
 "Canada","new brunswick",2020-03-09,0
 "Canada","new brunswick",2020-03-10,0
 "Canada","new brunswick",2020-03-11,1
@@ -1199,7 +1198,7 @@
 "Canada","new brunswick",2020-04-04,91
 "Canada","new brunswick",2020-04-05,98
 "Canada","new brunswick",2020-04-06,103
-"Canada","newfoundland and labrador",2020-03-08,0
+"Canada","new brunswick",2020-04-07,105
 "Canada","newfoundland and labrador",2020-03-09,0
 "Canada","newfoundland and labrador",2020-03-10,0
 "Canada","newfoundland and labrador",2020-03-11,0
@@ -1229,7 +1228,7 @@
 "Canada","newfoundland and labrador",2020-04-04,195
 "Canada","newfoundland and labrador",2020-04-05,217
 "Canada","newfoundland and labrador",2020-04-06,226
-"Canada","nova scotia",2020-03-08,0
+"Canada","newfoundland and labrador",2020-04-07,228
 "Canada","nova scotia",2020-03-09,0
 "Canada","nova scotia",2020-03-10,0
 "Canada","nova scotia",2020-03-11,0
@@ -1259,7 +1258,7 @@
 "Canada","nova scotia",2020-04-04,236
 "Canada","nova scotia",2020-04-05,262
 "Canada","nova scotia",2020-04-06,293
-"Canada","ontario",2020-03-08,29
+"Canada","nova scotia",2020-04-07,310
 "Canada","ontario",2020-03-09,34
 "Canada","ontario",2020-03-10,36
 "Canada","ontario",2020-03-11,41
@@ -1289,7 +1288,7 @@
 "Canada","ontario",2020-04-04,3630
 "Canada","ontario",2020-04-05,4354
 "Canada","ontario",2020-04-06,4347
-"Canada","prince edward island",2020-03-08,0
+"Canada","ontario",2020-04-07,4726
 "Canada","prince edward island",2020-03-09,0
 "Canada","prince edward island",2020-03-10,0
 "Canada","prince edward island",2020-03-11,0
@@ -1319,7 +1318,7 @@
 "Canada","prince edward island",2020-04-04,22
 "Canada","prince edward island",2020-04-05,22
 "Canada","prince edward island",2020-04-06,22
-"Canada","quebec",2020-03-08,4
+"Canada","prince edward island",2020-04-07,22
 "Canada","quebec",2020-03-09,4
 "Canada","quebec",2020-03-10,4
 "Canada","quebec",2020-03-11,8
@@ -1349,7 +1348,7 @@
 "Canada","quebec",2020-04-04,6101
 "Canada","quebec",2020-04-05,7944
 "Canada","quebec",2020-04-06,8580
-"Canada","saskatchewan",2020-03-08,0
+"Canada","quebec",2020-04-07,9340
 "Canada","saskatchewan",2020-03-09,0
 "Canada","saskatchewan",2020-03-10,0
 "Canada","saskatchewan",2020-03-11,0
@@ -1379,7 +1378,7 @@
 "Canada","saskatchewan",2020-04-04,220
 "Canada","saskatchewan",2020-04-05,249
 "Canada","saskatchewan",2020-04-06,249
-"Central African Republic",NA,2020-03-08,0
+"Canada","saskatchewan",2020-04-07,260
 "Central African Republic",NA,2020-03-09,0
 "Central African Republic",NA,2020-03-10,0
 "Central African Republic",NA,2020-03-11,0
@@ -1409,7 +1408,7 @@
 "Central African Republic",NA,2020-04-04,8
 "Central African Republic",NA,2020-04-05,8
 "Central African Republic",NA,2020-04-06,8
-"Chad",NA,2020-03-08,0
+"Central African Republic",NA,2020-04-07,8
 "Chad",NA,2020-03-09,0
 "Chad",NA,2020-03-10,0
 "Chad",NA,2020-03-11,0
@@ -1439,7 +1438,7 @@
 "Chad",NA,2020-04-04,9
 "Chad",NA,2020-04-05,9
 "Chad",NA,2020-04-06,9
-"Chile",NA,2020-03-08,8
+"Chad",NA,2020-04-07,10
 "Chile",NA,2020-03-09,8
 "Chile",NA,2020-03-10,13
 "Chile",NA,2020-03-11,23
@@ -1469,7 +1468,7 @@
 "Chile",NA,2020-04-04,4161
 "Chile",NA,2020-04-05,4471
 "Chile",NA,2020-04-06,4815
-"China","anhui",2020-03-08,990
+"Chile",NA,2020-04-07,5116
 "China","anhui",2020-03-09,990
 "China","anhui",2020-03-10,990
 "China","anhui",2020-03-11,990
@@ -1499,7 +1498,7 @@
 "China","anhui",2020-04-04,990
 "China","anhui",2020-04-05,990
 "China","anhui",2020-04-06,990
-"China","beijing",2020-03-08,428
+"China","anhui",2020-04-07,990
 "China","beijing",2020-03-09,428
 "China","beijing",2020-03-10,429
 "China","beijing",2020-03-11,435
@@ -1529,7 +1528,7 @@
 "China","beijing",2020-04-04,585
 "China","beijing",2020-04-05,586
 "China","beijing",2020-04-06,587
-"China","chongqing",2020-03-08,576
+"China","beijing",2020-04-07,587
 "China","chongqing",2020-03-09,576
 "China","chongqing",2020-03-10,576
 "China","chongqing",2020-03-11,576
@@ -1559,7 +1558,7 @@
 "China","chongqing",2020-04-04,579
 "China","chongqing",2020-04-05,579
 "China","chongqing",2020-04-06,579
-"China","fujian",2020-03-08,296
+"China","chongqing",2020-04-07,579
 "China","fujian",2020-03-09,296
 "China","fujian",2020-03-10,296
 "China","fujian",2020-03-11,296
@@ -1589,7 +1588,7 @@
 "China","fujian",2020-04-04,350
 "China","fujian",2020-04-05,350
 "China","fujian",2020-04-06,350
-"China","gansu",2020-03-08,124
+"China","fujian",2020-04-07,351
 "China","gansu",2020-03-09,124
 "China","gansu",2020-03-10,125
 "China","gansu",2020-03-11,127
@@ -1619,7 +1618,7 @@
 "China","gansu",2020-04-04,138
 "China","gansu",2020-04-05,138
 "China","gansu",2020-04-06,139
-"China","guangdong",2020-03-08,1352
+"China","gansu",2020-04-07,139
 "China","guangdong",2020-03-09,1352
 "China","guangdong",2020-03-10,1353
 "China","guangdong",2020-03-11,1356
@@ -1649,7 +1648,7 @@
 "China","guangdong",2020-04-04,1516
 "China","guangdong",2020-04-05,1524
 "China","guangdong",2020-04-06,1532
-"China","guangxi",2020-03-08,252
+"China","guangdong",2020-04-07,1533
 "China","guangxi",2020-03-09,252
 "China","guangxi",2020-03-10,252
 "China","guangxi",2020-03-11,252
@@ -1679,7 +1678,7 @@
 "China","guangxi",2020-04-04,254
 "China","guangxi",2020-04-05,254
 "China","guangxi",2020-04-06,254
-"China","guizhou",2020-03-08,146
+"China","guangxi",2020-04-07,254
 "China","guizhou",2020-03-09,146
 "China","guizhou",2020-03-10,146
 "China","guizhou",2020-03-11,146
@@ -1709,7 +1708,7 @@
 "China","guizhou",2020-04-04,146
 "China","guizhou",2020-04-05,146
 "China","guizhou",2020-04-06,146
-"China","hainan",2020-03-08,168
+"China","guizhou",2020-04-07,146
 "China","hainan",2020-03-09,168
 "China","hainan",2020-03-10,168
 "China","hainan",2020-03-11,168
@@ -1739,7 +1738,7 @@
 "China","hainan",2020-04-04,168
 "China","hainan",2020-04-05,168
 "China","hainan",2020-04-06,168
-"China","hebei",2020-03-08,318
+"China","hainan",2020-04-07,168
 "China","hebei",2020-03-09,318
 "China","hebei",2020-03-10,318
 "China","hebei",2020-03-11,318
@@ -1769,7 +1768,7 @@
 "China","hebei",2020-04-04,326
 "China","hebei",2020-04-05,327
 "China","hebei",2020-04-06,327
-"China","heilongjiang",2020-03-08,481
+"China","hebei",2020-04-07,327
 "China","heilongjiang",2020-03-09,481
 "China","heilongjiang",2020-03-10,481
 "China","heilongjiang",2020-03-11,482
@@ -1799,7 +1798,7 @@
 "China","heilongjiang",2020-04-04,491
 "China","heilongjiang",2020-04-05,504
 "China","heilongjiang",2020-04-06,524
-"China","henan",2020-03-08,1272
+"China","heilongjiang",2020-04-07,544
 "China","henan",2020-03-09,1272
 "China","henan",2020-03-10,1272
 "China","henan",2020-03-11,1273
@@ -1829,7 +1828,7 @@
 "China","henan",2020-04-04,1276
 "China","henan",2020-04-05,1276
 "China","henan",2020-04-06,1276
-"China","hong kong",2020-03-08,114
+"China","henan",2020-04-07,1276
 "China","hong kong",2020-03-09,115
 "China","hong kong",2020-03-10,120
 "China","hong kong",2020-03-11,126
@@ -1859,7 +1858,7 @@
 "China","hong kong",2020-04-04,862
 "China","hong kong",2020-04-05,890
 "China","hong kong",2020-04-06,914
-"China","hubei",2020-03-08,67707
+"China","hong kong",2020-04-07,935
 "China","hubei",2020-03-09,67743
 "China","hubei",2020-03-10,67760
 "China","hubei",2020-03-11,67773
@@ -1889,7 +1888,7 @@
 "China","hubei",2020-04-04,67803
 "China","hubei",2020-04-05,67803
 "China","hubei",2020-04-06,67803
-"China","hunan",2020-03-08,1018
+"China","hubei",2020-04-07,67803
 "China","hunan",2020-03-09,1018
 "China","hunan",2020-03-10,1018
 "China","hunan",2020-03-11,1018
@@ -1919,7 +1918,7 @@
 "China","hunan",2020-04-04,1019
 "China","hunan",2020-04-05,1019
 "China","hunan",2020-04-06,1019
-"China","inner mongolia",2020-03-08,75
+"China","hunan",2020-04-07,1019
 "China","inner mongolia",2020-03-09,75
 "China","inner mongolia",2020-03-10,75
 "China","inner mongolia",2020-03-11,75
@@ -1949,7 +1948,7 @@
 "China","inner mongolia",2020-04-04,117
 "China","inner mongolia",2020-04-05,117
 "China","inner mongolia",2020-04-06,118
-"China","jiangsu",2020-03-08,631
+"China","inner mongolia",2020-04-07,121
 "China","jiangsu",2020-03-09,631
 "China","jiangsu",2020-03-10,631
 "China","jiangsu",2020-03-11,631
@@ -1979,7 +1978,7 @@
 "China","jiangsu",2020-04-04,651
 "China","jiangsu",2020-04-05,651
 "China","jiangsu",2020-04-06,651
-"China","jiangxi",2020-03-08,935
+"China","jiangsu",2020-04-07,651
 "China","jiangxi",2020-03-09,935
 "China","jiangxi",2020-03-10,935
 "China","jiangxi",2020-03-11,935
@@ -2009,7 +2008,7 @@
 "China","jiangxi",2020-04-04,937
 "China","jiangxi",2020-04-05,937
 "China","jiangxi",2020-04-06,937
-"China","jilin",2020-03-08,93
+"China","jiangxi",2020-04-07,937
 "China","jilin",2020-03-09,93
 "China","jilin",2020-03-10,93
 "China","jilin",2020-03-11,93
@@ -2039,7 +2038,7 @@
 "China","jilin",2020-04-04,98
 "China","jilin",2020-04-05,98
 "China","jilin",2020-04-06,98
-"China","liaoning",2020-03-08,125
+"China","jilin",2020-04-07,98
 "China","liaoning",2020-03-09,125
 "China","liaoning",2020-03-10,125
 "China","liaoning",2020-03-11,125
@@ -2069,7 +2068,7 @@
 "China","liaoning",2020-04-04,141
 "China","liaoning",2020-04-05,142
 "China","liaoning",2020-04-06,142
-"China","macau",2020-03-08,10
+"China","liaoning",2020-04-07,144
 "China","macau",2020-03-09,10
 "China","macau",2020-03-10,10
 "China","macau",2020-03-11,10
@@ -2099,7 +2098,7 @@
 "China","macau",2020-04-04,43
 "China","macau",2020-04-05,44
 "China","macau",2020-04-06,44
-"China","ningxia",2020-03-08,75
+"China","macau",2020-04-07,44
 "China","ningxia",2020-03-09,75
 "China","ningxia",2020-03-10,75
 "China","ningxia",2020-03-11,75
@@ -2129,7 +2128,7 @@
 "China","ningxia",2020-04-04,75
 "China","ningxia",2020-04-05,75
 "China","ningxia",2020-04-06,75
-"China","qinghai",2020-03-08,18
+"China","ningxia",2020-04-07,75
 "China","qinghai",2020-03-09,18
 "China","qinghai",2020-03-10,18
 "China","qinghai",2020-03-11,18
@@ -2159,7 +2158,7 @@
 "China","qinghai",2020-04-04,18
 "China","qinghai",2020-04-05,18
 "China","qinghai",2020-04-06,18
-"China","shaanxi",2020-03-08,245
+"China","qinghai",2020-04-07,18
 "China","shaanxi",2020-03-09,245
 "China","shaanxi",2020-03-10,245
 "China","shaanxi",2020-03-11,245
@@ -2189,7 +2188,7 @@
 "China","shaanxi",2020-04-04,256
 "China","shaanxi",2020-04-05,256
 "China","shaanxi",2020-04-06,256
-"China","shandong",2020-03-08,758
+"China","shaanxi",2020-04-07,256
 "China","shandong",2020-03-09,758
 "China","shandong",2020-03-10,758
 "China","shandong",2020-03-11,760
@@ -2219,7 +2218,7 @@
 "China","shandong",2020-04-04,778
 "China","shandong",2020-04-05,779
 "China","shandong",2020-04-06,780
-"China","shanghai",2020-03-08,342
+"China","shandong",2020-04-07,781
 "China","shanghai",2020-03-09,342
 "China","shanghai",2020-03-10,344
 "China","shanghai",2020-03-11,344
@@ -2249,7 +2248,7 @@
 "China","shanghai",2020-04-04,529
 "China","shanghai",2020-04-05,531
 "China","shanghai",2020-04-06,536
-"China","shanxi",2020-03-08,133
+"China","shanghai",2020-04-07,538
 "China","shanxi",2020-03-09,133
 "China","shanxi",2020-03-10,133
 "China","shanxi",2020-03-11,133
@@ -2279,7 +2278,7 @@
 "China","shanxi",2020-04-04,137
 "China","shanxi",2020-04-05,138
 "China","shanxi",2020-04-06,138
-"China","sichuan",2020-03-08,539
+"China","shanxi",2020-04-07,138
 "China","sichuan",2020-03-09,539
 "China","sichuan",2020-03-10,539
 "China","sichuan",2020-03-11,539
@@ -2309,7 +2308,7 @@
 "China","sichuan",2020-04-04,557
 "China","sichuan",2020-04-05,558
 "China","sichuan",2020-04-06,559
-"China","tianjin",2020-03-08,136
+"China","sichuan",2020-04-07,560
 "China","tianjin",2020-03-09,136
 "China","tianjin",2020-03-10,136
 "China","tianjin",2020-03-11,136
@@ -2339,7 +2338,7 @@
 "China","tianjin",2020-04-04,180
 "China","tianjin",2020-04-05,180
 "China","tianjin",2020-04-06,180
-"China","tibet",2020-03-08,1
+"China","tianjin",2020-04-07,180
 "China","tibet",2020-03-09,1
 "China","tibet",2020-03-10,1
 "China","tibet",2020-03-11,1
@@ -2369,7 +2368,7 @@
 "China","tibet",2020-04-04,1
 "China","tibet",2020-04-05,1
 "China","tibet",2020-04-06,1
-"China","xinjiang",2020-03-08,76
+"China","tibet",2020-04-07,1
 "China","xinjiang",2020-03-09,76
 "China","xinjiang",2020-03-10,76
 "China","xinjiang",2020-03-11,76
@@ -2399,7 +2398,7 @@
 "China","xinjiang",2020-04-04,76
 "China","xinjiang",2020-04-05,76
 "China","xinjiang",2020-04-06,76
-"China","yunnan",2020-03-08,174
+"China","xinjiang",2020-04-07,76
 "China","yunnan",2020-03-09,174
 "China","yunnan",2020-03-10,174
 "China","yunnan",2020-03-11,174
@@ -2429,7 +2428,7 @@
 "China","yunnan",2020-04-04,184
 "China","yunnan",2020-04-05,184
 "China","yunnan",2020-04-06,184
-"China","zhejiang",2020-03-08,1215
+"China","yunnan",2020-04-07,184
 "China","zhejiang",2020-03-09,1215
 "China","zhejiang",2020-03-10,1215
 "China","zhejiang",2020-03-11,1215
@@ -2459,7 +2458,7 @@
 "China","zhejiang",2020-04-04,1262
 "China","zhejiang",2020-04-05,1263
 "China","zhejiang",2020-04-06,1264
-"Colombia",NA,2020-03-08,1
+"China","zhejiang",2020-04-07,1265
 "Colombia",NA,2020-03-09,1
 "Colombia",NA,2020-03-10,3
 "Colombia",NA,2020-03-11,9
@@ -2489,7 +2488,7 @@
 "Colombia",NA,2020-04-04,1406
 "Colombia",NA,2020-04-05,1485
 "Colombia",NA,2020-04-06,1579
-"Congo",NA,2020-03-08,0
+"Colombia",NA,2020-04-07,1780
 "Congo",NA,2020-03-09,0
 "Congo",NA,2020-03-10,0
 "Congo",NA,2020-03-11,0
@@ -2519,7 +2518,7 @@
 "Congo",NA,2020-04-04,22
 "Congo",NA,2020-04-05,45
 "Congo",NA,2020-04-06,45
-"DRC",NA,2020-03-08,0
+"Congo",NA,2020-04-07,45
 "DRC",NA,2020-03-09,0
 "DRC",NA,2020-03-10,0
 "DRC",NA,2020-03-11,1
@@ -2549,7 +2548,7 @@
 "DRC",NA,2020-04-04,154
 "DRC",NA,2020-04-05,154
 "DRC",NA,2020-04-06,161
-"Costa Rica",NA,2020-03-08,5
+"DRC",NA,2020-04-07,180
 "Costa Rica",NA,2020-03-09,9
 "Costa Rica",NA,2020-03-10,9
 "Costa Rica",NA,2020-03-11,13
@@ -2579,7 +2578,7 @@
 "Costa Rica",NA,2020-04-04,435
 "Costa Rica",NA,2020-04-05,454
 "Costa Rica",NA,2020-04-06,467
-"Cote d'Ivoire",NA,2020-03-08,0
+"Costa Rica",NA,2020-04-07,483
 "Cote d'Ivoire",NA,2020-03-09,0
 "Cote d'Ivoire",NA,2020-03-10,0
 "Cote d'Ivoire",NA,2020-03-11,1
@@ -2609,7 +2608,7 @@
 "Cote d'Ivoire",NA,2020-04-04,245
 "Cote d'Ivoire",NA,2020-04-05,261
 "Cote d'Ivoire",NA,2020-04-06,323
-"Croatia",NA,2020-03-08,12
+"Cote d'Ivoire",NA,2020-04-07,349
 "Croatia",NA,2020-03-09,12
 "Croatia",NA,2020-03-10,14
 "Croatia",NA,2020-03-11,19
@@ -2639,7 +2638,7 @@
 "Croatia",NA,2020-04-04,1126
 "Croatia",NA,2020-04-05,1182
 "Croatia",NA,2020-04-06,1222
-"Diamond Princess",NA,2020-03-08,706
+"Croatia",NA,2020-04-07,1282
 "Diamond Princess",NA,2020-03-09,706
 "Diamond Princess",NA,2020-03-10,706
 "Diamond Princess",NA,2020-03-11,706
@@ -2669,7 +2668,7 @@
 "Diamond Princess",NA,2020-04-04,712
 "Diamond Princess",NA,2020-04-05,712
 "Diamond Princess",NA,2020-04-06,712
-"Cuba",NA,2020-03-08,0
+"Diamond Princess",NA,2020-04-07,712
 "Cuba",NA,2020-03-09,0
 "Cuba",NA,2020-03-10,0
 "Cuba",NA,2020-03-11,0
@@ -2699,7 +2698,7 @@
 "Cuba",NA,2020-04-04,288
 "Cuba",NA,2020-04-05,320
 "Cuba",NA,2020-04-06,350
-"Cyprus",NA,2020-03-08,0
+"Cuba",NA,2020-04-07,396
 "Cyprus",NA,2020-03-09,2
 "Cyprus",NA,2020-03-10,3
 "Cyprus",NA,2020-03-11,6
@@ -2729,7 +2728,7 @@
 "Cyprus",NA,2020-04-04,426
 "Cyprus",NA,2020-04-05,446
 "Cyprus",NA,2020-04-06,465
-"Czechia",NA,2020-03-08,31
+"Cyprus",NA,2020-04-07,494
 "Czechia",NA,2020-03-09,31
 "Czechia",NA,2020-03-10,41
 "Czechia",NA,2020-03-11,91
@@ -2759,7 +2758,7 @@
 "Czechia",NA,2020-04-04,4472
 "Czechia",NA,2020-04-05,4587
 "Czechia",NA,2020-04-06,4822
-"Denmark","faroe islands",2020-03-08,2
+"Czechia",NA,2020-04-07,5017
 "Denmark","faroe islands",2020-03-09,2
 "Denmark","faroe islands",2020-03-10,2
 "Denmark","faroe islands",2020-03-11,2
@@ -2789,7 +2788,7 @@
 "Denmark","faroe islands",2020-04-04,181
 "Denmark","faroe islands",2020-04-05,181
 "Denmark","faroe islands",2020-04-06,183
-"Denmark","greenland",2020-03-08,0
+"Denmark","faroe islands",2020-04-07,184
 "Denmark","greenland",2020-03-09,0
 "Denmark","greenland",2020-03-10,0
 "Denmark","greenland",2020-03-11,0
@@ -2819,7 +2818,7 @@
 "Denmark","greenland",2020-04-04,11
 "Denmark","greenland",2020-04-05,11
 "Denmark","greenland",2020-04-06,11
-"Denmark",NA,2020-03-08,35
+"Denmark","greenland",2020-04-07,11
 "Denmark",NA,2020-03-09,90
 "Denmark",NA,2020-03-10,262
 "Denmark",NA,2020-03-11,442
@@ -2849,7 +2848,7 @@
 "Denmark",NA,2020-04-04,4077
 "Denmark",NA,2020-04-05,4369
 "Denmark",NA,2020-04-06,4681
-"Djibouti",NA,2020-03-08,0
+"Denmark",NA,2020-04-07,5071
 "Djibouti",NA,2020-03-09,0
 "Djibouti",NA,2020-03-10,0
 "Djibouti",NA,2020-03-11,0
@@ -2879,7 +2878,7 @@
 "Djibouti",NA,2020-04-04,50
 "Djibouti",NA,2020-04-05,59
 "Djibouti",NA,2020-04-06,90
-"Dominican Republic",NA,2020-03-08,5
+"Djibouti",NA,2020-04-07,90
 "Dominican Republic",NA,2020-03-09,5
 "Dominican Republic",NA,2020-03-10,5
 "Dominican Republic",NA,2020-03-11,5
@@ -2909,7 +2908,7 @@
 "Dominican Republic",NA,2020-04-04,1488
 "Dominican Republic",NA,2020-04-05,1745
 "Dominican Republic",NA,2020-04-06,1828
-"Ecuador",NA,2020-03-08,14
+"Dominican Republic",NA,2020-04-07,1956
 "Ecuador",NA,2020-03-09,15
 "Ecuador",NA,2020-03-10,15
 "Ecuador",NA,2020-03-11,17
@@ -2939,7 +2938,7 @@
 "Ecuador",NA,2020-04-04,3465
 "Ecuador",NA,2020-04-05,3646
 "Ecuador",NA,2020-04-06,3747
-"Egypt",NA,2020-03-08,49
+"Ecuador",NA,2020-04-07,3747
 "Egypt",NA,2020-03-09,55
 "Egypt",NA,2020-03-10,59
 "Egypt",NA,2020-03-11,60
@@ -2969,7 +2968,7 @@
 "Egypt",NA,2020-04-04,1070
 "Egypt",NA,2020-04-05,1173
 "Egypt",NA,2020-04-06,1322
-"El Salvador",NA,2020-03-08,0
+"Egypt",NA,2020-04-07,1450
 "El Salvador",NA,2020-03-09,0
 "El Salvador",NA,2020-03-10,0
 "El Salvador",NA,2020-03-11,0
@@ -2999,7 +2998,7 @@
 "El Salvador",NA,2020-04-04,56
 "El Salvador",NA,2020-04-05,62
 "El Salvador",NA,2020-04-06,69
-"Equatorial Guinea",NA,2020-03-08,0
+"El Salvador",NA,2020-04-07,78
 "Equatorial Guinea",NA,2020-03-09,0
 "Equatorial Guinea",NA,2020-03-10,0
 "Equatorial Guinea",NA,2020-03-11,0
@@ -3029,7 +3028,7 @@
 "Equatorial Guinea",NA,2020-04-04,16
 "Equatorial Guinea",NA,2020-04-05,16
 "Equatorial Guinea",NA,2020-04-06,16
-"Eritrea",NA,2020-03-08,0
+"Equatorial Guinea",NA,2020-04-07,16
 "Eritrea",NA,2020-03-09,0
 "Eritrea",NA,2020-03-10,0
 "Eritrea",NA,2020-03-11,0
@@ -3059,7 +3058,7 @@
 "Eritrea",NA,2020-04-04,29
 "Eritrea",NA,2020-04-05,29
 "Eritrea",NA,2020-04-06,31
-"Estonia",NA,2020-03-08,10
+"Eritrea",NA,2020-04-07,31
 "Estonia",NA,2020-03-09,10
 "Estonia",NA,2020-03-10,12
 "Estonia",NA,2020-03-11,16
@@ -3089,7 +3088,7 @@
 "Estonia",NA,2020-04-04,1039
 "Estonia",NA,2020-04-05,1097
 "Estonia",NA,2020-04-06,1108
-"Swaziland",NA,2020-03-08,0
+"Estonia",NA,2020-04-07,1149
 "Swaziland",NA,2020-03-09,0
 "Swaziland",NA,2020-03-10,0
 "Swaziland",NA,2020-03-11,0
@@ -3119,7 +3118,7 @@
 "Swaziland",NA,2020-04-04,9
 "Swaziland",NA,2020-04-05,9
 "Swaziland",NA,2020-04-06,10
-"Ethiopia",NA,2020-03-08,0
+"Swaziland",NA,2020-04-07,10
 "Ethiopia",NA,2020-03-09,0
 "Ethiopia",NA,2020-03-10,0
 "Ethiopia",NA,2020-03-11,0
@@ -3149,7 +3148,7 @@
 "Ethiopia",NA,2020-04-04,38
 "Ethiopia",NA,2020-04-05,43
 "Ethiopia",NA,2020-04-06,44
-"Fiji",NA,2020-03-08,0
+"Ethiopia",NA,2020-04-07,52
 "Fiji",NA,2020-03-09,0
 "Fiji",NA,2020-03-10,0
 "Fiji",NA,2020-03-11,0
@@ -3179,7 +3178,7 @@
 "Fiji",NA,2020-04-04,12
 "Fiji",NA,2020-04-05,12
 "Fiji",NA,2020-04-06,14
-"Finland",NA,2020-03-08,23
+"Fiji",NA,2020-04-07,15
 "Finland",NA,2020-03-09,30
 "Finland",NA,2020-03-10,40
 "Finland",NA,2020-03-11,59
@@ -3209,7 +3208,7 @@
 "Finland",NA,2020-04-04,1882
 "Finland",NA,2020-04-05,1927
 "Finland",NA,2020-04-06,2176
-"France","french guiana",2020-03-08,5
+"Finland",NA,2020-04-07,2308
 "France","french guiana",2020-03-09,5
 "France","french guiana",2020-03-10,5
 "France","french guiana",2020-03-11,5
@@ -3239,7 +3238,7 @@
 "France","french guiana",2020-04-04,61
 "France","french guiana",2020-04-05,61
 "France","french guiana",2020-04-06,72
-"France","french polynesia",2020-03-08,0
+"France","french guiana",2020-04-07,72
 "France","french polynesia",2020-03-09,0
 "France","french polynesia",2020-03-10,0
 "France","french polynesia",2020-03-11,0
@@ -3269,7 +3268,7 @@
 "France","french polynesia",2020-04-04,40
 "France","french polynesia",2020-04-05,41
 "France","french polynesia",2020-04-06,42
-"France","guadeloupe",2020-03-08,0
+"France","french polynesia",2020-04-07,47
 "France","guadeloupe",2020-03-09,0
 "France","guadeloupe",2020-03-10,0
 "France","guadeloupe",2020-03-11,0
@@ -3299,7 +3298,7 @@
 "France","guadeloupe",2020-04-04,134
 "France","guadeloupe",2020-04-05,135
 "France","guadeloupe",2020-04-06,135
-"France","mayotte",2020-03-08,0
+"France","guadeloupe",2020-04-07,139
 "France","mayotte",2020-03-09,0
 "France","mayotte",2020-03-10,0
 "France","mayotte",2020-03-11,0
@@ -3329,7 +3328,7 @@
 "France","mayotte",2020-04-04,134
 "France","mayotte",2020-04-05,147
 "France","mayotte",2020-04-06,147
-"France","new caledonia",2020-03-08,0
+"France","mayotte",2020-04-07,171
 "France","new caledonia",2020-03-09,0
 "France","new caledonia",2020-03-10,0
 "France","new caledonia",2020-03-11,0
@@ -3359,7 +3358,7 @@
 "France","new caledonia",2020-04-04,17
 "France","new caledonia",2020-04-05,18
 "France","new caledonia",2020-04-06,18
-"France","reunion",2020-03-08,0
+"France","new caledonia",2020-04-07,18
 "France","reunion",2020-03-09,0
 "France","reunion",2020-03-10,0
 "France","reunion",2020-03-11,1
@@ -3389,7 +3388,7 @@
 "France","reunion",2020-04-04,334
 "France","reunion",2020-04-05,344
 "France","reunion",2020-04-06,349
-"France","saint barthelemy",2020-03-08,3
+"France","reunion",2020-04-07,358
 "France","saint barthelemy",2020-03-09,1
 "France","saint barthelemy",2020-03-10,1
 "France","saint barthelemy",2020-03-11,1
@@ -3419,7 +3418,7 @@
 "France","saint barthelemy",2020-04-04,6
 "France","saint barthelemy",2020-04-05,6
 "France","saint barthelemy",2020-04-06,6
-"France","st martin",2020-03-08,0
+"France","saint barthelemy",2020-04-07,6
 "France","st martin",2020-03-09,2
 "France","st martin",2020-03-10,2
 "France","st martin",2020-03-11,2
@@ -3449,7 +3448,7 @@
 "France","st martin",2020-04-04,24
 "France","st martin",2020-04-05,32
 "France","st martin",2020-04-06,32
-"France","martinique",2020-03-08,2
+"France","st martin",2020-04-07,32
 "France","martinique",2020-03-09,2
 "France","martinique",2020-03-10,2
 "France","martinique",2020-03-11,3
@@ -3479,7 +3478,7 @@
 "France","martinique",2020-04-04,145
 "France","martinique",2020-04-05,149
 "France","martinique",2020-04-06,151
-"France",NA,2020-03-08,1126
+"France","martinique",2020-04-07,152
 "France",NA,2020-03-09,1209
 "France",NA,2020-03-10,1784
 "France",NA,2020-03-11,2281
@@ -3509,7 +3508,7 @@
 "France",NA,2020-04-04,89953
 "France",NA,2020-04-05,92839
 "France",NA,2020-04-06,98010
-"Gabon",NA,2020-03-08,0
+"France",NA,2020-04-07,109069
 "Gabon",NA,2020-03-09,0
 "Gabon",NA,2020-03-10,0
 "Gabon",NA,2020-03-11,0
@@ -3539,7 +3538,7 @@
 "Gabon",NA,2020-04-04,21
 "Gabon",NA,2020-04-05,21
 "Gabon",NA,2020-04-06,24
-"Gambia",NA,2020-03-08,0
+"Gabon",NA,2020-04-07,30
 "Gambia",NA,2020-03-09,0
 "Gambia",NA,2020-03-10,0
 "Gambia",NA,2020-03-11,0
@@ -3569,7 +3568,7 @@
 "Gambia",NA,2020-04-04,4
 "Gambia",NA,2020-04-05,4
 "Gambia",NA,2020-04-06,4
-"Georgia",NA,2020-03-08,13
+"Gambia",NA,2020-04-07,4
 "Georgia",NA,2020-03-09,15
 "Georgia",NA,2020-03-10,15
 "Georgia",NA,2020-03-11,24
@@ -3599,7 +3598,7 @@
 "Georgia",NA,2020-04-04,162
 "Georgia",NA,2020-04-05,174
 "Georgia",NA,2020-04-06,188
-"Germany",NA,2020-03-08,1040
+"Georgia",NA,2020-04-07,196
 "Germany",NA,2020-03-09,1176
 "Germany",NA,2020-03-10,1457
 "Germany",NA,2020-03-11,1908
@@ -3629,7 +3628,7 @@
 "Germany",NA,2020-04-04,96092
 "Germany",NA,2020-04-05,100123
 "Germany",NA,2020-04-06,103374
-"Ghana",NA,2020-03-08,0
+"Germany",NA,2020-04-07,107663
 "Ghana",NA,2020-03-09,0
 "Ghana",NA,2020-03-10,0
 "Ghana",NA,2020-03-11,0
@@ -3659,7 +3658,7 @@
 "Ghana",NA,2020-04-04,205
 "Ghana",NA,2020-04-05,214
 "Ghana",NA,2020-04-06,214
-"Greece",NA,2020-03-08,73
+"Ghana",NA,2020-04-07,287
 "Greece",NA,2020-03-09,73
 "Greece",NA,2020-03-10,89
 "Greece",NA,2020-03-11,99
@@ -3689,7 +3688,7 @@
 "Greece",NA,2020-04-04,1673
 "Greece",NA,2020-04-05,1735
 "Greece",NA,2020-04-06,1755
-"Guatemala",NA,2020-03-08,0
+"Greece",NA,2020-04-07,1832
 "Guatemala",NA,2020-03-09,0
 "Guatemala",NA,2020-03-10,0
 "Guatemala",NA,2020-03-11,0
@@ -3719,7 +3718,7 @@
 "Guatemala",NA,2020-04-04,61
 "Guatemala",NA,2020-04-05,61
 "Guatemala",NA,2020-04-06,70
-"Guinea",NA,2020-03-08,0
+"Guatemala",NA,2020-04-07,77
 "Guinea",NA,2020-03-09,0
 "Guinea",NA,2020-03-10,0
 "Guinea",NA,2020-03-11,0
@@ -3749,7 +3748,7 @@
 "Guinea",NA,2020-04-04,111
 "Guinea",NA,2020-04-05,121
 "Guinea",NA,2020-04-06,128
-"Guyana",NA,2020-03-08,0
+"Guinea",NA,2020-04-07,144
 "Guyana",NA,2020-03-09,0
 "Guyana",NA,2020-03-10,0
 "Guyana",NA,2020-03-11,0
@@ -3779,7 +3778,7 @@
 "Guyana",NA,2020-04-04,23
 "Guyana",NA,2020-04-05,24
 "Guyana",NA,2020-04-06,31
-"Haiti",NA,2020-03-08,0
+"Guyana",NA,2020-04-07,33
 "Haiti",NA,2020-03-09,0
 "Haiti",NA,2020-03-10,0
 "Haiti",NA,2020-03-11,0
@@ -3809,7 +3808,7 @@
 "Haiti",NA,2020-04-04,20
 "Haiti",NA,2020-04-05,21
 "Haiti",NA,2020-04-06,24
-"Holy See",NA,2020-03-08,1
+"Haiti",NA,2020-04-07,25
 "Holy See",NA,2020-03-09,1
 "Holy See",NA,2020-03-10,1
 "Holy See",NA,2020-03-11,1
@@ -3839,7 +3838,7 @@
 "Holy See",NA,2020-04-04,7
 "Holy See",NA,2020-04-05,7
 "Holy See",NA,2020-04-06,7
-"Honduras",NA,2020-03-08,0
+"Holy See",NA,2020-04-07,7
 "Honduras",NA,2020-03-09,0
 "Honduras",NA,2020-03-10,0
 "Honduras",NA,2020-03-11,2
@@ -3869,7 +3868,7 @@
 "Honduras",NA,2020-04-04,264
 "Honduras",NA,2020-04-05,268
 "Honduras",NA,2020-04-06,298
-"Hungary",NA,2020-03-08,7
+"Honduras",NA,2020-04-07,305
 "Hungary",NA,2020-03-09,9
 "Hungary",NA,2020-03-10,9
 "Hungary",NA,2020-03-11,13
@@ -3899,7 +3898,7 @@
 "Hungary",NA,2020-04-04,678
 "Hungary",NA,2020-04-05,733
 "Hungary",NA,2020-04-06,744
-"Iceland",NA,2020-03-08,50
+"Hungary",NA,2020-04-07,817
 "Iceland",NA,2020-03-09,58
 "Iceland",NA,2020-03-10,69
 "Iceland",NA,2020-03-11,85
@@ -3929,7 +3928,7 @@
 "Iceland",NA,2020-04-04,1417
 "Iceland",NA,2020-04-05,1486
 "Iceland",NA,2020-04-06,1562
-"India",NA,2020-03-08,39
+"Iceland",NA,2020-04-07,1586
 "India",NA,2020-03-09,43
 "India",NA,2020-03-10,56
 "India",NA,2020-03-11,62
@@ -3959,7 +3958,7 @@
 "India",NA,2020-04-04,3082
 "India",NA,2020-04-05,3588
 "India",NA,2020-04-06,4778
-"Indonesia",NA,2020-03-08,6
+"India",NA,2020-04-07,5311
 "Indonesia",NA,2020-03-09,19
 "Indonesia",NA,2020-03-10,27
 "Indonesia",NA,2020-03-11,34
@@ -3989,7 +3988,7 @@
 "Indonesia",NA,2020-04-04,2092
 "Indonesia",NA,2020-04-05,2273
 "Indonesia",NA,2020-04-06,2491
-"Iran",NA,2020-03-08,6566
+"Indonesia",NA,2020-04-07,2738
 "Iran",NA,2020-03-09,7161
 "Iran",NA,2020-03-10,8042
 "Iran",NA,2020-03-11,9000
@@ -4019,7 +4018,7 @@
 "Iran",NA,2020-04-04,55743
 "Iran",NA,2020-04-05,58226
 "Iran",NA,2020-04-06,60500
-"Iraq",NA,2020-03-08,60
+"Iran",NA,2020-04-07,62589
 "Iraq",NA,2020-03-09,60
 "Iraq",NA,2020-03-10,71
 "Iraq",NA,2020-03-11,71
@@ -4049,7 +4048,7 @@
 "Iraq",NA,2020-04-04,878
 "Iraq",NA,2020-04-05,961
 "Iraq",NA,2020-04-06,1031
-"Ireland",NA,2020-03-08,19
+"Iraq",NA,2020-04-07,1122
 "Ireland",NA,2020-03-09,21
 "Ireland",NA,2020-03-10,34
 "Ireland",NA,2020-03-11,43
@@ -4079,7 +4078,7 @@
 "Ireland",NA,2020-04-04,4604
 "Ireland",NA,2020-04-05,4994
 "Ireland",NA,2020-04-06,5364
-"Israel",NA,2020-03-08,61
+"Ireland",NA,2020-04-07,5709
 "Israel",NA,2020-03-09,61
 "Israel",NA,2020-03-10,75
 "Israel",NA,2020-03-11,79
@@ -4109,7 +4108,7 @@
 "Israel",NA,2020-04-04,7851
 "Israel",NA,2020-04-05,8430
 "Israel",NA,2020-04-06,8904
-"Italy",NA,2020-03-08,7375
+"Israel",NA,2020-04-07,9248
 "Italy",NA,2020-03-09,9172
 "Italy",NA,2020-03-10,10149
 "Italy",NA,2020-03-11,12462
@@ -4139,7 +4138,7 @@
 "Italy",NA,2020-04-04,124632
 "Italy",NA,2020-04-05,128948
 "Italy",NA,2020-04-06,132547
-"Jamaica",NA,2020-03-08,0
+"Italy",NA,2020-04-07,135586
 "Jamaica",NA,2020-03-09,0
 "Jamaica",NA,2020-03-10,0
 "Jamaica",NA,2020-03-11,1
@@ -4169,7 +4168,7 @@
 "Jamaica",NA,2020-04-04,53
 "Jamaica",NA,2020-04-05,58
 "Jamaica",NA,2020-04-06,58
-"Japan",NA,2020-03-08,502
+"Jamaica",NA,2020-04-07,63
 "Japan",NA,2020-03-09,511
 "Japan",NA,2020-03-10,581
 "Japan",NA,2020-03-11,639
@@ -4199,7 +4198,7 @@
 "Japan",NA,2020-04-04,3139
 "Japan",NA,2020-04-05,3139
 "Japan",NA,2020-04-06,3654
-"Jordan",NA,2020-03-08,1
+"Japan",NA,2020-04-07,3906
 "Jordan",NA,2020-03-09,1
 "Jordan",NA,2020-03-10,1
 "Jordan",NA,2020-03-11,1
@@ -4229,7 +4228,7 @@
 "Jordan",NA,2020-04-04,323
 "Jordan",NA,2020-04-05,345
 "Jordan",NA,2020-04-06,349
-"Kazakhstan",NA,2020-03-08,0
+"Jordan",NA,2020-04-07,353
 "Kazakhstan",NA,2020-03-09,0
 "Kazakhstan",NA,2020-03-10,0
 "Kazakhstan",NA,2020-03-11,0
@@ -4259,7 +4258,7 @@
 "Kazakhstan",NA,2020-04-04,531
 "Kazakhstan",NA,2020-04-05,584
 "Kazakhstan",NA,2020-04-06,662
-"Kenya",NA,2020-03-08,0
+"Kazakhstan",NA,2020-04-07,697
 "Kenya",NA,2020-03-09,0
 "Kenya",NA,2020-03-10,0
 "Kenya",NA,2020-03-11,0
@@ -4289,7 +4288,7 @@
 "Kenya",NA,2020-04-04,126
 "Kenya",NA,2020-04-05,142
 "Kenya",NA,2020-04-06,158
-"S. Korea",NA,2020-03-08,7314
+"Kenya",NA,2020-04-07,172
 "S. Korea",NA,2020-03-09,7478
 "S. Korea",NA,2020-03-10,7513
 "S. Korea",NA,2020-03-11,7755
@@ -4319,7 +4318,7 @@
 "S. Korea",NA,2020-04-04,10156
 "S. Korea",NA,2020-04-05,10237
 "S. Korea",NA,2020-04-06,10284
-"Kuwait",NA,2020-03-08,64
+"S. Korea",NA,2020-04-07,10331
 "Kuwait",NA,2020-03-09,64
 "Kuwait",NA,2020-03-10,69
 "Kuwait",NA,2020-03-11,72
@@ -4349,7 +4348,7 @@
 "Kuwait",NA,2020-04-04,479
 "Kuwait",NA,2020-04-05,556
 "Kuwait",NA,2020-04-06,665
-"Kyrgyzstan",NA,2020-03-08,0
+"Kuwait",NA,2020-04-07,743
 "Kyrgyzstan",NA,2020-03-09,0
 "Kyrgyzstan",NA,2020-03-10,0
 "Kyrgyzstan",NA,2020-03-11,0
@@ -4379,7 +4378,7 @@
 "Kyrgyzstan",NA,2020-04-04,144
 "Kyrgyzstan",NA,2020-04-05,147
 "Kyrgyzstan",NA,2020-04-06,216
-"Latvia",NA,2020-03-08,2
+"Kyrgyzstan",NA,2020-04-07,228
 "Latvia",NA,2020-03-09,6
 "Latvia",NA,2020-03-10,8
 "Latvia",NA,2020-03-11,10
@@ -4409,7 +4408,7 @@
 "Latvia",NA,2020-04-04,509
 "Latvia",NA,2020-04-05,533
 "Latvia",NA,2020-04-06,542
-"Lebanon",NA,2020-03-08,32
+"Latvia",NA,2020-04-07,548
 "Lebanon",NA,2020-03-09,32
 "Lebanon",NA,2020-03-10,41
 "Lebanon",NA,2020-03-11,61
@@ -4439,7 +4438,7 @@
 "Lebanon",NA,2020-04-04,520
 "Lebanon",NA,2020-04-05,527
 "Lebanon",NA,2020-04-06,541
-"Liberia",NA,2020-03-08,0
+"Lebanon",NA,2020-04-07,548
 "Liberia",NA,2020-03-09,0
 "Liberia",NA,2020-03-10,0
 "Liberia",NA,2020-03-11,0
@@ -4469,7 +4468,7 @@
 "Liberia",NA,2020-04-04,10
 "Liberia",NA,2020-04-05,13
 "Liberia",NA,2020-04-06,14
-"Liechtenstein",NA,2020-03-08,1
+"Liberia",NA,2020-04-07,14
 "Liechtenstein",NA,2020-03-09,1
 "Liechtenstein",NA,2020-03-10,1
 "Liechtenstein",NA,2020-03-11,1
@@ -4499,7 +4498,7 @@
 "Liechtenstein",NA,2020-04-04,77
 "Liechtenstein",NA,2020-04-05,77
 "Liechtenstein",NA,2020-04-06,77
-"Lithuania",NA,2020-03-08,1
+"Liechtenstein",NA,2020-04-07,78
 "Lithuania",NA,2020-03-09,1
 "Lithuania",NA,2020-03-10,1
 "Lithuania",NA,2020-03-11,3
@@ -4529,7 +4528,7 @@
 "Lithuania",NA,2020-04-04,771
 "Lithuania",NA,2020-04-05,811
 "Lithuania",NA,2020-04-06,843
-"Luxembourg",NA,2020-03-08,3
+"Lithuania",NA,2020-04-07,880
 "Luxembourg",NA,2020-03-09,3
 "Luxembourg",NA,2020-03-10,5
 "Luxembourg",NA,2020-03-11,7
@@ -4559,7 +4558,7 @@
 "Luxembourg",NA,2020-04-04,2729
 "Luxembourg",NA,2020-04-05,2804
 "Luxembourg",NA,2020-04-06,2843
-"Madagascar",NA,2020-03-08,0
+"Luxembourg",NA,2020-04-07,2970
 "Madagascar",NA,2020-03-09,0
 "Madagascar",NA,2020-03-10,0
 "Madagascar",NA,2020-03-11,0
@@ -4589,7 +4588,7 @@
 "Madagascar",NA,2020-04-04,70
 "Madagascar",NA,2020-04-05,72
 "Madagascar",NA,2020-04-06,82
-"Malaysia",NA,2020-03-08,99
+"Madagascar",NA,2020-04-07,88
 "Malaysia",NA,2020-03-09,117
 "Malaysia",NA,2020-03-10,129
 "Malaysia",NA,2020-03-11,149
@@ -4619,7 +4618,7 @@
 "Malaysia",NA,2020-04-04,3483
 "Malaysia",NA,2020-04-05,3662
 "Malaysia",NA,2020-04-06,3793
-"Maldives",NA,2020-03-08,4
+"Malaysia",NA,2020-04-07,3963
 "Maldives",NA,2020-03-09,4
 "Maldives",NA,2020-03-10,6
 "Maldives",NA,2020-03-11,8
@@ -4649,7 +4648,7 @@
 "Maldives",NA,2020-04-04,19
 "Maldives",NA,2020-04-05,19
 "Maldives",NA,2020-04-06,19
-"Malta",NA,2020-03-08,3
+"Maldives",NA,2020-04-07,19
 "Malta",NA,2020-03-09,3
 "Malta",NA,2020-03-10,5
 "Malta",NA,2020-03-11,6
@@ -4679,7 +4678,7 @@
 "Malta",NA,2020-04-04,213
 "Malta",NA,2020-04-05,227
 "Malta",NA,2020-04-06,241
-"Mauritania",NA,2020-03-08,0
+"Malta",NA,2020-04-07,293
 "Mauritania",NA,2020-03-09,0
 "Mauritania",NA,2020-03-10,0
 "Mauritania",NA,2020-03-11,0
@@ -4709,7 +4708,7 @@
 "Mauritania",NA,2020-04-04,6
 "Mauritania",NA,2020-04-05,6
 "Mauritania",NA,2020-04-06,6
-"Mauritius",NA,2020-03-08,0
+"Mauritania",NA,2020-04-07,6
 "Mauritius",NA,2020-03-09,0
 "Mauritius",NA,2020-03-10,0
 "Mauritius",NA,2020-03-11,0
@@ -4739,7 +4738,7 @@
 "Mauritius",NA,2020-04-04,196
 "Mauritius",NA,2020-04-05,227
 "Mauritius",NA,2020-04-06,244
-"Mexico",NA,2020-03-08,7
+"Mauritius",NA,2020-04-07,268
 "Mexico",NA,2020-03-09,7
 "Mexico",NA,2020-03-10,7
 "Mexico",NA,2020-03-11,8
@@ -4769,7 +4768,7 @@
 "Mexico",NA,2020-04-04,1688
 "Mexico",NA,2020-04-05,1890
 "Mexico",NA,2020-04-06,2143
-"Moldova, Republic of",NA,2020-03-08,1
+"Mexico",NA,2020-04-07,2439
 "Moldova, Republic of",NA,2020-03-09,1
 "Moldova, Republic of",NA,2020-03-10,3
 "Moldova, Republic of",NA,2020-03-11,3
@@ -4799,7 +4798,7 @@
 "Moldova, Republic of",NA,2020-04-04,752
 "Moldova, Republic of",NA,2020-04-05,864
 "Moldova, Republic of",NA,2020-04-06,965
-"Monaco",NA,2020-03-08,1
+"Moldova, Republic of",NA,2020-04-07,1056
 "Monaco",NA,2020-03-09,1
 "Monaco",NA,2020-03-10,1
 "Monaco",NA,2020-03-11,1
@@ -4829,7 +4828,7 @@
 "Monaco",NA,2020-04-04,66
 "Monaco",NA,2020-04-05,73
 "Monaco",NA,2020-04-06,77
-"Mongolia",NA,2020-03-08,0
+"Monaco",NA,2020-04-07,79
 "Mongolia",NA,2020-03-09,0
 "Mongolia",NA,2020-03-10,1
 "Mongolia",NA,2020-03-11,1
@@ -4859,7 +4858,7 @@
 "Mongolia",NA,2020-04-04,14
 "Mongolia",NA,2020-04-05,14
 "Mongolia",NA,2020-04-06,15
-"Montenegro",NA,2020-03-08,0
+"Mongolia",NA,2020-04-07,15
 "Montenegro",NA,2020-03-09,0
 "Montenegro",NA,2020-03-10,0
 "Montenegro",NA,2020-03-11,0
@@ -4889,7 +4888,7 @@
 "Montenegro",NA,2020-04-04,201
 "Montenegro",NA,2020-04-05,214
 "Montenegro",NA,2020-04-06,233
-"Morocco",NA,2020-03-08,2
+"Montenegro",NA,2020-04-07,241
 "Morocco",NA,2020-03-09,2
 "Morocco",NA,2020-03-10,3
 "Morocco",NA,2020-03-11,5
@@ -4919,7 +4918,7 @@
 "Morocco",NA,2020-04-04,919
 "Morocco",NA,2020-04-05,1021
 "Morocco",NA,2020-04-06,1120
-"Namibia",NA,2020-03-08,0
+"Morocco",NA,2020-04-07,1184
 "Namibia",NA,2020-03-09,0
 "Namibia",NA,2020-03-10,0
 "Namibia",NA,2020-03-11,0
@@ -4949,7 +4948,7 @@
 "Namibia",NA,2020-04-04,14
 "Namibia",NA,2020-04-05,16
 "Namibia",NA,2020-04-06,16
-"Nepal",NA,2020-03-08,1
+"Namibia",NA,2020-04-07,16
 "Nepal",NA,2020-03-09,1
 "Nepal",NA,2020-03-10,1
 "Nepal",NA,2020-03-11,1
@@ -4979,7 +4978,7 @@
 "Nepal",NA,2020-04-04,9
 "Nepal",NA,2020-04-05,9
 "Nepal",NA,2020-04-06,9
-"Netherlands","aruba",2020-03-08,0
+"Nepal",NA,2020-04-07,9
 "Netherlands","aruba",2020-03-09,0
 "Netherlands","aruba",2020-03-10,0
 "Netherlands","aruba",2020-03-11,0
@@ -5009,7 +5008,7 @@
 "Netherlands","aruba",2020-04-04,64
 "Netherlands","aruba",2020-04-05,64
 "Netherlands","aruba",2020-04-06,71
-"Netherlands","curacao",2020-03-08,0
+"Netherlands","aruba",2020-04-07,74
 "Netherlands","curacao",2020-03-09,0
 "Netherlands","curacao",2020-03-10,0
 "Netherlands","curacao",2020-03-11,0
@@ -5039,7 +5038,7 @@
 "Netherlands","curacao",2020-04-04,11
 "Netherlands","curacao",2020-04-05,11
 "Netherlands","curacao",2020-04-06,13
-"Netherlands","sint maarten",2020-03-08,0
+"Netherlands","curacao",2020-04-07,13
 "Netherlands","sint maarten",2020-03-09,0
 "Netherlands","sint maarten",2020-03-10,0
 "Netherlands","sint maarten",2020-03-11,0
@@ -5069,7 +5068,7 @@
 "Netherlands","sint maarten",2020-04-04,23
 "Netherlands","sint maarten",2020-04-05,25
 "Netherlands","sint maarten",2020-04-06,37
-"Netherlands",NA,2020-03-08,265
+"Netherlands","sint maarten",2020-04-07,40
 "Netherlands",NA,2020-03-09,321
 "Netherlands",NA,2020-03-10,382
 "Netherlands",NA,2020-03-11,503
@@ -5099,7 +5098,7 @@
 "Netherlands",NA,2020-04-04,16627
 "Netherlands",NA,2020-04-05,17851
 "Netherlands",NA,2020-04-06,18803
-"New Zealand",NA,2020-03-08,5
+"Netherlands",NA,2020-04-07,19580
 "New Zealand",NA,2020-03-09,5
 "New Zealand",NA,2020-03-10,5
 "New Zealand",NA,2020-03-11,5
@@ -5129,7 +5128,7 @@
 "New Zealand",NA,2020-04-04,950
 "New Zealand",NA,2020-04-05,1039
 "New Zealand",NA,2020-04-06,1106
-"Nicaragua",NA,2020-03-08,0
+"New Zealand",NA,2020-04-07,1160
 "Nicaragua",NA,2020-03-09,0
 "Nicaragua",NA,2020-03-10,0
 "Nicaragua",NA,2020-03-11,0
@@ -5159,7 +5158,7 @@
 "Nicaragua",NA,2020-04-04,5
 "Nicaragua",NA,2020-04-05,6
 "Nicaragua",NA,2020-04-06,6
-"Niger",NA,2020-03-08,0
+"Nicaragua",NA,2020-04-07,6
 "Niger",NA,2020-03-09,0
 "Niger",NA,2020-03-10,0
 "Niger",NA,2020-03-11,0
@@ -5189,7 +5188,7 @@
 "Niger",NA,2020-04-04,144
 "Niger",NA,2020-04-05,184
 "Niger",NA,2020-04-06,253
-"Nigeria",NA,2020-03-08,1
+"Niger",NA,2020-04-07,278
 "Nigeria",NA,2020-03-09,2
 "Nigeria",NA,2020-03-10,2
 "Nigeria",NA,2020-03-11,2
@@ -5219,7 +5218,7 @@
 "Nigeria",NA,2020-04-04,214
 "Nigeria",NA,2020-04-05,232
 "Nigeria",NA,2020-04-06,238
-"Macedonia",NA,2020-03-08,3
+"Nigeria",NA,2020-04-07,254
 "Macedonia",NA,2020-03-09,3
 "Macedonia",NA,2020-03-10,7
 "Macedonia",NA,2020-03-11,7
@@ -5249,7 +5248,7 @@
 "Macedonia",NA,2020-04-04,483
 "Macedonia",NA,2020-04-05,555
 "Macedonia",NA,2020-04-06,570
-"Norway",NA,2020-03-08,176
+"Macedonia",NA,2020-04-07,599
 "Norway",NA,2020-03-09,205
 "Norway",NA,2020-03-10,400
 "Norway",NA,2020-03-11,598
@@ -5279,7 +5278,7 @@
 "Norway",NA,2020-04-04,5550
 "Norway",NA,2020-04-05,5687
 "Norway",NA,2020-04-06,5865
-"Oman",NA,2020-03-08,16
+"Norway",NA,2020-04-07,6086
 "Oman",NA,2020-03-09,16
 "Oman",NA,2020-03-10,18
 "Oman",NA,2020-03-11,18
@@ -5309,7 +5308,7 @@
 "Oman",NA,2020-04-04,277
 "Oman",NA,2020-04-05,298
 "Oman",NA,2020-04-06,331
-"Pakistan",NA,2020-03-08,6
+"Oman",NA,2020-04-07,371
 "Pakistan",NA,2020-03-09,6
 "Pakistan",NA,2020-03-10,16
 "Pakistan",NA,2020-03-11,19
@@ -5339,7 +5338,7 @@
 "Pakistan",NA,2020-04-04,2818
 "Pakistan",NA,2020-04-05,3157
 "Pakistan",NA,2020-04-06,3766
-"Panama",NA,2020-03-08,0
+"Pakistan",NA,2020-04-07,4035
 "Panama",NA,2020-03-09,0
 "Panama",NA,2020-03-10,1
 "Panama",NA,2020-03-11,8
@@ -5369,7 +5368,7 @@
 "Panama",NA,2020-04-04,1673
 "Panama",NA,2020-04-05,1801
 "Panama",NA,2020-04-06,1988
-"Papua New Guinea",NA,2020-03-08,0
+"Panama",NA,2020-04-07,2100
 "Papua New Guinea",NA,2020-03-09,0
 "Papua New Guinea",NA,2020-03-10,0
 "Papua New Guinea",NA,2020-03-11,0
@@ -5399,7 +5398,7 @@
 "Papua New Guinea",NA,2020-04-04,1
 "Papua New Guinea",NA,2020-04-05,1
 "Papua New Guinea",NA,2020-04-06,2
-"Paraguay",NA,2020-03-08,1
+"Papua New Guinea",NA,2020-04-07,2
 "Paraguay",NA,2020-03-09,1
 "Paraguay",NA,2020-03-10,1
 "Paraguay",NA,2020-03-11,5
@@ -5429,7 +5428,7 @@
 "Paraguay",NA,2020-04-04,96
 "Paraguay",NA,2020-04-05,104
 "Paraguay",NA,2020-04-06,113
-"Peru",NA,2020-03-08,6
+"Paraguay",NA,2020-04-07,115
 "Peru",NA,2020-03-09,7
 "Peru",NA,2020-03-10,11
 "Peru",NA,2020-03-11,11
@@ -5459,7 +5458,7 @@
 "Peru",NA,2020-04-04,1746
 "Peru",NA,2020-04-05,2281
 "Peru",NA,2020-04-06,2561
-"Philippines",NA,2020-03-08,10
+"Peru",NA,2020-04-07,2954
 "Philippines",NA,2020-03-09,20
 "Philippines",NA,2020-03-10,33
 "Philippines",NA,2020-03-11,49
@@ -5489,7 +5488,7 @@
 "Philippines",NA,2020-04-04,3094
 "Philippines",NA,2020-04-05,3246
 "Philippines",NA,2020-04-06,3660
-"Poland",NA,2020-03-08,11
+"Philippines",NA,2020-04-07,3764
 "Poland",NA,2020-03-09,16
 "Poland",NA,2020-03-10,22
 "Poland",NA,2020-03-11,31
@@ -5519,7 +5518,7 @@
 "Poland",NA,2020-04-04,3627
 "Poland",NA,2020-04-05,4102
 "Poland",NA,2020-04-06,4413
-"Portugal",NA,2020-03-08,30
+"Poland",NA,2020-04-07,4848
 "Portugal",NA,2020-03-09,30
 "Portugal",NA,2020-03-10,41
 "Portugal",NA,2020-03-11,59
@@ -5549,7 +5548,7 @@
 "Portugal",NA,2020-04-04,10524
 "Portugal",NA,2020-04-05,11278
 "Portugal",NA,2020-04-06,11730
-"Qatar",NA,2020-03-08,15
+"Portugal",NA,2020-04-07,12442
 "Qatar",NA,2020-03-09,18
 "Qatar",NA,2020-03-10,24
 "Qatar",NA,2020-03-11,262
@@ -5579,7 +5578,7 @@
 "Qatar",NA,2020-04-04,1325
 "Qatar",NA,2020-04-05,1604
 "Qatar",NA,2020-04-06,1832
-"Romania",NA,2020-03-08,15
+"Qatar",NA,2020-04-07,2057
 "Romania",NA,2020-03-09,15
 "Romania",NA,2020-03-10,25
 "Romania",NA,2020-03-11,45
@@ -5609,7 +5608,7 @@
 "Romania",NA,2020-04-04,3613
 "Romania",NA,2020-04-05,3864
 "Romania",NA,2020-04-06,4057
-"Russia",NA,2020-03-08,17
+"Romania",NA,2020-04-07,4417
 "Russia",NA,2020-03-09,17
 "Russia",NA,2020-03-10,20
 "Russia",NA,2020-03-11,20
@@ -5639,7 +5638,7 @@
 "Russia",NA,2020-04-04,4731
 "Russia",NA,2020-04-05,5389
 "Russia",NA,2020-04-06,6343
-"Rwanda",NA,2020-03-08,0
+"Russia",NA,2020-04-07,7497
 "Rwanda",NA,2020-03-09,0
 "Rwanda",NA,2020-03-10,0
 "Rwanda",NA,2020-03-11,0
@@ -5669,7 +5668,7 @@
 "Rwanda",NA,2020-04-04,102
 "Rwanda",NA,2020-04-05,104
 "Rwanda",NA,2020-04-06,105
-"Saint Lucia",NA,2020-03-08,0
+"Rwanda",NA,2020-04-07,105
 "Saint Lucia",NA,2020-03-09,0
 "Saint Lucia",NA,2020-03-10,0
 "Saint Lucia",NA,2020-03-11,0
@@ -5699,7 +5698,7 @@
 "Saint Lucia",NA,2020-04-04,14
 "Saint Lucia",NA,2020-04-05,14
 "Saint Lucia",NA,2020-04-06,14
-"Saint Vincent and the Grenadines",NA,2020-03-08,0
+"Saint Lucia",NA,2020-04-07,14
 "Saint Vincent and the Grenadines",NA,2020-03-09,0
 "Saint Vincent and the Grenadines",NA,2020-03-10,0
 "Saint Vincent and the Grenadines",NA,2020-03-11,0
@@ -5729,7 +5728,7 @@
 "Saint Vincent and the Grenadines",NA,2020-04-04,7
 "Saint Vincent and the Grenadines",NA,2020-04-05,7
 "Saint Vincent and the Grenadines",NA,2020-04-06,7
-"San Marino",NA,2020-03-08,36
+"Saint Vincent and the Grenadines",NA,2020-04-07,8
 "San Marino",NA,2020-03-09,36
 "San Marino",NA,2020-03-10,51
 "San Marino",NA,2020-03-11,62
@@ -5759,7 +5758,7 @@
 "San Marino",NA,2020-04-04,259
 "San Marino",NA,2020-04-05,266
 "San Marino",NA,2020-04-06,266
-"Saudi Arabia",NA,2020-03-08,11
+"San Marino",NA,2020-04-07,279
 "Saudi Arabia",NA,2020-03-09,15
 "Saudi Arabia",NA,2020-03-10,20
 "Saudi Arabia",NA,2020-03-11,21
@@ -5789,7 +5788,7 @@
 "Saudi Arabia",NA,2020-04-04,2179
 "Saudi Arabia",NA,2020-04-05,2402
 "Saudi Arabia",NA,2020-04-06,2605
-"Senegal",NA,2020-03-08,4
+"Saudi Arabia",NA,2020-04-07,2795
 "Senegal",NA,2020-03-09,4
 "Senegal",NA,2020-03-10,4
 "Senegal",NA,2020-03-11,4
@@ -5819,7 +5818,7 @@
 "Senegal",NA,2020-04-04,219
 "Senegal",NA,2020-04-05,222
 "Senegal",NA,2020-04-06,226
-"Serbia",NA,2020-03-08,1
+"Senegal",NA,2020-04-07,237
 "Serbia",NA,2020-03-09,1
 "Serbia",NA,2020-03-10,5
 "Serbia",NA,2020-03-11,12
@@ -5849,7 +5848,7 @@
 "Serbia",NA,2020-04-04,1624
 "Serbia",NA,2020-04-05,1908
 "Serbia",NA,2020-04-06,2200
-"Seychelles",NA,2020-03-08,0
+"Serbia",NA,2020-04-07,2447
 "Seychelles",NA,2020-03-09,0
 "Seychelles",NA,2020-03-10,0
 "Seychelles",NA,2020-03-11,0
@@ -5879,7 +5878,7 @@
 "Seychelles",NA,2020-04-04,10
 "Seychelles",NA,2020-04-05,10
 "Seychelles",NA,2020-04-06,11
-"Singapore",NA,2020-03-08,150
+"Seychelles",NA,2020-04-07,11
 "Singapore",NA,2020-03-09,150
 "Singapore",NA,2020-03-10,160
 "Singapore",NA,2020-03-11,178
@@ -5909,7 +5908,7 @@
 "Singapore",NA,2020-04-04,1189
 "Singapore",NA,2020-04-05,1309
 "Singapore",NA,2020-04-06,1375
-"Slovakia",NA,2020-03-08,3
+"Singapore",NA,2020-04-07,1481
 "Slovakia",NA,2020-03-09,3
 "Slovakia",NA,2020-03-10,7
 "Slovakia",NA,2020-03-11,10
@@ -5939,7 +5938,7 @@
 "Slovakia",NA,2020-04-04,471
 "Slovakia",NA,2020-04-05,485
 "Slovakia",NA,2020-04-06,534
-"Slovenia",NA,2020-03-08,16
+"Slovakia",NA,2020-04-07,581
 "Slovenia",NA,2020-03-09,16
 "Slovenia",NA,2020-03-10,31
 "Slovenia",NA,2020-03-11,57
@@ -5969,7 +5968,7 @@
 "Slovenia",NA,2020-04-04,977
 "Slovenia",NA,2020-04-05,997
 "Slovenia",NA,2020-04-06,1021
-"Somalia",NA,2020-03-08,0
+"Slovenia",NA,2020-04-07,1059
 "Somalia",NA,2020-03-09,0
 "Somalia",NA,2020-03-10,0
 "Somalia",NA,2020-03-11,0
@@ -5999,7 +5998,7 @@
 "Somalia",NA,2020-04-04,7
 "Somalia",NA,2020-04-05,7
 "Somalia",NA,2020-04-06,7
-"South Africa",NA,2020-03-08,3
+"Somalia",NA,2020-04-07,8
 "South Africa",NA,2020-03-09,3
 "South Africa",NA,2020-03-10,7
 "South Africa",NA,2020-03-11,13
@@ -6029,7 +6028,7 @@
 "South Africa",NA,2020-04-04,1585
 "South Africa",NA,2020-04-05,1655
 "South Africa",NA,2020-04-06,1686
-"Spain",NA,2020-03-08,673
+"South Africa",NA,2020-04-07,1749
 "Spain",NA,2020-03-09,1073
 "Spain",NA,2020-03-10,1695
 "Spain",NA,2020-03-11,2277
@@ -6059,7 +6058,7 @@
 "Spain",NA,2020-04-04,126168
 "Spain",NA,2020-04-05,131646
 "Spain",NA,2020-04-06,136675
-"Sri Lanka",NA,2020-03-08,1
+"Spain",NA,2020-04-07,141942
 "Sri Lanka",NA,2020-03-09,1
 "Sri Lanka",NA,2020-03-10,1
 "Sri Lanka",NA,2020-03-11,2
@@ -6089,7 +6088,7 @@
 "Sri Lanka",NA,2020-04-04,166
 "Sri Lanka",NA,2020-04-05,176
 "Sri Lanka",NA,2020-04-06,178
-"Sudan",NA,2020-03-08,0
+"Sri Lanka",NA,2020-04-07,185
 "Sudan",NA,2020-03-09,0
 "Sudan",NA,2020-03-10,0
 "Sudan",NA,2020-03-11,0
@@ -6119,7 +6118,7 @@
 "Sudan",NA,2020-04-04,10
 "Sudan",NA,2020-04-05,12
 "Sudan",NA,2020-04-06,12
-"Suriname",NA,2020-03-08,0
+"Sudan",NA,2020-04-07,14
 "Suriname",NA,2020-03-09,0
 "Suriname",NA,2020-03-10,0
 "Suriname",NA,2020-03-11,0
@@ -6149,7 +6148,7 @@
 "Suriname",NA,2020-04-04,10
 "Suriname",NA,2020-04-05,10
 "Suriname",NA,2020-04-06,10
-"Sweden",NA,2020-03-08,203
+"Suriname",NA,2020-04-07,10
 "Sweden",NA,2020-03-09,248
 "Sweden",NA,2020-03-10,355
 "Sweden",NA,2020-03-11,500
@@ -6179,7 +6178,7 @@
 "Sweden",NA,2020-04-04,6443
 "Sweden",NA,2020-04-05,6830
 "Sweden",NA,2020-04-06,7206
-"Switzerland",NA,2020-03-08,337
+"Sweden",NA,2020-04-07,7693
 "Switzerland",NA,2020-03-09,374
 "Switzerland",NA,2020-03-10,491
 "Switzerland",NA,2020-03-11,652
@@ -6209,7 +6208,7 @@
 "Switzerland",NA,2020-04-04,20505
 "Switzerland",NA,2020-04-05,21100
 "Switzerland",NA,2020-04-06,21657
-"Taiwan",NA,2020-03-08,45
+"Switzerland",NA,2020-04-07,22253
 "Taiwan",NA,2020-03-09,45
 "Taiwan",NA,2020-03-10,47
 "Taiwan",NA,2020-03-11,48
@@ -6239,7 +6238,7 @@
 "Taiwan",NA,2020-04-04,355
 "Taiwan",NA,2020-04-05,363
 "Taiwan",NA,2020-04-06,373
-"Tanzania, United Republic of",NA,2020-03-08,0
+"Taiwan",NA,2020-04-07,376
 "Tanzania, United Republic of",NA,2020-03-09,0
 "Tanzania, United Republic of",NA,2020-03-10,0
 "Tanzania, United Republic of",NA,2020-03-11,0
@@ -6269,7 +6268,7 @@
 "Tanzania, United Republic of",NA,2020-04-04,20
 "Tanzania, United Republic of",NA,2020-04-05,22
 "Tanzania, United Republic of",NA,2020-04-06,24
-"Thailand",NA,2020-03-08,50
+"Tanzania, United Republic of",NA,2020-04-07,24
 "Thailand",NA,2020-03-09,50
 "Thailand",NA,2020-03-10,53
 "Thailand",NA,2020-03-11,59
@@ -6299,7 +6298,7 @@
 "Thailand",NA,2020-04-04,2067
 "Thailand",NA,2020-04-05,2169
 "Thailand",NA,2020-04-06,2220
-"Togo",NA,2020-03-08,1
+"Thailand",NA,2020-04-07,2258
 "Togo",NA,2020-03-09,1
 "Togo",NA,2020-03-10,1
 "Togo",NA,2020-03-11,1
@@ -6329,7 +6328,7 @@
 "Togo",NA,2020-04-04,41
 "Togo",NA,2020-04-05,44
 "Togo",NA,2020-04-06,58
-"Trinidad and Tobago",NA,2020-03-08,0
+"Togo",NA,2020-04-07,65
 "Trinidad and Tobago",NA,2020-03-09,0
 "Trinidad and Tobago",NA,2020-03-10,0
 "Trinidad and Tobago",NA,2020-03-11,0
@@ -6359,7 +6358,7 @@
 "Trinidad and Tobago",NA,2020-04-04,103
 "Trinidad and Tobago",NA,2020-04-05,104
 "Trinidad and Tobago",NA,2020-04-06,105
-"Tunisia",NA,2020-03-08,2
+"Trinidad and Tobago",NA,2020-04-07,107
 "Tunisia",NA,2020-03-09,2
 "Tunisia",NA,2020-03-10,5
 "Tunisia",NA,2020-03-11,7
@@ -6389,7 +6388,7 @@
 "Tunisia",NA,2020-04-04,553
 "Tunisia",NA,2020-04-05,574
 "Tunisia",NA,2020-04-06,596
-"Turkey",NA,2020-03-08,0
+"Tunisia",NA,2020-04-07,623
 "Turkey",NA,2020-03-09,0
 "Turkey",NA,2020-03-10,0
 "Turkey",NA,2020-03-11,1
@@ -6419,7 +6418,7 @@
 "Turkey",NA,2020-04-04,23934
 "Turkey",NA,2020-04-05,27069
 "Turkey",NA,2020-04-06,30217
-"Uganda",NA,2020-03-08,0
+"Turkey",NA,2020-04-07,34109
 "Uganda",NA,2020-03-09,0
 "Uganda",NA,2020-03-10,0
 "Uganda",NA,2020-03-11,0
@@ -6449,7 +6448,7 @@
 "Uganda",NA,2020-04-04,48
 "Uganda",NA,2020-04-05,52
 "Uganda",NA,2020-04-06,52
-"Ukraine",NA,2020-03-08,1
+"Uganda",NA,2020-04-07,52
 "Ukraine",NA,2020-03-09,1
 "Ukraine",NA,2020-03-10,1
 "Ukraine",NA,2020-03-11,1
@@ -6479,7 +6478,7 @@
 "Ukraine",NA,2020-04-04,1225
 "Ukraine",NA,2020-04-05,1308
 "Ukraine",NA,2020-04-06,1319
-"UAE",NA,2020-03-08,45
+"Ukraine",NA,2020-04-07,1462
 "UAE",NA,2020-03-09,45
 "UAE",NA,2020-03-10,74
 "UAE",NA,2020-03-11,74
@@ -6509,7 +6508,7 @@
 "UAE",NA,2020-04-04,1505
 "UAE",NA,2020-04-05,1799
 "UAE",NA,2020-04-06,2076
-"UK","bermuda",2020-03-08,0
+"UAE",NA,2020-04-07,2359
 "UK","bermuda",2020-03-09,0
 "UK","bermuda",2020-03-10,0
 "UK","bermuda",2020-03-11,0
@@ -6539,7 +6538,7 @@
 "UK","bermuda",2020-04-04,35
 "UK","bermuda",2020-04-05,37
 "UK","bermuda",2020-04-06,39
-"UK","cayman islands",2020-03-08,0
+"UK","bermuda",2020-04-07,39
 "UK","cayman islands",2020-03-09,0
 "UK","cayman islands",2020-03-10,0
 "UK","cayman islands",2020-03-11,0
@@ -6569,7 +6568,7 @@
 "UK","cayman islands",2020-04-04,35
 "UK","cayman islands",2020-04-05,35
 "UK","cayman islands",2020-04-06,39
-"UK","channel islands",2020-03-08,0
+"UK","cayman islands",2020-04-07,45
 "UK","channel islands",2020-03-09,0
 "UK","channel islands",2020-03-10,1
 "UK","channel islands",2020-03-11,2
@@ -6599,7 +6598,7 @@
 "UK","channel islands",2020-04-04,262
 "UK","channel islands",2020-04-05,309
 "UK","channel islands",2020-04-06,323
-"UK","gibraltar",2020-03-08,1
+"UK","channel islands",2020-04-07,335
 "UK","gibraltar",2020-03-09,1
 "UK","gibraltar",2020-03-10,1
 "UK","gibraltar",2020-03-11,1
@@ -6629,7 +6628,7 @@
 "UK","gibraltar",2020-04-04,98
 "UK","gibraltar",2020-04-05,103
 "UK","gibraltar",2020-04-06,109
-"UK","isle of man",2020-03-08,0
+"UK","gibraltar",2020-04-07,113
 "UK","isle of man",2020-03-09,0
 "UK","isle of man",2020-03-10,0
 "UK","isle of man",2020-03-11,0
@@ -6659,7 +6658,7 @@
 "UK","isle of man",2020-04-04,126
 "UK","isle of man",2020-04-05,127
 "UK","isle of man",2020-04-06,139
-"UK","montserrat",2020-03-08,0
+"UK","isle of man",2020-04-07,150
 "UK","montserrat",2020-03-09,0
 "UK","montserrat",2020-03-10,0
 "UK","montserrat",2020-03-11,0
@@ -6689,7 +6688,7 @@
 "UK","montserrat",2020-04-04,6
 "UK","montserrat",2020-04-05,6
 "UK","montserrat",2020-04-06,6
-"UK",NA,2020-03-08,273
+"UK","montserrat",2020-04-07,9
 "UK",NA,2020-03-09,321
 "UK",NA,2020-03-10,382
 "UK",NA,2020-03-11,456
@@ -6719,7 +6718,7 @@
 "UK",NA,2020-04-04,41903
 "UK",NA,2020-04-05,47806
 "UK",NA,2020-04-06,51608
-"Uruguay",NA,2020-03-08,0
+"UK",NA,2020-04-07,55242
 "Uruguay",NA,2020-03-09,0
 "Uruguay",NA,2020-03-10,0
 "Uruguay",NA,2020-03-11,0
@@ -6749,7 +6748,7 @@
 "Uruguay",NA,2020-04-04,400
 "Uruguay",NA,2020-04-05,400
 "Uruguay",NA,2020-04-06,406
-"USA",NA,2020-03-08,518
+"Uruguay",NA,2020-04-07,424
 "USA",NA,2020-03-09,583
 "USA",NA,2020-03-10,959
 "USA",NA,2020-03-11,1281
@@ -6760,9 +6759,9 @@
 "USA",NA,2020-03-16,4632
 "USA",NA,2020-03-17,6421
 "USA",NA,2020-03-18,7783
-"USA",NA,2020-03-19,13677
-"USA",NA,2020-03-20,19100
-"USA",NA,2020-03-21,25489
+"USA",NA,2020-03-19,13747
+"USA",NA,2020-03-20,19273
+"USA",NA,2020-03-21,25600
 "USA",NA,2020-03-22,33276
 "USA",NA,2020-03-23,43847
 "USA",NA,2020-03-24,53740
@@ -6770,16 +6769,16 @@
 "USA",NA,2020-03-26,83836
 "USA",NA,2020-03-27,101657
 "USA",NA,2020-03-28,121478
-"USA",NA,2020-03-29,140886
-"USA",NA,2020-03-30,161807
+"USA",NA,2020-03-29,140909
+"USA",NA,2020-03-30,161837
 "USA",NA,2020-03-31,188172
 "USA",NA,2020-04-01,213372
-"USA",NA,2020-04-02,243453
+"USA",NA,2020-04-02,243616
 "USA",NA,2020-04-03,275586
 "USA",NA,2020-04-04,308850
 "USA",NA,2020-04-05,337072
-"USA",NA,2020-04-06,366614
-"Uzbekistan",NA,2020-03-08,0
+"USA",NA,2020-04-06,366667
+"USA",NA,2020-04-07,396223
 "Uzbekistan",NA,2020-03-09,0
 "Uzbekistan",NA,2020-03-10,0
 "Uzbekistan",NA,2020-03-11,0
@@ -6809,7 +6808,7 @@
 "Uzbekistan",NA,2020-04-04,266
 "Uzbekistan",NA,2020-04-05,342
 "Uzbekistan",NA,2020-04-06,457
-"Venezuela",NA,2020-03-08,0
+"Uzbekistan",NA,2020-04-07,520
 "Venezuela",NA,2020-03-09,0
 "Venezuela",NA,2020-03-10,0
 "Venezuela",NA,2020-03-11,0
@@ -6839,7 +6838,7 @@
 "Venezuela",NA,2020-04-04,155
 "Venezuela",NA,2020-04-05,159
 "Venezuela",NA,2020-04-06,165
-"Vietnam",NA,2020-03-08,30
+"Venezuela",NA,2020-04-07,165
 "Vietnam",NA,2020-03-09,30
 "Vietnam",NA,2020-03-10,31
 "Vietnam",NA,2020-03-11,38
@@ -6869,7 +6868,7 @@
 "Vietnam",NA,2020-04-04,240
 "Vietnam",NA,2020-04-05,241
 "Vietnam",NA,2020-04-06,245
-"Zambia",NA,2020-03-08,0
+"Vietnam",NA,2020-04-07,249
 "Zambia",NA,2020-03-09,0
 "Zambia",NA,2020-03-10,0
 "Zambia",NA,2020-03-11,0
@@ -6899,7 +6898,7 @@
 "Zambia",NA,2020-04-04,39
 "Zambia",NA,2020-04-05,39
 "Zambia",NA,2020-04-06,39
-"Zimbabwe",NA,2020-03-08,0
+"Zambia",NA,2020-04-07,39
 "Zimbabwe",NA,2020-03-09,0
 "Zimbabwe",NA,2020-03-10,0
 "Zimbabwe",NA,2020-03-11,0
@@ -6929,7 +6928,7 @@
 "Zimbabwe",NA,2020-04-04,9
 "Zimbabwe",NA,2020-04-05,9
 "Zimbabwe",NA,2020-04-06,10
-"Canada","diamond princess",2020-03-08,0
+"Zimbabwe",NA,2020-04-07,11
 "Canada","diamond princess",2020-03-09,0
 "Canada","diamond princess",2020-03-10,0
 "Canada","diamond princess",2020-03-11,0
@@ -6959,7 +6958,7 @@
 "Canada","diamond princess",2020-04-04,0
 "Canada","diamond princess",2020-04-05,0
 "Canada","diamond princess",2020-04-06,0
-"Dominica",NA,2020-03-08,0
+"Canada","diamond princess",2020-04-07,0
 "Dominica",NA,2020-03-09,0
 "Dominica",NA,2020-03-10,0
 "Dominica",NA,2020-03-11,0
@@ -6989,7 +6988,7 @@
 "Dominica",NA,2020-04-04,14
 "Dominica",NA,2020-04-05,14
 "Dominica",NA,2020-04-06,15
-"Grenada",NA,2020-03-08,0
+"Dominica",NA,2020-04-07,15
 "Grenada",NA,2020-03-09,0
 "Grenada",NA,2020-03-10,0
 "Grenada",NA,2020-03-11,0
@@ -7019,7 +7018,7 @@
 "Grenada",NA,2020-04-04,12
 "Grenada",NA,2020-04-05,12
 "Grenada",NA,2020-04-06,12
-"Mozambique",NA,2020-03-08,0
+"Grenada",NA,2020-04-07,12
 "Mozambique",NA,2020-03-09,0
 "Mozambique",NA,2020-03-10,0
 "Mozambique",NA,2020-03-11,0
@@ -7049,7 +7048,7 @@
 "Mozambique",NA,2020-04-04,10
 "Mozambique",NA,2020-04-05,10
 "Mozambique",NA,2020-04-06,10
-"Syrian Arab Republic",NA,2020-03-08,0
+"Mozambique",NA,2020-04-07,10
 "Syrian Arab Republic",NA,2020-03-09,0
 "Syrian Arab Republic",NA,2020-03-10,0
 "Syrian Arab Republic",NA,2020-03-11,0
@@ -7079,7 +7078,7 @@
 "Syrian Arab Republic",NA,2020-04-04,16
 "Syrian Arab Republic",NA,2020-04-05,19
 "Syrian Arab Republic",NA,2020-04-06,19
-"Timor-Leste",NA,2020-03-08,0
+"Syrian Arab Republic",NA,2020-04-07,19
 "Timor-Leste",NA,2020-03-09,0
 "Timor-Leste",NA,2020-03-10,0
 "Timor-Leste",NA,2020-03-11,0
@@ -7109,7 +7108,7 @@
 "Timor-Leste",NA,2020-04-04,1
 "Timor-Leste",NA,2020-04-05,1
 "Timor-Leste",NA,2020-04-06,1
-"Belize",NA,2020-03-08,0
+"Timor-Leste",NA,2020-04-07,1
 "Belize",NA,2020-03-09,0
 "Belize",NA,2020-03-10,0
 "Belize",NA,2020-03-11,0
@@ -7139,7 +7138,7 @@
 "Belize",NA,2020-04-04,4
 "Belize",NA,2020-04-05,5
 "Belize",NA,2020-04-06,7
-"Canada","recovered",2020-03-08,0
+"Belize",NA,2020-04-07,7
 "Canada","recovered",2020-03-09,0
 "Canada","recovered",2020-03-10,0
 "Canada","recovered",2020-03-11,0
@@ -7169,7 +7168,7 @@
 "Canada","recovered",2020-04-04,0
 "Canada","recovered",2020-04-05,0
 "Canada","recovered",2020-04-06,0
-"Lao People""s Democratic Republic",NA,2020-03-08,0
+"Canada","recovered",2020-04-07,0
 "Lao People""s Democratic Republic",NA,2020-03-09,0
 "Lao People""s Democratic Republic",NA,2020-03-10,0
 "Lao People""s Democratic Republic",NA,2020-03-11,0
@@ -7199,7 +7198,7 @@
 "Lao People""s Democratic Republic",NA,2020-04-04,10
 "Lao People""s Democratic Republic",NA,2020-04-05,11
 "Lao People""s Democratic Republic",NA,2020-04-06,12
-"Libyan Arab Jamahiriya",NA,2020-03-08,0
+"Lao People""s Democratic Republic",NA,2020-04-07,14
 "Libyan Arab Jamahiriya",NA,2020-03-09,0
 "Libyan Arab Jamahiriya",NA,2020-03-10,0
 "Libyan Arab Jamahiriya",NA,2020-03-11,0
@@ -7229,7 +7228,7 @@
 "Libyan Arab Jamahiriya",NA,2020-04-04,18
 "Libyan Arab Jamahiriya",NA,2020-04-05,18
 "Libyan Arab Jamahiriya",NA,2020-04-06,19
-"West Bank and Gaza",NA,2020-03-08,16
+"Libyan Arab Jamahiriya",NA,2020-04-07,20
 "West Bank and Gaza",NA,2020-03-09,19
 "West Bank and Gaza",NA,2020-03-10,26
 "West Bank and Gaza",NA,2020-03-11,30
@@ -7259,7 +7258,7 @@
 "West Bank and Gaza",NA,2020-04-04,217
 "West Bank and Gaza",NA,2020-04-05,237
 "West Bank and Gaza",NA,2020-04-06,254
-"Guinea-Bissau",NA,2020-03-08,0
+"West Bank and Gaza",NA,2020-04-07,261
 "Guinea-Bissau",NA,2020-03-09,0
 "Guinea-Bissau",NA,2020-03-10,0
 "Guinea-Bissau",NA,2020-03-11,0
@@ -7289,7 +7288,7 @@
 "Guinea-Bissau",NA,2020-04-04,18
 "Guinea-Bissau",NA,2020-04-05,18
 "Guinea-Bissau",NA,2020-04-06,18
-"Mali",NA,2020-03-08,0
+"Guinea-Bissau",NA,2020-04-07,33
 "Mali",NA,2020-03-09,0
 "Mali",NA,2020-03-10,0
 "Mali",NA,2020-03-11,0
@@ -7319,7 +7318,7 @@
 "Mali",NA,2020-04-04,41
 "Mali",NA,2020-04-05,45
 "Mali",NA,2020-04-06,47
-"Saint Kitts and Nevis",NA,2020-03-08,0
+"Mali",NA,2020-04-07,56
 "Saint Kitts and Nevis",NA,2020-03-09,0
 "Saint Kitts and Nevis",NA,2020-03-10,0
 "Saint Kitts and Nevis",NA,2020-03-11,0
@@ -7349,7 +7348,7 @@
 "Saint Kitts and Nevis",NA,2020-04-04,9
 "Saint Kitts and Nevis",NA,2020-04-05,10
 "Saint Kitts and Nevis",NA,2020-04-06,10
-"Canada","northwest territories",2020-03-08,0
+"Saint Kitts and Nevis",NA,2020-04-07,11
 "Canada","northwest territories",2020-03-09,0
 "Canada","northwest territories",2020-03-10,0
 "Canada","northwest territories",2020-03-11,0
@@ -7379,7 +7378,7 @@
 "Canada","northwest territories",2020-04-04,4
 "Canada","northwest territories",2020-04-05,4
 "Canada","northwest territories",2020-04-06,5
-"Canada","yukon",2020-03-08,0
+"Canada","northwest territories",2020-04-07,5
 "Canada","yukon",2020-03-09,0
 "Canada","yukon",2020-03-10,0
 "Canada","yukon",2020-03-11,0
@@ -7409,7 +7408,7 @@
 "Canada","yukon",2020-04-04,6
 "Canada","yukon",2020-04-05,6
 "Canada","yukon",2020-04-06,6
-"Kosovo",NA,2020-03-08,0
+"Canada","yukon",2020-04-07,7
 "Kosovo",NA,2020-03-09,0
 "Kosovo",NA,2020-03-10,0
 "Kosovo",NA,2020-03-11,0
@@ -7439,7 +7438,7 @@
 "Kosovo",NA,2020-04-04,135
 "Kosovo",NA,2020-04-05,145
 "Kosovo",NA,2020-04-06,145
-"Burma",NA,2020-03-08,0
+"Kosovo",NA,2020-04-07,170
 "Burma",NA,2020-03-09,0
 "Burma",NA,2020-03-10,0
 "Burma",NA,2020-03-11,0
@@ -7469,7 +7468,7 @@
 "Burma",NA,2020-04-04,21
 "Burma",NA,2020-04-05,21
 "Burma",NA,2020-04-06,22
-"UK","anguilla",2020-03-08,0
+"Burma",NA,2020-04-07,22
 "UK","anguilla",2020-03-09,0
 "UK","anguilla",2020-03-10,0
 "UK","anguilla",2020-03-11,0
@@ -7499,7 +7498,7 @@
 "UK","anguilla",2020-04-04,3
 "UK","anguilla",2020-04-05,3
 "UK","anguilla",2020-04-06,3
-"UK","british virgin islands",2020-03-08,0
+"UK","anguilla",2020-04-07,3
 "UK","british virgin islands",2020-03-09,0
 "UK","british virgin islands",2020-03-10,0
 "UK","british virgin islands",2020-03-11,0
@@ -7529,7 +7528,7 @@
 "UK","british virgin islands",2020-04-04,3
 "UK","british virgin islands",2020-04-05,3
 "UK","british virgin islands",2020-04-06,3
-"UK","turks and caicos islands",2020-03-08,0
+"UK","british virgin islands",2020-04-07,3
 "UK","turks and caicos islands",2020-03-09,0
 "UK","turks and caicos islands",2020-03-10,0
 "UK","turks and caicos islands",2020-03-11,0
@@ -7559,7 +7558,7 @@
 "UK","turks and caicos islands",2020-04-04,5
 "UK","turks and caicos islands",2020-04-05,5
 "UK","turks and caicos islands",2020-04-06,8
-"MS Zaandam",NA,2020-03-08,0
+"UK","turks and caicos islands",2020-04-07,8
 "MS Zaandam",NA,2020-03-09,0
 "MS Zaandam",NA,2020-03-10,0
 "MS Zaandam",NA,2020-03-11,0
@@ -7589,7 +7588,7 @@
 "MS Zaandam",NA,2020-04-04,9
 "MS Zaandam",NA,2020-04-05,9
 "MS Zaandam",NA,2020-04-06,9
-"Botswana",NA,2020-03-08,0
+"MS Zaandam",NA,2020-04-07,9
 "Botswana",NA,2020-03-09,0
 "Botswana",NA,2020-03-10,0
 "Botswana",NA,2020-03-11,0
@@ -7619,7 +7618,7 @@
 "Botswana",NA,2020-04-04,4
 "Botswana",NA,2020-04-05,6
 "Botswana",NA,2020-04-06,6
-"Burundi",NA,2020-03-08,0
+"Botswana",NA,2020-04-07,6
 "Burundi",NA,2020-03-09,0
 "Burundi",NA,2020-03-10,0
 "Burundi",NA,2020-03-11,0
@@ -7649,7 +7648,7 @@
 "Burundi",NA,2020-04-04,3
 "Burundi",NA,2020-04-05,3
 "Burundi",NA,2020-04-06,3
-"Sierra Leone",NA,2020-03-08,0
+"Burundi",NA,2020-04-07,3
 "Sierra Leone",NA,2020-03-09,0
 "Sierra Leone",NA,2020-03-10,0
 "Sierra Leone",NA,2020-03-11,0
@@ -7679,7 +7678,7 @@
 "Sierra Leone",NA,2020-04-04,4
 "Sierra Leone",NA,2020-04-05,6
 "Sierra Leone",NA,2020-04-06,6
-"Netherlands","bonaire, sint eustatius and saba",2020-03-08,0
+"Sierra Leone",NA,2020-04-07,6
 "Netherlands","bonaire, sint eustatius and saba",2020-03-09,0
 "Netherlands","bonaire, sint eustatius and saba",2020-03-10,0
 "Netherlands","bonaire, sint eustatius and saba",2020-03-11,0
@@ -7709,7 +7708,7 @@
 "Netherlands","bonaire, sint eustatius and saba",2020-04-04,2
 "Netherlands","bonaire, sint eustatius and saba",2020-04-05,2
 "Netherlands","bonaire, sint eustatius and saba",2020-04-06,2
-"Malawi",NA,2020-03-08,0
+"Netherlands","bonaire, sint eustatius and saba",2020-04-07,2
 "Malawi",NA,2020-03-09,0
 "Malawi",NA,2020-03-10,0
 "Malawi",NA,2020-03-11,0
@@ -7739,37 +7738,37 @@
 "Malawi",NA,2020-04-04,4
 "Malawi",NA,2020-04-05,4
 "Malawi",NA,2020-04-06,5
-"UK","falkland islands (islas malvinas)",2020-03-08,0
-"UK","falkland islands (islas malvinas)",2020-03-09,0
-"UK","falkland islands (islas malvinas)",2020-03-10,0
-"UK","falkland islands (islas malvinas)",2020-03-11,0
-"UK","falkland islands (islas malvinas)",2020-03-12,0
-"UK","falkland islands (islas malvinas)",2020-03-13,0
-"UK","falkland islands (islas malvinas)",2020-03-14,0
-"UK","falkland islands (islas malvinas)",2020-03-15,0
-"UK","falkland islands (islas malvinas)",2020-03-16,0
-"UK","falkland islands (islas malvinas)",2020-03-17,0
-"UK","falkland islands (islas malvinas)",2020-03-18,0
-"UK","falkland islands (islas malvinas)",2020-03-19,0
-"UK","falkland islands (islas malvinas)",2020-03-20,0
-"UK","falkland islands (islas malvinas)",2020-03-21,0
-"UK","falkland islands (islas malvinas)",2020-03-22,0
-"UK","falkland islands (islas malvinas)",2020-03-23,0
-"UK","falkland islands (islas malvinas)",2020-03-24,0
-"UK","falkland islands (islas malvinas)",2020-03-25,0
-"UK","falkland islands (islas malvinas)",2020-03-26,0
-"UK","falkland islands (islas malvinas)",2020-03-27,0
-"UK","falkland islands (islas malvinas)",2020-03-28,0
-"UK","falkland islands (islas malvinas)",2020-03-29,0
-"UK","falkland islands (islas malvinas)",2020-03-30,0
-"UK","falkland islands (islas malvinas)",2020-03-31,0
-"UK","falkland islands (islas malvinas)",2020-04-01,0
-"UK","falkland islands (islas malvinas)",2020-04-02,0
-"UK","falkland islands (islas malvinas)",2020-04-03,0
-"UK","falkland islands (islas malvinas)",2020-04-04,1
-"UK","falkland islands (islas malvinas)",2020-04-05,2
-"UK","falkland islands (islas malvinas)",2020-04-06,2
-"France","saint pierre and miquelon",2020-03-08,0
+"Malawi",NA,2020-04-07,8
+"UK","falkland islands (malvinas)",2020-03-09,0
+"UK","falkland islands (malvinas)",2020-03-10,0
+"UK","falkland islands (malvinas)",2020-03-11,0
+"UK","falkland islands (malvinas)",2020-03-12,0
+"UK","falkland islands (malvinas)",2020-03-13,0
+"UK","falkland islands (malvinas)",2020-03-14,0
+"UK","falkland islands (malvinas)",2020-03-15,0
+"UK","falkland islands (malvinas)",2020-03-16,0
+"UK","falkland islands (malvinas)",2020-03-17,0
+"UK","falkland islands (malvinas)",2020-03-18,0
+"UK","falkland islands (malvinas)",2020-03-19,0
+"UK","falkland islands (malvinas)",2020-03-20,0
+"UK","falkland islands (malvinas)",2020-03-21,0
+"UK","falkland islands (malvinas)",2020-03-22,0
+"UK","falkland islands (malvinas)",2020-03-23,0
+"UK","falkland islands (malvinas)",2020-03-24,0
+"UK","falkland islands (malvinas)",2020-03-25,0
+"UK","falkland islands (malvinas)",2020-03-26,0
+"UK","falkland islands (malvinas)",2020-03-27,0
+"UK","falkland islands (malvinas)",2020-03-28,0
+"UK","falkland islands (malvinas)",2020-03-29,0
+"UK","falkland islands (malvinas)",2020-03-30,0
+"UK","falkland islands (malvinas)",2020-03-31,0
+"UK","falkland islands (malvinas)",2020-04-01,0
+"UK","falkland islands (malvinas)",2020-04-02,0
+"UK","falkland islands (malvinas)",2020-04-03,0
+"UK","falkland islands (malvinas)",2020-04-04,1
+"UK","falkland islands (malvinas)",2020-04-05,2
+"UK","falkland islands (malvinas)",2020-04-06,2
+"UK","falkland islands (malvinas)",2020-04-07,2
 "France","saint pierre and miquelon",2020-03-09,0
 "France","saint pierre and miquelon",2020-03-10,0
 "France","saint pierre and miquelon",2020-03-11,0
@@ -7799,7 +7798,7 @@
 "France","saint pierre and miquelon",2020-04-04,0
 "France","saint pierre and miquelon",2020-04-05,1
 "France","saint pierre and miquelon",2020-04-06,1
-"South Sudan",NA,2020-03-08,0
+"France","saint pierre and miquelon",2020-04-07,1
 "South Sudan",NA,2020-03-09,0
 "South Sudan",NA,2020-03-10,0
 "South Sudan",NA,2020-03-11,0
@@ -7829,7 +7828,7 @@
 "South Sudan",NA,2020-04-04,0
 "South Sudan",NA,2020-04-05,1
 "South Sudan",NA,2020-04-06,1
-"Western Sahara",NA,2020-03-08,0
+"South Sudan",NA,2020-04-07,2
 "Western Sahara",NA,2020-03-09,0
 "Western Sahara",NA,2020-03-10,0
 "Western Sahara",NA,2020-03-11,0
@@ -7859,7 +7858,7 @@
 "Western Sahara",NA,2020-04-04,0
 "Western Sahara",NA,2020-04-05,4
 "Western Sahara",NA,2020-04-06,4
-"Sao Tome and Principe",NA,2020-03-08,0
+"Western Sahara",NA,2020-04-07,4
 "Sao Tome and Principe",NA,2020-03-09,0
 "Sao Tome and Principe",NA,2020-03-10,0
 "Sao Tome and Principe",NA,2020-03-11,0
@@ -7889,3 +7888,4 @@
 "Sao Tome and Principe",NA,2020-04-04,0
 "Sao Tome and Principe",NA,2020-04-05,0
 "Sao Tome and Principe",NA,2020-04-06,4
+"Sao Tome and Principe",NA,2020-04-07,4
